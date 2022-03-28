@@ -1,0 +1,77 @@
+{
+  "id": "menu",
+  "label": "menu",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        },
+        "type": "UID"
+      },
+      "title": {
+        "config": {
+          "label": "Title",
+          "placeholder": "Menu title...",
+          "allowTargetBlank": true,
+          "single": "heading1"
+        },
+        "type": "StructuredText"
+      },
+      "menuLinks": {
+        "config": {
+          "label": "Menu Links",
+          "fields": {
+            "link": {
+              "config": {
+                "label": "Link",
+                "placeholder": "Select link...",
+                "allowTargetBlank": false,
+                "select": null
+              },
+              "type": "Link"
+            },
+            "label": {
+              "config": {
+                "label": "Label",
+                "placeholder": "Enter label for menu link...",
+                "allowTargetBlank": true,
+                "single": "paragraph"
+              },
+              "type": "StructuredText"
+            }
+          }
+        },
+        "type": "Group"
+      },
+      "logo": {
+        "config": {
+          "label": "Logo",
+          "constraint": {},
+          "thumbnails": []
+        },
+        "type": "Image"
+      },
+      "buttonLabel": {
+        "config": {
+          "label": "Button Label",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        },
+        "type": "StructuredText"
+      },
+      "buttonLink": {
+        "config": {
+          "label": "Button Link",
+          "placeholder": "",
+          "allowTargetBlank": false
+        },
+        "type": "Link"
+      }
+    }
+  }
+}

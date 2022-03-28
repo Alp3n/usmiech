@@ -1,0 +1,125 @@
+{
+  "id": "single_image",
+  "type": "SharedSlice",
+  "name": "SingleImage",
+  "description": "SingleImage",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "SingleImage",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "buttonLabel": {
+          "config": {
+            "label": "Button Label",
+            "placeholder": "Insert button label..."
+          },
+          "type": "Text"
+        },
+        "buttonLink": {
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "allowTargetBlank": false
+          },
+          "type": "Link"
+        },
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {
+              "height": 780
+            },
+            "thumbnails": [
+              {
+                "name": "mobile",
+                "width": 640,
+                "height": 600
+              }
+            ]
+          },
+          "type": "Image"
+        },
+        "imageSide": {
+          "config": {
+            "label": "Image Side",
+            "placeholder": "Enter left or right..."
+          },
+          "type": "Text"
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "noCta",
+      "name": "NoCta",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "SingleImage",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {
+              "height": 780
+            },
+            "thumbnails": [
+              {
+                "name": "mobile",
+                "width": 640,
+                "height": 600
+              }
+            ]
+          },
+          "type": "Image"
+        },
+        "imageSide": {
+          "config": {
+            "label": "Image Side",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

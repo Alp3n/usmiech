@@ -1,0 +1,28 @@
+{
+  "id": "pageClinics",
+  "label": "pageClinics",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        },
+        "type": "UID"
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "full_bleed": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

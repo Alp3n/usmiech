@@ -1,0 +1,123 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "double_image",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Brand robust technologies",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Aute mollit id sint irure incididunt nostrud magna mollit laborum dolore qui esse. Aute veniam irure aliqua veniam occaecat magna anim non eiusmod sit occaecat amet.",
+          "spans": []
+        }
+      ],
+      "buttonLabel": "streamline impactful deliverables",
+      "buttonLink": {
+        "link_type": "Web",
+        "url": "http://google.com"
+      },
+      "imageBig": {
+        "dimensions": {
+          "width": 900,
+          "height": 780
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=780&fit=crop",
+        "mobile": {
+          "dimensions": {
+            "width": 640,
+            "height": 600
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=640&h=600&fit=crop"
+        }
+      },
+      "imageSmall": {
+        "dimensions": {
+          "width": 900,
+          "height": 780
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=780&fit=crop",
+        "mobile": {
+          "dimensions": {
+            "width": 640,
+            "height": 600
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=640&h=600&fit=crop"
+        }
+      }
+    }
+  },
+  {
+    "variation": "noCta",
+    "name": "NoCta",
+    "slice_type": "double_image",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Envisioneer virtual functionalities",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Incididunt fugiat incididunt incididunt aute enim culpa non labore sint enim. Velit voluptate labore adipisicing ex minim magna Lorem duis.",
+          "spans": []
+        }
+      ],
+      "imageBig": {
+        "dimensions": {
+          "width": 900,
+          "height": 780
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=900&h=780&fit=crop",
+        "mobile": {
+          "dimensions": {
+            "width": 640,
+            "height": 600
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=640&h=600&fit=crop"
+        }
+      },
+      "imageSmall": {
+        "dimensions": {
+          "width": 900,
+          "height": 780
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=900&h=780&fit=crop",
+        "mobile": {
+          "dimensions": {
+            "width": 640,
+            "height": 600
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=640&h=600&fit=crop"
+        }
+      }
+    }
+  }
+]

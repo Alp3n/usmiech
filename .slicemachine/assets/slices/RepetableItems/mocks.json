@@ -1,0 +1,258 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "repetable_items",
+    "items": [
+      {
+        "title": [
+          {
+            "type": "paragraph",
+            "text": "Eiusmod sint esse ipsum Lorem irure adipisicing nostrud ullamco consectetur duis quis laborum.",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Ipsum elit ullamco consectetur consequat pariatur magna veniam cillum laborum labore. Reprehenderit ullamco officia excepteur aliquip consequat dolor do aliquip anim consequat ex cillum nisi. Aliqua occaecat labore ex sint mollit exercitation ad qui anim non laboris sit.",
+            "spans": []
+          }
+        ],
+        "uid": "monetize interactive e-commerce"
+      },
+      {
+        "title": [
+          {
+            "type": "paragraph",
+            "text": "Culpa sit duis laboris velit elit laborum sunt cupidatat.",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Enim aliquip occaecat incididunt ex reprehenderit. Elit ad nostrud elit esse irure irure voluptate adipisicing consectetur.",
+            "spans": []
+          }
+        ],
+        "uid": "drive next-generation paradigms"
+      },
+      {
+        "title": [
+          {
+            "type": "paragraph",
+            "text": "Mollit eiusmod pariatur qui aliquip excepteur. In et consequat ullamco id aliquip nisi Lorem qui est labore quis culpa. Adipisicing consectetur occaecat eu quis dolor deserunt cillum aute ut anim reprehenderit.",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "In nulla minim ad duis mollit ut ullamco culpa ut dolore sint aliquip nisi.",
+            "spans": []
+          }
+        ],
+        "uid": "reinvent frictionless interfaces"
+      },
+      {
+        "title": [
+          {
+            "type": "paragraph",
+            "text": "Enim sunt esse irure occaecat pariatur consequat nostrud et officia et aute. Pariatur eu ad amet ea excepteur. Minim labore veniam excepteur eu ea.",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Nisi laboris sit tempor ex deserunt laboris sint sint in voluptate tempor cupidatat ad. Id veniam anim in ut reprehenderit magna minim.",
+            "spans": []
+          }
+        ],
+        "uid": "evolve B2C blockchains"
+      },
+      {
+        "title": [
+          {
+            "type": "paragraph",
+            "text": "Exercitation occaecat voluptate reprehenderit aliqua.",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Consectetur quis ut sint. Reprehenderit nisi reprehenderit exercitation cupidatat consequat. Laboris enim qui dolore sit do pariatur.",
+            "spans": []
+          }
+        ],
+        "uid": "morph impactful solutions"
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Harness front-end infrastructures",
+          "spans": []
+        }
+      ]
+    }
+  },
+  {
+    "variation": "steps",
+    "name": "Steps",
+    "slice_type": "repetable_items",
+    "items": [
+      {
+        "title": [
+          {
+            "type": "heading2",
+            "text": "Reinvent turn-key users",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Deserunt tempor esse officia in proident mollit nostrud.",
+            "spans": []
+          }
+        ],
+        "number": 321,
+        "uid": "recontextualize e-business portals"
+      },
+      {
+        "title": [
+          {
+            "type": "heading2",
+            "text": "Synthesize one-to-one bandwidth",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Nisi qui cillum consectetur tempor sint.",
+            "spans": []
+          }
+        ],
+        "number": 5362,
+        "uid": "productize integrated web services"
+      },
+      {
+        "title": [
+          {
+            "type": "heading2",
+            "text": "Scale B2B experiences",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Proident eiusmod ullamco dolore amet eu Lorem anim in mollit est.",
+            "spans": []
+          }
+        ],
+        "number": 254,
+        "uid": "enable real-time functionalities"
+      },
+      {
+        "title": [
+          {
+            "type": "heading2",
+            "text": "Revolutionize intuitive vortals",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Voluptate elit qui consequat reprehenderit dolore esse sit culpa nulla amet duis. Excepteur aute consequat anim ea. Excepteur minim nulla anim deserunt id enim dolore non.",
+            "spans": []
+          }
+        ],
+        "number": 7766,
+        "uid": "redefine transparent content"
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Incubate vertical experiences",
+          "spans": []
+        }
+      ]
+    }
+  },
+  {
+    "variation": "opinions",
+    "name": "Opinions",
+    "slice_type": "repetable_items",
+    "items": [
+      {
+        "title": [
+          {
+            "type": "heading2",
+            "text": "Syndicate 24/7 metrics",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Magna deserunt laborum aliquip cupidatat est laborum sit nostrud et mollit labore.",
+            "spans": []
+          }
+        ],
+        "uid": "reintermediate best-of-breed methodologies"
+      },
+      {
+        "title": [
+          {
+            "type": "heading2",
+            "text": "Generate 24/365 networks",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Tempor nisi est velit sunt eu ad laborum occaecat duis.",
+            "spans": []
+          }
+        ],
+        "uid": "innovate bleeding-edge action-items"
+      },
+      {
+        "title": [
+          {
+            "type": "heading2",
+            "text": "Optimize best-of-breed models",
+            "spans": []
+          }
+        ],
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Id officia minim ea minim Lorem adipisicing cillum.",
+            "spans": []
+          }
+        ],
+        "uid": "benchmark proactive interfaces"
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Morph global users",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

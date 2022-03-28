@@ -1,0 +1,43 @@
+{
+  "id": "fa_q",
+  "type": "SharedSlice",
+  "name": "FaQ",
+  "description": "FaQ",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "FaQ",
+      "primary": {},
+      "items": {
+        "Question": {
+          "config": {
+            "label": "Question",
+            "placeholder": "Insert question...",
+            "allowTargetBlank": true,
+            "multi": "heading2"
+          },
+          "type": "StructuredText"
+        },
+        "Answer": {
+          "config": {
+            "label": "Answer",
+            "placeholder": "Insert answer...",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "uid": {
+          "config": {
+            "label": "Uid",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "four_steps",
+  "type": "SharedSlice",
+  "name": "FourSteps",
+  "description": "FourSteps",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "FourSteps",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "Insert title...",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        }
+      },
+      "items": {
+        "number": {
+          "config": {
+            "label": "Number",
+            "placeholder": "Insert number of the step..."
+          },
+          "type": "Number"
+        },
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": "Insert title...",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        },
+        "descritption": {
+          "config": {
+            "label": "Descritption",
+            "placeholder": "Insert description...",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        }
+      }
+    }
+  ]
+}

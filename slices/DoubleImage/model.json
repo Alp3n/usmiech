@@ -1,0 +1,143 @@
+{
+  "id": "double_image",
+  "type": "SharedSlice",
+  "name": "DoubleImage",
+  "description": "DoubleImage",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "DoubleImage",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "Insert title...",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "Insert description...",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "buttonLabel": {
+          "config": {
+            "label": "Button Label",
+            "placeholder": "Insert button label..."
+          },
+          "type": "Text"
+        },
+        "buttonLink": {
+          "config": {
+            "label": "Button Link",
+            "placeholder": "Insert link to a page...",
+            "allowTargetBlank": false
+          },
+          "type": "Link"
+        },
+        "imageBig": {
+          "config": {
+            "label": "Image Big",
+            "constraint": {
+              "height": 780
+            },
+            "thumbnails": [
+              {
+                "name": "mobile",
+                "width": 640,
+                "height": 600
+              }
+            ]
+          },
+          "type": "Image"
+        },
+        "imageSmall": {
+          "config": {
+            "label": "Image Small",
+            "constraint": {
+              "height": 780
+            },
+            "thumbnails": [
+              {
+                "name": "mobile",
+                "width": 640,
+                "height": 600
+              }
+            ]
+          },
+          "type": "Image"
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "noCta",
+      "name": "NoCta",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "DoubleImage",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "Insert title...",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "Insert description...",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "imageBig": {
+          "config": {
+            "label": "Image Big",
+            "constraint": {
+              "height": 780
+            },
+            "thumbnails": [
+              {
+                "name": "mobile",
+                "width": 640,
+                "height": 600
+              }
+            ]
+          },
+          "type": "Image"
+        },
+        "imageSmall": {
+          "config": {
+            "label": "Image Small",
+            "constraint": {
+              "height": 780
+            },
+            "thumbnails": [
+              {
+                "name": "mobile",
+                "width": 640,
+                "height": 600
+              }
+            ]
+          },
+          "type": "Image"
+        }
+      },
+      "items": {}
+    }
+  ]
+}
