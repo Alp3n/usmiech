@@ -1,6 +1,28 @@
 {
-  "id": "26d9b9d0-706d-4dfc-a802-7afa41cef929",
-  "uid": "repudiandae-veniam-dolores",
+  "id": "ca171885-8544-4e3e-afce-93d78796757a",
+  "uid": "et-quisquam-soluta",
   "type": "pageOffer",
-  "data": {}
+  "data": {
+    "title": [
+      {
+        "type": "heading2",
+        "text": "Benchmark global mindshare",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Deserunt cillum ex dolore anim pariatur laboris mollit nisi dolore ea sint sunt pariatur quis.",
+        "spans": []
+      }
+    ],
+    "installmentsSummary": [
+      {
+        "type": "heading4",
+        "text": "Seize viral e-business",
+        "spans": []
+      }
+    ]
+  }
 }

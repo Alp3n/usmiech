@@ -2,15 +2,16 @@ import { PrismicLink, PrismicText, PrismicRichText } from '@prismicio/react';
 import { Default, Mobile } from './MediaQueries';
 import styled from '@emotion/styled';
 
-const Button = ({ link, label }) => {
-  console.log(label, 'LABEL');
+const Button = ({ link, label, plain, gridArea }) => {
   return (
     <>
-      <StyledLink field={link}>
+      <StyledLink field={link} plain={plain} gridArea={gridArea}>
         <p field={label}>{label.toString()}</p>
-        <Mobile>
-          <StyledLine />
-        </Mobile>
+        {plain ? null : (
+          <Mobile>
+            <StyledLine />
+          </Mobile>
+        )}
       </StyledLink>
     </>
   );
@@ -23,21 +24,22 @@ const StyledLink = styled(PrismicLink)`
   text-decoration: none;
   justify-content: center;
   align-items: center;
+  grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
   p {
     margin: 8px 1rem 8px 0;
   }
 
   &:link {
-    color: black;
+    color: ${({ plain }) => (plain ? 'white' : 'black')};
   }
   &:visited {
-    color: black;
+    color: ${({ plain }) => (plain ? 'white' : 'black')};
   }
   &:hover {
-    color: pink;
+    color: ${({ plain }) => (plain ? 'white' : 'black')};
   }
   &:active {
-    color: black;
+    color: ${({ plain }) => (plain ? 'white' : 'black')};
   }
 
   @media only screen and (min-width: 764px) {
@@ -46,8 +48,8 @@ const StyledLink = styled(PrismicLink)`
     border-radius: 32px;
     width: fit-content;
     p {
-    margin: 8px 0;
-  }
+      margin: 8px 0;
+    }
 
     &:hover {
       background-color: black;

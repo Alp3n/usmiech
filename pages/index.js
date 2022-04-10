@@ -3,11 +3,8 @@ import styled from '@emotion/styled';
 import { createClient } from '../prismicio';
 import { SliceZone } from '@prismicio/react';
 import { components } from '../slices/index';
-import Button from '../components/Button';
-import FullBleed from '../slices/FullBleed';
 
 export default function Home({ menu, page }) {
-  console.log(page);
   return (
     <Layout menu={menu}>
       <SliceZone slices={page.data.slices} components={components} />

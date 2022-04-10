@@ -19,7 +19,7 @@ export function linkResolver(doc) {
     case 'pageClinics':
       return `/gabinety`;
     case 'pageOffer':
-      return `/cennik`;
+      return `/offer`;
     case 'pageHowItWorks':
       return `/jak-to-dziala`;
     case 'pageBooking':

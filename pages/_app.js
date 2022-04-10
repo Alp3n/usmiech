@@ -5,7 +5,7 @@ import '../styles/globals.css';
 import { PrismicProvider } from '@prismicio/react';
 import { PrismicPreview } from '@prismicio/next';
 import { linkResolver, repositoryName } from '../prismicio';
-import styled from '@emotion/styled';
+import { Layout } from '../components/layout/Layout';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
       )}
     >
       <PrismicPreview repositoryName={repositoryName}>
-        <Component {...pageProps} />
+        <Component {...pageProps}></Component>
       </PrismicPreview>
     </PrismicProvider>
   );

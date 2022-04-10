@@ -1,6 +1,305 @@
 {
   "slices": {
     "components": {
+      "calculator": {
+        "library": "slices",
+        "id": "calculator",
+        "name": "Calculator",
+        "description": "Calculator",
+        "model": {
+          "id": "calculator",
+          "type": "SharedSlice",
+          "name": "Calculator",
+          "description": "Calculator",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Calculator",
+              "primary": {
+                "productName": {
+                  "config": {
+                    "label": "Product Name",
+                    "placeholder": "Insert product name...",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  },
+                  "type": "StructuredText"
+                },
+                "installmentsText": {
+                  "config": {
+                    "label": "Installments Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  },
+                  "type": "StructuredText"
+                },
+                "installmentsArray": {
+                  "config": {
+                    "label": "Array Of Installments",
+                    "placeholder": "Enter values separated with comma",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                }
+              },
+              "items": {}
+            },
+            {
+              "id": "licowki",
+              "name": "licowki",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Calculator",
+              "primary": {
+                "productName": {
+                  "config": {
+                    "label": "Product Name",
+                    "placeholder": "Enter product name...",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  },
+                  "type": "StructuredText"
+                },
+                "installmentsText": {
+                  "config": {
+                    "label": "Installments Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "installmentsArray": {
+                  "config": {
+                    "label": "Installments Array",
+                    "placeholder": "Enter values separated with comma",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "licowkiText": {
+                  "config": {
+                    "label": "Licowki Text",
+                    "placeholder": "Wybierz ilość licówek",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "licowkiArray": {
+                  "config": {
+                    "label": "Licowki Array",
+                    "placeholder": "Enter values separated with comma",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                }
+              },
+              "items": {}
+            },
+            {
+              "id": "ortodoncja",
+              "name": "ortodoncja",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Calculator",
+              "primary": {
+                "productName": {
+                  "config": {
+                    "label": "Product Name",
+                    "placeholder": "Enter product name...",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  },
+                  "type": "StructuredText"
+                },
+                "installmentsText": {
+                  "config": {
+                    "label": "Installments Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "installmentsArray": {
+                  "config": {
+                    "label": "Installments Array",
+                    "placeholder": "Enter values separated with comma",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "treatmentText": {
+                  "config": {
+                    "label": "Leczenie Text",
+                    "placeholder": "Wybierz ilość licówek",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                },
+                "treatmentTimeArray": {
+                  "config": {
+                    "label": "Czas Leczenia Array",
+                    "placeholder": "Enter values separated with comma",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  },
+                  "type": "StructuredText"
+                }
+              },
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "calculator",
+            "items": [],
+            "primary": {
+              "productName": [
+                {
+                  "type": "heading2",
+                  "text": "Brand dot-com technologies",
+                  "spans": []
+                }
+              ],
+              "installmentsText": [
+                {
+                  "type": "paragraph",
+                  "text": "Eiusmod proident Lorem in. Pariatur sit nulla ullamco ipsum. Duis esse commodo dolor qui anim sunt quis adipisicing aliquip in.",
+                  "spans": []
+                }
+              ],
+              "installmentsArray": [
+                {
+                  "type": "paragraph",
+                  "text": "Velit cillum proident consequat deserunt ea ea ipsum velit culpa enim dolore proident sint id pariatur. Ex aliquip mollit nulla cillum dolore sunt.",
+                  "spans": []
+                }
+              ]
+            }
+          },
+          "licowki": {
+            "variation": "licowki",
+            "name": "licowki",
+            "slice_type": "calculator",
+            "items": [],
+            "primary": {
+              "productName": [
+                {
+                  "type": "heading2",
+                  "text": "Visualize innovative infrastructures",
+                  "spans": []
+                }
+              ],
+              "installmentsText": [
+                {
+                  "type": "paragraph",
+                  "text": "Sunt aute in mollit proident anim esse dolore ipsum nulla labore exercitation elit.",
+                  "spans": []
+                }
+              ],
+              "installmentsArray": [
+                {
+                  "type": "paragraph",
+                  "text": "Adipisicing ipsum sit elit adipisicing adipisicing dolore laboris qui dolor duis incididunt sit non non. Cillum laboris culpa mollit amet in officia ex ipsum tempor enim incididunt fugiat eu. Excepteur ipsum minim veniam.",
+                  "spans": []
+                }
+              ],
+              "licowkiText": [
+                {
+                  "type": "paragraph",
+                  "text": "Esse aute irure voluptate. Laboris et irure ipsum. Tempor non proident ex.",
+                  "spans": []
+                }
+              ],
+              "licowkiArray": [
+                {
+                  "type": "paragraph",
+                  "text": "Quis qui voluptate enim commodo dolor ea sunt Lorem. Do nostrud minim dolore exercitation tempor.",
+                  "spans": []
+                }
+              ]
+            }
+          },
+          "ortodoncja": {
+            "variation": "ortodoncja",
+            "name": "ortodoncja",
+            "slice_type": "calculator",
+            "items": [],
+            "primary": {
+              "productName": [
+                {
+                  "type": "heading2",
+                  "text": "Expedite integrated channels",
+                  "spans": []
+                }
+              ],
+              "installmentsText": [
+                {
+                  "type": "paragraph",
+                  "text": "Consequat Lorem consequat voluptate pariatur.",
+                  "spans": []
+                }
+              ],
+              "installmentsArray": [
+                {
+                  "type": "paragraph",
+                  "text": "Ea commodo enim est tempor aute ea ullamco reprehenderit consectetur sunt et id irure ullamco. Consequat deserunt reprehenderit aliqua magna excepteur ea anim labore ut pariatur pariatur incididunt pariatur elit.",
+                  "spans": []
+                }
+              ],
+              "treatmentText": [
+                {
+                  "type": "paragraph",
+                  "text": "Occaecat culpa quis excepteur exercitation sit ut ut voluptate reprehenderit enim et tempor.",
+                  "spans": []
+                }
+              ],
+              "treatmentTimeArray": [
+                {
+                  "type": "paragraph",
+                  "text": "Cillum aute est magna minim Lorem mollit voluptate ad aliqua minim irure.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "D:\\Programming\\smiech\\slices\\Calculator\\default\\preview.jpeg",
+            "width": 626,
+            "height": 530
+          },
+          "licowki": {
+            "path": "D:\\Programming\\smiech\\slices\\Calculator\\licowki\\preview.jpeg",
+            "width": 626,
+            "height": 530
+          },
+          "ortodoncja": {
+            "path": "D:\\Programming\\smiech\\slices\\Calculator\\ortodoncja\\preview.jpeg",
+            "width": 626,
+            "height": 530
+          }
+        }
+      },
       "double_image": {
         "library": "slices",
         "id": "double_image",
@@ -274,7 +573,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "js"
         },
         "screenshotPaths": {
@@ -384,7 +682,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "js"
         },
         "screenshotPaths": {
@@ -419,58 +716,7 @@
                     "label": "Title",
                     "placeholder": "Insert title...",
                     "allowTargetBlank": true,
-                    "multi": "heading2"
-                  }
-                },
-                "description": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Description",
-                    "placeholder": "Insert descritpion...",
-                    "allowTargetBlank": true,
-                    "multi": "paragraph"
-                  }
-                },
-                "image": {
-                  "config": {
-                    "label": "Image",
-                    "constraint": {},
-                    "thumbnails": []
-                  },
-                  "type": "Image"
-                },
-                "buttonLabel": {
-                  "config": {
-                    "label": "Button Label",
-                    "placeholder": "Insert button label..."
-                  },
-                  "type": "Text"
-                },
-                "buttonLink": {
-                  "config": {
-                    "label": "Button Link",
-                    "placeholder": "Insert page link...",
-                    "allowTargetBlank": false
-                  },
-                  "type": "Link"
-                }
-              },
-              "items": {}
-            },
-            {
-              "id": "noCta",
-              "name": "noCta",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "FullBleed",
-              "primary": {
-                "title": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Title",
-                    "placeholder": "Insert title...",
-                    "allowTargetBlank": true,
-                    "multi": "heading2"
+                    "multi": "heading1,heading2"
                   }
                 },
                 "description": {
@@ -495,6 +741,81 @@
                     ]
                   },
                   "type": "Image"
+                },
+                "buttonLabel": {
+                  "config": {
+                    "label": "Button Label",
+                    "placeholder": "Insert button label..."
+                  },
+                  "type": "Text"
+                },
+                "buttonLink": {
+                  "config": {
+                    "label": "Button Link",
+                    "placeholder": "Insert page link...",
+                    "allowTargetBlank": false
+                  },
+                  "type": "Link"
+                },
+                "inside": {
+                  "config": {
+                    "label": "Inside",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": true
+                  },
+                  "type": "Boolean"
+                }
+              },
+              "items": {}
+            },
+            {
+              "id": "noCta",
+              "name": "noCta",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "FullBleed",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "Insert title...",
+                    "allowTargetBlank": true,
+                    "multi": "heading1,heading2"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "Insert descritpion...",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph"
+                  }
+                },
+                "image": {
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": [
+                      {
+                        "name": "mobile",
+                        "width": 400,
+                        "height": 600
+                      }
+                    ]
+                  },
+                  "type": "Image"
+                },
+                "inside": {
+                  "config": {
+                    "label": "Inside",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": false
+                  },
+                  "type": "Boolean"
                 }
               },
               "items": {}
@@ -510,15 +831,15 @@
             "primary": {
               "title": [
                 {
-                  "type": "heading2",
-                  "text": "Enhance synergistic vortals",
+                  "type": "heading1",
+                  "text": "Deliver scalable web services",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Velit laborum ipsum laborum sit. Irure eu esse duis labore excepteur magna in.",
+                  "text": "Magna aliquip occaecat veniam. Sit deserunt nisi sint ad est. Duis duis laboris consectetur enim eiusmod enim anim proident dolore sit voluptate fugiat.",
                   "spans": []
                 }
               ],
@@ -529,13 +850,23 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=900&h=500&fit=crop",
+                "mobile": {
+                  "dimensions": {
+                    "width": 400,
+                    "height": 600
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=400&h=600&fit=crop"
+                }
               },
-              "buttonLabel": "redefine synergistic networks",
+              "buttonLabel": "implement front-end users",
               "buttonLink": {
                 "link_type": "Web",
-                "url": "https://prismic.io"
-              }
+                "url": "https://slicemachine.dev"
+              },
+              "inside": true
             }
           },
           "noCta": {
@@ -546,15 +877,15 @@
             "primary": {
               "title": [
                 {
-                  "type": "heading2",
-                  "text": "Deploy web-enabled niches",
+                  "type": "heading1",
+                  "text": "Scale sticky eyeballs",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Incididunt anim adipisicing pariatur sunt cupidatat.",
+                  "text": "Ea amet aute laborum ad amet et ad cillum. Non nisi dolore consectetur exercitation exercitation Lorem sit aliqua Lorem irure adipisicing dolore tempor quis exercitation.",
                   "spans": []
                 }
               ],
@@ -565,7 +896,7 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&h=500&fit=crop",
+                "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=900&h=500&fit=crop",
                 "mobile": {
                   "dimensions": {
                     "width": 400,
@@ -573,15 +904,15 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=400&h=600&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=400&h=600&fit=crop"
                 }
-              }
+              },
+              "inside": false
             }
           }
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "js"
         },
         "screenshotPaths": {
@@ -618,9 +949,10 @@
                 "title": {
                   "type": "StructuredText",
                   "config": {
-                    "single": "heading1",
                     "label": "Title",
-                    "placeholder": "This is where it all begins..."
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
                   }
                 }
               },
@@ -662,9 +994,10 @@
                 "title": {
                   "type": "StructuredText",
                   "config": {
-                    "single": "heading1",
                     "label": "Title",
-                    "placeholder": "This is where it all begins..."
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
                   }
                 }
               },
@@ -713,9 +1046,10 @@
                 "title": {
                   "type": "StructuredText",
                   "config": {
-                    "single": "heading1",
                     "label": "Title",
-                    "placeholder": "This is where it all begins..."
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
                   }
                 }
               },
@@ -759,93 +1093,42 @@
                 "title": [
                   {
                     "type": "paragraph",
-                    "text": "Eiusmod sint esse ipsum Lorem irure adipisicing nostrud ullamco consectetur duis quis laborum.",
+                    "text": "Excepteur proident ad incididunt commodo Lorem nostrud est cillum laboris nisi. Anim ipsum anim consectetur duis minim nostrud est laboris est fugiat dolor aliquip quis.",
                     "spans": []
                   }
                 ],
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Ipsum elit ullamco consectetur consequat pariatur magna veniam cillum laborum labore. Reprehenderit ullamco officia excepteur aliquip consequat dolor do aliquip anim consequat ex cillum nisi. Aliqua occaecat labore ex sint mollit exercitation ad qui anim non laboris sit.",
+                    "text": "Aliquip irure tempor irure minim aliquip veniam do irure amet.",
                     "spans": []
                   }
                 ],
-                "uid": "monetize interactive e-commerce"
+                "uid": "incentivize proactive platforms"
               },
               {
                 "title": [
                   {
                     "type": "paragraph",
-                    "text": "Culpa sit duis laboris velit elit laborum sunt cupidatat.",
+                    "text": "Non elit irure enim dolor ipsum. Fugiat elit dolore incididunt consectetur aliquip magna ipsum aliquip cupidatat consectetur reprehenderit do do irure do.",
                     "spans": []
                   }
                 ],
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Enim aliquip occaecat incididunt ex reprehenderit. Elit ad nostrud elit esse irure irure voluptate adipisicing consectetur.",
+                    "text": "Dolor ut Lorem adipisicing. Proident nostrud qui officia est exercitation tempor. Ipsum tempor reprehenderit ut minim dolore amet.",
                     "spans": []
                   }
                 ],
-                "uid": "drive next-generation paradigms"
-              },
-              {
-                "title": [
-                  {
-                    "type": "paragraph",
-                    "text": "Mollit eiusmod pariatur qui aliquip excepteur. In et consequat ullamco id aliquip nisi Lorem qui est labore quis culpa. Adipisicing consectetur occaecat eu quis dolor deserunt cillum aute ut anim reprehenderit.",
-                    "spans": []
-                  }
-                ],
-                "description": [
-                  {
-                    "type": "paragraph",
-                    "text": "In nulla minim ad duis mollit ut ullamco culpa ut dolore sint aliquip nisi.",
-                    "spans": []
-                  }
-                ],
-                "uid": "reinvent frictionless interfaces"
-              },
-              {
-                "title": [
-                  {
-                    "type": "paragraph",
-                    "text": "Enim sunt esse irure occaecat pariatur consequat nostrud et officia et aute. Pariatur eu ad amet ea excepteur. Minim labore veniam excepteur eu ea.",
-                    "spans": []
-                  }
-                ],
-                "description": [
-                  {
-                    "type": "paragraph",
-                    "text": "Nisi laboris sit tempor ex deserunt laboris sint sint in voluptate tempor cupidatat ad. Id veniam anim in ut reprehenderit magna minim.",
-                    "spans": []
-                  }
-                ],
-                "uid": "evolve B2C blockchains"
-              },
-              {
-                "title": [
-                  {
-                    "type": "paragraph",
-                    "text": "Exercitation occaecat voluptate reprehenderit aliqua.",
-                    "spans": []
-                  }
-                ],
-                "description": [
-                  {
-                    "type": "paragraph",
-                    "text": "Consectetur quis ut sint. Reprehenderit nisi reprehenderit exercitation cupidatat consequat. Laboris enim qui dolore sit do pariatur.",
-                    "spans": []
-                  }
-                ],
-                "uid": "morph impactful solutions"
+                "uid": "empower virtual ROI"
               }
             ],
             "primary": {
               "title": [
                 {
-                  "type": "heading1",
-                  "text": "Harness front-end infrastructures",
+                  "type": "heading2",
+                  "text": "Facilitate out-of-the-box systems",
                   "spans": []
                 }
               ]
@@ -860,80 +1143,80 @@
                 "title": [
                   {
                     "type": "heading2",
-                    "text": "Reinvent turn-key users",
+                    "text": "Evolve rich users",
                     "spans": []
                   }
                 ],
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Deserunt tempor esse officia in proident mollit nostrud.",
+                    "text": "Ut ut deserunt Lorem aliquip labore duis quis aliqua nisi est proident laborum. Id quis est ut non ut non quis occaecat do est nostrud minim nisi voluptate aliquip. Nulla sint ut commodo.",
                     "spans": []
                   }
                 ],
-                "number": 321,
-                "uid": "recontextualize e-business portals"
+                "number": 4385,
+                "uid": "evolve back-end web services"
               },
               {
                 "title": [
                   {
                     "type": "heading2",
-                    "text": "Synthesize one-to-one bandwidth",
+                    "text": "Deliver out-of-the-box interfaces",
                     "spans": []
                   }
                 ],
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Nisi qui cillum consectetur tempor sint.",
+                    "text": "Ullamco laboris fugiat nisi pariatur. Proident ea qui duis. Eiusmod do labore est id consequat cillum nostrud tempor pariatur eu cillum eiusmod culpa est.",
                     "spans": []
                   }
                 ],
-                "number": 5362,
-                "uid": "productize integrated web services"
+                "number": 4966,
+                "uid": "reinvent front-end e-commerce"
               },
               {
                 "title": [
                   {
                     "type": "heading2",
-                    "text": "Scale B2B experiences",
+                    "text": "Benchmark best-of-breed e-services",
                     "spans": []
                   }
                 ],
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Proident eiusmod ullamco dolore amet eu Lorem anim in mollit est.",
+                    "text": "Mollit culpa magna excepteur ea tempor id sint consectetur. Irure laboris eu nulla dolore adipisicing cupidatat duis quis. Aliqua non voluptate Lorem et ipsum labore enim quis minim enim veniam pariatur aute consequat.",
                     "spans": []
                   }
                 ],
-                "number": 254,
-                "uid": "enable real-time functionalities"
+                "number": 3153,
+                "uid": "expedite visionary schemas"
               },
               {
                 "title": [
                   {
                     "type": "heading2",
-                    "text": "Revolutionize intuitive vortals",
+                    "text": "Iterate customized methodologies",
                     "spans": []
                   }
                 ],
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Voluptate elit qui consequat reprehenderit dolore esse sit culpa nulla amet duis. Excepteur aute consequat anim ea. Excepteur minim nulla anim deserunt id enim dolore non.",
+                    "text": "Sunt veniam consectetur incididunt.",
                     "spans": []
                   }
                 ],
-                "number": 7766,
-                "uid": "redefine transparent content"
+                "number": 8853,
+                "uid": "evolve 24/365 relationships"
               }
             ],
             "primary": {
               "title": [
                 {
-                  "type": "heading1",
-                  "text": "Incubate vertical experiences",
+                  "type": "heading2",
+                  "text": "Disintermediate web-enabled markets",
                   "spans": []
                 }
               ]
@@ -948,59 +1231,110 @@
                 "title": [
                   {
                     "type": "heading2",
-                    "text": "Syndicate 24/7 metrics",
+                    "text": "Reinvent rich e-commerce",
                     "spans": []
                   }
                 ],
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Magna deserunt laborum aliquip cupidatat est laborum sit nostrud et mollit labore.",
+                    "text": "Sit id cillum nisi nulla consequat adipisicing pariatur et labore excepteur adipisicing incididunt.",
                     "spans": []
                   }
                 ],
-                "uid": "reintermediate best-of-breed methodologies"
+                "uid": "cultivate out-of-the-box markets"
               },
               {
                 "title": [
                   {
                     "type": "heading2",
-                    "text": "Generate 24/365 networks",
+                    "text": "Extend collaborative synergies",
                     "spans": []
                   }
                 ],
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Tempor nisi est velit sunt eu ad laborum occaecat duis.",
+                    "text": "Ipsum fugiat minim commodo voluptate reprehenderit adipisicing non culpa consequat. Consectetur est ad nostrud reprehenderit id consequat enim quis sint. Labore incididunt mollit exercitation qui officia elit velit eu elit qui et.",
                     "spans": []
                   }
                 ],
-                "uid": "innovate bleeding-edge action-items"
+                "uid": "embrace killer initiatives"
               },
               {
                 "title": [
                   {
                     "type": "heading2",
-                    "text": "Optimize best-of-breed models",
+                    "text": "Drive seamless infrastructures",
                     "spans": []
                   }
                 ],
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Id officia minim ea minim Lorem adipisicing cillum.",
+                    "text": "Aliqua esse qui fugiat eu adipisicing fugiat. Qui dolore exercitation sint eiusmod cupidatat ullamco labore. Nisi in voluptate incididunt ex deserunt laboris aliqua reprehenderit.",
                     "spans": []
                   }
                 ],
-                "uid": "benchmark proactive interfaces"
+                "uid": "embrace open-source web services"
+              },
+              {
+                "title": [
+                  {
+                    "type": "heading2",
+                    "text": "Enable impactful deliverables",
+                    "spans": []
+                  }
+                ],
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Occaecat occaecat aliquip consequat sit dolore nulla nisi duis. Irure officia ut aliqua exercitation tempor consequat excepteur cupidatat.",
+                    "spans": []
+                  }
+                ],
+                "uid": "benchmark seamless relationships"
+              },
+              {
+                "title": [
+                  {
+                    "type": "heading2",
+                    "text": "Enable 24/7 interfaces",
+                    "spans": []
+                  }
+                ],
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Id nostrud nostrud fugiat et. Consequat anim aliquip incididunt deserunt qui. Dolore esse consequat consectetur mollit reprehenderit reprehenderit ullamco eu elit cillum minim.",
+                    "spans": []
+                  }
+                ],
+                "uid": "harness e-business e-markets"
+              },
+              {
+                "title": [
+                  {
+                    "type": "heading2",
+                    "text": "Syndicate cutting-edge markets",
+                    "spans": []
+                  }
+                ],
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Voluptate ad non ullamco aliquip laborum quis aliqua id pariatur do amet anim sunt fugiat fugiat. Lorem dolor labore dolor eu aute aliquip fugiat consequat voluptate amet duis est aliqua ad. Do enim ut occaecat sunt non in veniam est duis sint minim.",
+                    "spans": []
+                  }
+                ],
+                "uid": "enable transparent markets"
               }
             ],
             "primary": {
               "title": [
                 {
-                  "type": "heading1",
-                  "text": "Morph global users",
+                  "type": "heading2",
+                  "text": "Scale cross-media e-tailers",
                   "spans": []
                 }
               ]
@@ -1009,7 +1343,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "js"
         },
         "screenshotPaths": {
@@ -1251,7 +1584,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "js"
         },
         "screenshotPaths": {

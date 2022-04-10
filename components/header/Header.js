@@ -6,7 +6,6 @@ import { Default, Desktop, Mobile } from '../MediaQueries';
 import Navigation from './Navigation';
 
 export const Header = ({ menu }) => {
-  console.log('MENU', menu);
   return (
     <StyledWrapper>
       <StyledFlex>

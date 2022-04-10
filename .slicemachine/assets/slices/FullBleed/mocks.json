@@ -7,15 +7,15 @@
     "primary": {
       "title": [
         {
-          "type": "heading2",
-          "text": "Enhance synergistic vortals",
+          "type": "heading1",
+          "text": "Deliver scalable web services",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "Velit laborum ipsum laborum sit. Irure eu esse duis labore excepteur magna in.",
+          "text": "Magna aliquip occaecat veniam. Sit deserunt nisi sint ad est. Duis duis laboris consectetur enim eiusmod enim anim proident dolore sit voluptate fugiat.",
           "spans": []
         }
       ],
@@ -26,13 +26,23 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=900&h=500&fit=crop"
+        "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=900&h=500&fit=crop",
+        "mobile": {
+          "dimensions": {
+            "width": 400,
+            "height": 600
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=400&h=600&fit=crop"
+        }
       },
-      "buttonLabel": "redefine synergistic networks",
+      "buttonLabel": "implement front-end users",
       "buttonLink": {
         "link_type": "Web",
-        "url": "https://prismic.io"
-      }
+        "url": "https://slicemachine.dev"
+      },
+      "inside": true
     }
   },
   {
@@ -43,15 +53,15 @@
     "primary": {
       "title": [
         {
-          "type": "heading2",
-          "text": "Deploy web-enabled niches",
+          "type": "heading1",
+          "text": "Scale sticky eyeballs",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "Incididunt anim adipisicing pariatur sunt cupidatat.",
+          "text": "Ea amet aute laborum ad amet et ad cillum. Non nisi dolore consectetur exercitation exercitation Lorem sit aliqua Lorem irure adipisicing dolore tempor quis exercitation.",
           "spans": []
         }
       ],
@@ -62,7 +72,7 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&h=500&fit=crop",
+        "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=900&h=500&fit=crop",
         "mobile": {
           "dimensions": {
             "width": 400,
@@ -70,9 +80,10 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=400&h=600&fit=crop"
+          "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=400&h=600&fit=crop"
         }
-      }
+      },
+      "inside": false
     }
   }
 ]

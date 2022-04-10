@@ -12,6 +12,33 @@
         },
         "type": "UID"
       },
+      "title": {
+        "config": {
+          "label": "Title",
+          "placeholder": "Insert title for this page...",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        },
+        "type": "StructuredText"
+      },
+      "description": {
+        "config": {
+          "label": "Description",
+          "placeholder": "Insert descritpion for this page...",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        },
+        "type": "StructuredText"
+      },
+      "installmentsSummary": {
+        "config": {
+          "label": "Installments Summary",
+          "placeholder": "Text for installments summary...",
+          "allowTargetBlank": true,
+          "single": "heading4"
+        },
+        "type": "StructuredText"
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
@@ -20,7 +47,7 @@
             "full_bleed": {
               "type": "SharedSlice"
             },
-            "single_image": {
+            "calculator": {
               "type": "SharedSlice"
             }
           }

@@ -1,0 +1,155 @@
+{
+  "id": "calculator",
+  "type": "SharedSlice",
+  "name": "Calculator",
+  "description": "Calculator",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Calculator",
+      "primary": {
+        "productName": {
+          "config": {
+            "label": "Product Name",
+            "placeholder": "Insert product name...",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        },
+        "installmentsText": {
+          "config": {
+            "label": "Installments Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "installmentsArray": {
+          "config": {
+            "label": "Array Of Installments",
+            "placeholder": "Enter values separated with comma",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "licowki",
+      "name": "licowki",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Calculator",
+      "primary": {
+        "productName": {
+          "config": {
+            "label": "Product Name",
+            "placeholder": "Enter product name...",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        },
+        "installmentsText": {
+          "config": {
+            "label": "Installments Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "installmentsArray": {
+          "config": {
+            "label": "Installments Array",
+            "placeholder": "Enter values separated with comma",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "licowkiText": {
+          "config": {
+            "label": "Licowki Text",
+            "placeholder": "Wybierz ilość licówek",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "licowkiArray": {
+          "config": {
+            "label": "Licowki Array",
+            "placeholder": "Enter values separated with comma",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "ortodoncja",
+      "name": "ortodoncja",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Calculator",
+      "primary": {
+        "productName": {
+          "config": {
+            "label": "Product Name",
+            "placeholder": "Enter product name...",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        },
+        "installmentsText": {
+          "config": {
+            "label": "Installments Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "installmentsArray": {
+          "config": {
+            "label": "Installments Array",
+            "placeholder": "Enter values separated with comma",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "treatmentText": {
+          "config": {
+            "label": "Leczenie Text",
+            "placeholder": "Wybierz ilość licówek",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "treatmentTimeArray": {
+          "config": {
+            "label": "Czas Leczenia Array",
+            "placeholder": "Enter values separated with comma",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

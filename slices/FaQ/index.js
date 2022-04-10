@@ -5,9 +5,9 @@ import Description from '../../components/Description';
 
 const FaQ = ({ slice }) => (
   <>
-    <Title>
+    {/* <Title>
       <h2>F&Q</h2>
-    </Title>
+    </Title> */}
     {slice.items.map((item) => (
       <div key={item.uid}>
         <Title>

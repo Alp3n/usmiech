@@ -116,7 +116,14 @@
     },
     "RepetableItems": {
       "default": {
-        "primary": {}
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
       },
       "steps": {
         "items": {
@@ -126,6 +133,14 @@
               "blocks": 1
             }
           },
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "primary": {
           "title": {
             "config": {
               "patternType": "HEADING",
@@ -145,6 +160,14 @@
           "description": {
             "config": {
               "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
               "blocks": 1
             }
           }
@@ -169,13 +192,102 @@
           }
         }
       }
+    },
+    "Calculator": {
+      "default": {
+        "primary": {
+          "productName": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "installmentsArray": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      },
+      "licowki": {
+        "primary": {
+          "installmentsText": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "productName": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "installmentsArray": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "licowkiArray": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "licowkiText": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      },
+      "ortodoncja": {
+        "primary": {
+          "treatmentTimeArray": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "treatmentText": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   },
   "_cts": {
     "pageHome": {},
     "pageTreatment": {},
     "pageHowItWorks": {},
-    "pageOffer": {},
+    "pageOffer": {
+      "installmentsSummary": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "description": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
     "pageBooking": {},
     "pageClinics": {},
     "pageAboutUs": {},
