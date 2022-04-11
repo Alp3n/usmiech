@@ -111,10 +111,6 @@ const StyledAbsoluteWrapper = styled.div`
   grid-template-columns: 100%;
   align-self: center;
 
-  > span:nth-child(1) {
-    ${({ inside }) => (inside ? 'color:white;' : null)};
-  }
-
   @media only screen and (max-width: 767px) {
     margin-left: 1rem;
     ${({ inside }) => (inside ? 'top:3rem;' : 'bottom: 0;')};
