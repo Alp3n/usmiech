@@ -1,16 +1,52 @@
 import styled from '@emotion/styled';
+import { MdPhone, MdMail, MdLocationOn } from 'react-icons/md';
+import { RiFacebookCircleLine, RiInstagramLine } from 'react-icons/ri';
+import Navigation from '../header/Navigation';
+import { Media } from '../MediaQueries';
 
-const Footer = () => {
+const Footer = ({ menu }) => {
   return (
     <StyledFooter>
-      <StyledLine />
-      <StyledContactGrid>
-        <div>
-          <div>sda</div>
-          <div>dsa</div>
-        </div>
-      </StyledContactGrid>
-      <StyledLine />
+      <StyledWrapper>
+        <StyledLine greaterThan='sm' area='line' />
+        <StyledLine at='sm' />
+        <StyledGrid>
+          <StyledItem>
+            <MdLocationOn size={'24'} />
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+              }}
+            >
+              <p style={{ marginTop: 0 }}>ul. Grzybowska 43 lok. U7</p>
+              <p style={{ marginTop: 0 }}>00-855 Warszawa, Polska</p>
+            </div>
+          </StyledItem>
+          <StyledItem>
+            <MdPhone size={'24'} />
+            <span>505 255 600</span>
+          </StyledItem>
+          <StyledItem>
+            <MdMail size={'24'} />
+            <span>kontakt@smiechu.pl</span>
+          </StyledItem>
+        </StyledGrid>
+        <StyledLine at='sm' />
+        <StyledGrid>
+          <Navigation menu={menu} vertical />
+        </StyledGrid>
+        <StyledLine at='sm' />
+        <StyledFlex>
+          <StyledItem>
+            <RiFacebookCircleLine size={'34'} />
+          </StyledItem>
+          <StyledItem>
+            <RiInstagramLine size={'34'} />
+          </StyledItem>
+        </StyledFlex>
+        <StyledLine greaterThan='sm' area='line2' />
+      </StyledWrapper>
     </StyledFooter>
   );
 };
@@ -19,7 +55,7 @@ const StyledFooter = styled.footer`
   display: grid;
   grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr;
   grid-column-gap: 24px;
-  margin: 2rem 0;
+  margin: 4rem 0 2rem 0;
   > * {
     grid-column: 2;
   }
@@ -30,13 +66,58 @@ const StyledFooter = styled.footer`
   }
 `;
 
-const StyledLine = styled.div`
-  width: 100%;
-  border-top: 1px solid black;
-  margin: 3rem 0;
+const StyledWrapper = styled.div`
+  display: grid;
+  grid-template-areas:
+    'contact'
+    'menu'
+    'social'
+    'line2';
+  gap: 2rem;
+  @media only screen and (min-width: 768px) {
+    grid-template-areas:
+      'line line'
+      'contact menu'
+      'social menu'
+      'line2 line2';
+    gap: 4rem;
+  }
 `;
 
-const StyledContactGrid = styled.div`
+const StyledLine = styled(Media)`
+  width: 100%;
+  border-top: 1px solid black;
+  grid-area: ${({ area }) => (area ? area : null)};
+`;
+
+const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
+  place-items: center;
+  gap: 2.5rem;
+  @media only screen and (min-width: 768px) {
+    place-items: flex-start;
+  }
+`;
+
+const StyledFlex = styled.div`
+  display: flex;
+  gap: 2rem;
+
+  @media only screen and (max-width: 768px) {
+    place-content: center;
+  }
+`;
+
+const StyledItem = styled.div`
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  place-content: center;
+  place-items: center;
+
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    place-items: start;
+  }
 `;

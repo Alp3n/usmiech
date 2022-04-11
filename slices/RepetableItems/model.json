@@ -17,7 +17,7 @@
             "label": "Title",
             "placeholder": "This is where it all begins...",
             "allowTargetBlank": true,
-            "single": "heading2"
+            "single": "heading1"
           }
         }
       },
@@ -47,7 +47,8 @@
           },
           "type": "Text"
         }
-      }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     },
     {
       "id": "steps",
@@ -63,6 +64,23 @@
             "placeholder": "This is where it all begins...",
             "allowTargetBlank": true,
             "single": "heading2"
+          }
+        },
+        "buttonLabel": {
+          "config": {
+            "label": "Button Label",
+            "placeholder": "Insert button label...",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "buttonLink": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "Choose link to a page...",
+            "select": null
           }
         }
       },
@@ -99,7 +117,8 @@
           },
           "type": "Text"
         }
-      }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     },
     {
       "id": "opinions",
@@ -144,7 +163,8 @@
           },
           "type": "Text"
         }
-      }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]
 }

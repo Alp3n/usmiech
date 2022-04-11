@@ -1,18 +1,17 @@
 import Head from 'next/head';
 import styled from '@emotion/styled';
 import { Header } from '../header/Header';
-import styles from './Layout.module.css';
 import Footer from '../footer/Footer';
 
 export const Layout = ({ children, menu }) => {
   return (
     <>
       <Head>
-        <title> Prismic Next.js Multi Page Website </title>
+        <title>u'Smiech - gabinet stomatologii estetycznej</title>
       </Head>
       <Header menu={menu} />
       <StyledMain>{children}</StyledMain>
-      <Footer></Footer>
+      <Footer menu={menu}></Footer>
     </>
   );
 };

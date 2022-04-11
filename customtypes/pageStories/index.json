@@ -15,7 +15,6 @@
       "story": {
         "config": {
           "label": "Story",
-          "placeholder": "Add story of a patient...",
           "fields": {
             "image": {
               "config": {
@@ -63,7 +62,8 @@
               "config": {
                 "label": "Button Link",
                 "placeholder": "Insert link to a page of patient...",
-                "allowTargetBlank": false
+                "allowTargetBlank": false,
+                "select": null
               },
               "type": "Link"
             }
@@ -77,6 +77,9 @@
         "config": {
           "choices": {
             "full_bleed": {
+              "type": "SharedSlice"
+            },
+            "story": {
               "type": "SharedSlice"
             }
           }

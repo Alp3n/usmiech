@@ -2,23 +2,34 @@ import React from 'react';
 import { PrismicRichText } from '@prismicio/react';
 import Title from '../../components/Title';
 import Description from '../../components/Description';
+import styled from '@emotion/styled';
 
 const FaQ = ({ slice }) => (
-  <>
-    {/* <Title>
-      <h2>F&Q</h2>
-    </Title> */}
+  <StyledWrapper>
     {slice.items.map((item) => (
-      <div key={item.uid}>
+      <StyledItem key={item.uid}>
         <Title>
           <PrismicRichText field={item.Question} />
         </Title>
         <Description>
           <PrismicRichText field={item.Answer} />
         </Description>
-      </div>
+      </StyledItem>
     ))}
-  </>
+  </StyledWrapper>
 );
 
 export default FaQ;
+
+const StyledWrapper = styled.div`
+  margin-bottom: 3rem;
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 6rem;
+  }
+`;
+
+const StyledItem = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+`;

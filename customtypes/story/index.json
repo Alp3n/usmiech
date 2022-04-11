@@ -1,0 +1,81 @@
+{
+  "id": "story",
+  "label": "Story",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "Image",
+          "constraint": {},
+          "thumbnails": [
+            {
+              "name": "mobile",
+              "width": 430,
+              "height": 430
+            }
+          ]
+        }
+      },
+      "firstText": {
+        "type": "StructuredText",
+        "config": {
+          "label": "First Text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "firstDescription": {
+        "type": "StructuredText",
+        "config": {
+          "label": "First Description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "treatmentText": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Treatment Text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "satisfactionText": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Satisfaction Text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "double_image": {
+              "type": "SharedSlice"
+            },
+            "full_bleed": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

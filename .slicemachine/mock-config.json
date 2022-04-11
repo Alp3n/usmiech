@@ -17,6 +17,12 @@
           },
           "image": {
             "content": "https://images.unsplash.com/photo-1499651681375-8afc5a4db253"
+          },
+          "buttonLabel": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
           }
         }
       },
@@ -44,6 +50,12 @@
           },
           "imageSmall": {
             "content": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+          },
+          "buttonLabel": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
           }
         }
       },
@@ -92,6 +104,12 @@
           "title": {
             "config": {
               "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "buttonLabel": {
+            "config": {
+              "patternType": "PARAGRAPH",
               "blocks": 1
             }
           }
@@ -144,6 +162,12 @@
           "title": {
             "config": {
               "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "buttonLabel": {
+            "config": {
+              "patternType": "PARAGRAPH",
               "blocks": 1
             }
           }
@@ -262,6 +286,18 @@
           }
         }
       }
+    },
+    "Story": {
+      "default": {
+        "primary": {
+          "subTitle": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   },
   "_cts": {
@@ -321,6 +357,7 @@
         }
       }
     },
-    "menu": {}
+    "menu": {},
+    "story": {}
   }
 }

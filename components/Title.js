@@ -1,7 +1,12 @@
 import styled from '@emotion/styled';
 
-const Title = ({ children, absolute, size, gridArea }) => (
-  <StyledTitle absolute={absolute} size={size} gridArea={gridArea}>
+const Title = ({ children, absolute, size, gridArea, white }) => (
+  <StyledTitle
+    absolute={absolute}
+    size={size}
+    gridArea={gridArea}
+    white={white}
+  >
     {children}
   </StyledTitle>
 );
@@ -13,10 +18,10 @@ const StyledTitle = styled.span`
   bottom: 0;
   place-content: bottom;
   margin: 0;
-  color: #000;
+  color: ${({ white }) => (white === 'white' ? '#fff' : '#000')};
   place-self: baseline;
   z-index: 1000;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
   grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
 
   > h1 {
@@ -24,20 +29,22 @@ const StyledTitle = styled.span`
     margin: 0;
     padding: 0;
     bottom: 50px;
+    font-weight: 200;
   }
 
   > h2 {
-    font-size: ${({ size }) => (size === 'large' ? '2rem' : '1.8rem')};
+    font-size: ${({ size }) => (size === 'large' ? '2rem' : '2.2rem')};
     line-height: 1.5;
     margin: 0;
   }
   @media only screen and (min-width: 767px) {
     > h1 {
-      font-size: ${({ size }) => (size === 'large' ? '2rem' : '6rem')};
+      font-size: ${({ size }) => (size === 'large' ? '2rem' : '5vw')};
+      font-weight: 200;
     }
 
     > h2 {
-      font-size: ${({ size }) => (size === 'large' ? '2rem' : '1.8rem')};
+      font-size: ${({ size }) => (size === 'large' ? '2rem' : '2rem')};
       line-height: 1.5;
     }
   }

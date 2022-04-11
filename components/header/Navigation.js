@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 import { PrismicRichText } from '@prismicio/react';
-import MyLink from './MyLink';
+import MyLink from '../MyLink';
 
-const Navigation = ({ menu }) => {
+const Navigation = ({ menu, vertical }) => {
   return (
-    <StyledNav className='flex-grow mr-5'>
-      <StyledUl>
+    <StyledNav>
+      <StyledUl vertical={vertical}>
         {menu.data?.menuLinks.map((menuLink) => (
           <MyLink key={menuLink.link.id} field={menuLink.link}>
             <PrismicRichText field={menuLink.label} />
@@ -25,4 +25,7 @@ const StyledNav = styled.nav`
 const StyledUl = styled.ul`
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
+  ${({ vertical }) => (vertical ? 'flex-direction: column;' : null)}
 `;

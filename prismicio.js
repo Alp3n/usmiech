@@ -11,19 +11,19 @@ export function linkResolver(doc) {
     case 'pageHome':
       return '/';
     case 'pageAboutUs':
-      return `/o-nas`;
+      return `/about`;
     case 'pageTreatment':
-      return `/leczenie`;
+      return `/treatment`;
     case 'pageStories':
-      return `/historie`;
+      return `/stories`;
     case 'pageClinics':
-      return `/gabinety`;
+      return `/clinics`;
     case 'pageOffer':
       return `/offer`;
     case 'pageHowItWorks':
-      return `/jak-to-dziala`;
+      return `/howItWorks`;
     case 'pageBooking':
-      return `/gabinety`;
+      return `/clinics`;
     default:
       return null;
   }

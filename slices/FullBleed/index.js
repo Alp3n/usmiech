@@ -1,39 +1,94 @@
 import React from 'react';
 import { PrismicRichText } from '@prismicio/react';
 import styled from '@emotion/styled';
-import {
-  Default,
-  Desktop,
-  Mobile,
-  Tablet,
-} from '../../components/MediaQueries';
 import Image from 'next/image';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
+import { Media } from '../../components/MediaQueries';
 
 const FullBleed = ({ slice }) => (
   <>
-    {console.log(slice)}
-    <StyledImageWrapper className='full-bleed'>
-      {slice.primary.inside ? null : (
-        <Title absolute>
-          {slice.primary.title ? (
-            <PrismicRichText field={slice.primary.title} />
+    {/* MOBILE */}
+    <StyledImageWrapper
+      at='sm'
+      className='full-bleed'
+      color={slice.primary?.color}
+      inside={slice.primary?.inside}
+    >
+      <div className='full-bleed' style={{ position: 'relative' }}>
+        <Image
+          src={`${slice.primary.image.mobile.url}&auto=noCompress`}
+          alt={slice.primary.image.mobile.alt}
+          width={slice.primary.image.mobile.dimensions.width}
+          height={slice.primary.image.mobile.dimensions.height}
+          layout='responsive'
+          quality={100}
+        />
+        <StyledAbsoluteWrapper inside={slice.primary.inside}>
+          <Title white={false}>
+            {slice.primary.title ? (
+              <PrismicRichText field={slice.primary.title} />
+            ) : null}
+          </Title>
+          {slice.primary.inside ? (
+            slice.primary.description ? (
+              <>
+                <StyledDescription color={slice.primary?.color}>
+                  <PrismicRichText field={slice.primary.description} />
+                </StyledDescription>
+                {slice.primary.buttonLink ? (
+                  <Button
+                    link={slice.primary.buttonLink}
+                    label={slice.primary.buttonLabel}
+                    plain
+                  />
+                ) : null}
+              </>
+            ) : null
           ) : null}
-        </Title>
+        </StyledAbsoluteWrapper>
+      </div>
+      {slice.primary.inside ? null : (
+        <div>
+          {slice.primary.description ? (
+            <StyledDescription>
+              <PrismicRichText field={slice.primary.description} />
+            </StyledDescription>
+          ) : null}
+        </div>
       )}
-      <div className='full-bleed'>
-        <Mobile>
-          <Image
-            src={`${slice.primary.image.mobile.url}&auto=noCompress`}
-            alt={slice.primary.image.mobile.alt}
-            width={slice.primary.image.mobile.dimensions.width}
-            height={slice.primary.image.mobile.dimensions.height}
-            layout='responsive'
-            quality={100}
+    </StyledImageWrapper>
+
+    {/* DEFAULT */}
+    <StyledImageWrapper
+      greaterThan='sm'
+      className='full-bleed'
+      color={slice.primary?.color}
+      inside={slice.primary?.inside}
+    >
+      <StyledAbsoluteWrapper>
+        {slice.primary.title ? (
+          <Title white={slice.primary?.color}>
+            <PrismicRichText field={slice.primary.title} />
+          </Title>
+        ) : null}
+        {slice.primary.description ? (
+          <StyledDescription color={slice.primary.color}>
+            <PrismicRichText field={slice.primary.description} />
+          </StyledDescription>
+        ) : null}
+        {slice.primary.buttonLink ? (
+          <Button
+            link={slice.primary.buttonLink}
+            label={slice.primary.buttonLabel}
+            color={slice.primary?.color}
           />
-        </Mobile>
-        <Default>
+        ) : null}
+      </StyledAbsoluteWrapper>
+      {/* TODO TABLET SIZES */}
+
+      <div className='full-bleed' style={{ overflow: 'hidden' }}>
+        <Media greaterThan='sm'>
           <Image
             src={`${slice.primary.image.url}&auto=noCompress`}
             alt={slice.primary.image.alt}
@@ -42,87 +97,64 @@ const FullBleed = ({ slice }) => (
             layout='responsive'
             quality={100}
           />
-        </Default>
+        </Media>
       </div>
-      {slice.primary.inside ? (
-        <StyledWrapper absolute>
-          <Title>
-            {slice.primary.title ? (
-              <PrismicRichText field={slice.primary.title} />
-            ) : null}
-          </Title>
-          {slice.primary.description ? (
-            <StyledDescription>
-              <PrismicRichText field={slice.primary.description} />
-            </StyledDescription>
-          ) : null}
-          {slice.variation === 'default' ? (
-            <Button
-              link={slice.primary.buttonLink}
-              label={slice.primary.buttonLabel}
-              plain
-            />
-          ) : null}
-        </StyledWrapper>
-      ) : null}
     </StyledImageWrapper>
-    {slice.primary.inside ? null : (
-      <StyledWrapper>
-        {slice.primary.description ? (
-          <StyledDescription>
-            <PrismicRichText field={slice.primary.description} />
-          </StyledDescription>
-        ) : null}
-        {slice.variation === 'default' ? (
-          <Button
-            link={slice.primary.buttonLink}
-            label={slice.primary.buttonLabel}
-          />
-        ) : null}
-      </StyledWrapper>
-    )}
   </>
 );
 
 export default FullBleed;
 
-const StyledWrapper = styled.div`
-  margin-bottom: 1rem;
-  position: ${({ absolute }) => (absolute ? 'absolute' : null)};
-`;
-
-const StyledTitle = styled.span`
+const StyledAbsoluteWrapper = styled.div`
   position: absolute;
-  bottom: 0;
-  place-content: bottom;
-  padding: 2rem 0;
-  color: #000;
-  font-size: 1.8rem;
-  z-index: 100;
-  h2 {
-    font-weight: 200;
-    line-height: 1.3rem;
-    text-transform: capitalize;
+  display: grid;
+  grid-template-columns: 100%;
+  align-self: center;
+
+  > span:nth-child(1) {
+    ${({ inside }) => (inside ? 'color:white;' : null)};
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin-left: 1rem;
+    ${({ inside }) => (inside ? 'top:3rem;' : 'bottom: 0;')};
   }
 `;
 
 const StyledDescription = styled.span`
+  position: relative;
   margin-bottom: 2rem;
+  z-index: 100;
+  width: 50ch;
+  ${({ color }) =>
+    color === 'white'
+      ? `
+    color: white;
+  `
+      : 'color: black;'}
+
   p {
     font-weight: 300;
     line-height: 2rem;
-    text-transform: capitalize;
+  }
+
+  @media only screen and (min-width: 768px) {
+    p {
+      line-height: 2.2rem;
+      font-size: 1rem;
+      /* width: 100%; */
+    }
   }
 `;
 
-const StyledImageWrapper = styled.div`
+const StyledImageWrapper = styled(Media)`
   position: relative;
-  width: 100%;
-  margin-bottom: 2rem;
   display: grid;
+  margin-bottom: 3rem;
   grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr;
   grid-column-gap: 24px;
   height: auto;
+
   > * {
     grid-column: 2;
   }
@@ -130,8 +162,13 @@ const StyledImageWrapper = styled.div`
     grid-column: 1 / -1;
     width: 100%;
   }
-`;
-
-const ImageWrapper = styled.div`
-  height: 600px;
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 3rem;
+    ${({ color }) =>
+      color === 'white'
+        ? ` > * > * {
+    color: white;
+  }`
+        : '#000;'}
+  }
 `;

@@ -29,13 +29,6 @@
             "multi": "paragraph"
           }
         },
-        "buttonLabel": {
-          "config": {
-            "label": "Button Label",
-            "placeholder": "Insert button label..."
-          },
-          "type": "Text"
-        },
         "buttonLink": {
           "config": {
             "label": "Button Link",
@@ -75,6 +68,15 @@
             ]
           },
           "type": "Image"
+        },
+        "buttonLabel": {
+          "config": {
+            "label": "Button Label",
+            "placeholder": "Insert button label...",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
         }
       },
       "items": {}

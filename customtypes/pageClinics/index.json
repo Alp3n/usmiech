@@ -19,6 +19,12 @@
           "choices": {
             "full_bleed": {
               "type": "SharedSlice"
+            },
+            "single_image": {
+              "type": "SharedSlice"
+            },
+            "fa_q": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -1,0 +1,60 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "story",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Aggregate e-business networks",
+          "spans": []
+        }
+      ],
+      "subTitle": [
+        {
+          "type": "paragraph",
+          "text": "Consectetur excepteur consectetur officia nulla ex exercitation adipisicing est et mollit fugiat adipisicing enim irure dolor.",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Anim eiusmod qui aliquip sit. Veniam nulla fugiat dolor dolor et.",
+          "spans": []
+        }
+      ],
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=900&h=500&fit=crop",
+        "mobile": {
+          "dimensions": {
+            "width": 430,
+            "height": 430
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=430&h=430&fit=crop"
+        }
+      },
+      "buttonLink": {
+        "link_type": "Web",
+        "url": "http://twitter.com"
+      },
+      "buttonLabel": [
+        {
+          "type": "paragraph",
+          "text": "Eiusmod officia reprehenderit elit labore nulla ad occaecat reprehenderit minim eu fugiat. Adipisicing voluptate duis deserunt.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

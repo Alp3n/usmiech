@@ -6,6 +6,7 @@ import FaQ from './FaQ';
 import FullBleed from './FullBleed';
 import RepetableItems from './RepetableItems';
 import SingleImage from './SingleImage';
+import Story from './Story';
 
 export {
 	Calculator,
@@ -14,6 +15,7 @@ export {
 	FullBleed,
 	RepetableItems,
 	SingleImage,
+	Story,
 };
 
 export const components = {
@@ -23,4 +25,5 @@ export const components = {
 	full_bleed: FullBleed,
 	repetable_items: RepetableItems,
 	single_image: SingleImage,
+	story: Story,
 };

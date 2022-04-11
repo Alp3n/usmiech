@@ -1,9 +1,15 @@
 import { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
-import Title from '../Title';
 import Price from './price';
 
-const Calculator = ({ monthsData, ratesData, priceData }) => {
+const Calculator = ({
+  monthsData,
+  ratesData,
+  priceData,
+  title,
+  firstDesc,
+  secondDesc,
+}) => {
   const [months, setMonths] = useState(monthsData);
   const [rates, setRates] = useState(ratesData);
   const [selectedMonth, setSelectedMonth] = useState([months[0], 'index']);
@@ -27,9 +33,9 @@ const Calculator = ({ monthsData, ratesData, priceData }) => {
 
   return (
     <StyledWrapper>
-      <Title>Licówki</Title>
+      <h2>{title}</h2>
       <StyledInputWrapper>
-        <span>Wybierz ilość licówek</span>
+        <span>{firstDesc}</span>
         <StyledOptionsWrapper>
           {months?.map((value, index) => (
             <>
@@ -48,7 +54,7 @@ const Calculator = ({ monthsData, ratesData, priceData }) => {
         </StyledOptionsWrapper>
       </StyledInputWrapper>
       <StyledInputWrapper>
-        <span>Wybierz ilość rat miesięcznych</span>
+        <span>{secondDesc}</span>
         <StyledOptionsWrapper>
           {rates.map((value, index) => (
             <>
@@ -76,12 +82,20 @@ export default Calculator;
 const StyledInputWrapper = styled.div`
   display: grid;
   gap: 24px;
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 20% 1fr;
+  }
 `;
 
 const StyledWrapper = styled.div`
   display: grid;
   grid-template-columns: 1;
   gap: 30px;
+  margin-bottom: 3rem;
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 5rem;
+  }
 `;
 
 const StyledOptionsWrapper = styled.div`
@@ -104,6 +118,7 @@ const StyledCircle = styled.div`
   border-radius: 100%;
   background-color: ${({ selectedValue, index, values }) =>
     selectedValue[0] === values[index] ? '#A79797' : 'transparent'};
+  cursor: pointer;
 `;
 
 const StyledValue = styled.span`
