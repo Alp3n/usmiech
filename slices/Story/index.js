@@ -71,8 +71,8 @@ const StyledGrid = styled.div`
 
 const StyledDescription = styled.div`
   font-size: 1.1rem;
-  line-height: 1.5;
-
+  line-height: 2.2;
+  margin-bottom: 2rem;
   @media only screen and (min-width: 768px) {
     font-size: 1.5rem;
     line-height: 1.6;

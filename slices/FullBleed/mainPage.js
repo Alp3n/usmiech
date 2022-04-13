@@ -25,11 +25,11 @@ const MainPage = ({ slice }) => (
           quality={90}
         />
         <StyledAbsoluteWrapper inside={slice.primary.inside}>
-          <Title white={false}>
-            {slice.primary.title ? (
+          {slice.primary.title ? (
+            <Title white={false}>
               <PrismicRichText field={slice.primary.title} />
-            ) : null}
-          </Title>
+            </Title>
+          ) : null}
         </StyledAbsoluteWrapper>
       </div>
       <div>
@@ -104,6 +104,7 @@ const StyledDescription = styled.span`
   margin-bottom: 2rem;
   z-index: 100;
   width: 50ch;
+
   ${({ color }) =>
     color === 'white'
       ? `
@@ -112,14 +113,15 @@ const StyledDescription = styled.span`
       : 'color: black;'}
 
   p {
+    font-size: 1.1rem;
+    line-height: 2.2rem;
     font-weight: 300;
-    line-height: 2rem;
   }
 
   @media only screen and (min-width: 768px) {
     p {
       line-height: 2.2rem;
-      font-size: 1rem;
+      font-size: 1.1rem;
       /* width: 100%; */
     }
   }

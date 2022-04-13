@@ -28,6 +28,26 @@
       },
       "noCta": {
         "primary": {}
+      },
+      "clinic": {
+        "primary": {
+          "calendarLink": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      },
+      "product": {
+        "primary": {
+          "price": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "DoubleImage": {
@@ -137,6 +157,18 @@
       "inside": {
         "primary": {
           "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "descriptionMobile": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "titleMobile": {
             "config": {
               "patternType": "HEADING",
               "blocks": 1

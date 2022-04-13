@@ -27,13 +27,19 @@ const Inside = ({ slice }) => (
       </div>
       <StyledAbsoluteWrapper inside={slice.primary.inside}>
         {slice.primary.title ? (
-          <Title white={slice.primary.color} size='2.2rem'>
-            <PrismicRichText field={slice.primary.title} />
+          <Title white={slice.primary.color} size='2.2rem' noBottomMargin>
+            <PrismicRichText
+              field={
+                slice.primary.titleMobile
+                  ? slice.primary.titleMobile
+                  : slice.primary.title
+              }
+            />
           </Title>
         ) : null}
         {slice.primary.description ? (
           <StyledDescription color={slice.primary?.color}>
-            <PrismicRichText field={slice.primary.description} />
+            <PrismicRichText field={slice.primary.descriptionMobile} />
           </StyledDescription>
         ) : null}
         {slice.primary.buttonLink ? (
@@ -98,9 +104,9 @@ const StyledAbsoluteWrapper = styled.div`
   display: grid;
   grid-template-columns: 100%;
   align-self: center;
-  @media only screen and (max-width: 767px) {
+  /*   @media only screen and (max-width: 767px) {
     top: 1rem;
-  }
+  } */
 
   @media only screen and (min-width: 768px) {
     /* top: 3rem; */
@@ -111,7 +117,7 @@ const StyledDescription = styled.span`
   position: relative;
   margin-bottom: 2rem;
   z-index: 100;
-  /* width: 50ch; */
+  width: 15ch;
   ${({ color }) =>
     color === 'white'
       ? `
@@ -125,7 +131,7 @@ const StyledDescription = styled.span`
   }
 
   @media only screen and (min-width: 768px) {
-    width: 50ch;
+    width: 61ch;
     p {
       line-height: 2.2rem;
       font-size: 1.2rem;

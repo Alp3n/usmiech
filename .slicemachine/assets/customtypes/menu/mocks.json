@@ -1,12 +1,12 @@
 {
-  "id": "c6acb5da-8cd4-4a68-a850-6e3f51fd738d",
-  "uid": "qui-ratione-et",
+  "id": "f33fa2b0-1c87-4bfe-8caa-9318f36278c0",
+  "uid": "fuga-sunt-minima",
   "type": "menu",
   "data": {
     "title": [
       {
         "type": "heading1",
-        "text": "Streamline best-of-breed markets",
+        "text": "Generate plug-and-play models",
         "spans": []
       }
     ],
@@ -17,42 +17,37 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117?w=900&h=500&fit=crop"
     },
     "buttonLabel": [
       {
         "type": "paragraph",
-        "text": "Nulla nisi ipsum voluptate reprehenderit adipisicing culpa esse in ex ipsum deserunt proident nostrud. Aliquip nisi aute aliqua culpa.",
+        "text": "Nisi dolore in ex ullamco dolore enim nostrud cupidatat qui cillum. Officia ea aliqua excepteur nisi occaecat do eu qui duis labore tempor.",
         "spans": []
       }
     ],
     "buttonLink": {
       "link_type": "Web",
-      "url": "http://twitter.com"
+      "url": "https://slicemachine.dev"
+    },
+    "socialInstagram": {
+      "link_type": "Web",
+      "url": "http://google.com"
+    },
+    "socialFacebook": {
+      "link_type": "Web",
+      "url": "http://google.com"
     },
     "menuLinks": [
       {
         "link": {
           "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        },
-        "label": [
-          {
-            "type": "paragraph",
-            "text": "Minim sit proident velit ut non excepteur eiusmod labore irure voluptate Lorem ad ipsum. Magna irure eiusmod nulla sint occaecat sint pariatur in tempor proident occaecat irure eu labore.",
-            "spans": []
-          }
-        ]
-      },
-      {
-        "link": {
-          "link_type": "Web",
           "url": "http://google.com"
         },
         "label": [
           {
             "type": "paragraph",
-            "text": "Veniam cillum exercitation sint incididunt commodo commodo qui sit ipsum dolore sunt consequat incididunt reprehenderit.",
+            "text": "Voluptate veniam consectetur in.",
             "spans": []
           }
         ]
@@ -60,38 +55,12 @@
       {
         "link": {
           "link_type": "Web",
-          "url": "http://google.com"
+          "url": "http://twitter.com"
         },
         "label": [
           {
             "type": "paragraph",
-            "text": "Esse veniam eu irure eu aliqua eiusmod est officia magna reprehenderit exercitation amet. Amet fugiat culpa magna qui consequat. Amet deserunt culpa voluptate eu laboris veniam magna sint.",
-            "spans": []
-          }
-        ]
-      },
-      {
-        "link": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        },
-        "label": [
-          {
-            "type": "paragraph",
-            "text": "Lorem sunt nostrud irure do ea nostrud irure.",
-            "spans": []
-          }
-        ]
-      },
-      {
-        "link": {
-          "link_type": "Web",
-          "url": "https://prismic.io"
-        },
-        "label": [
-          {
-            "type": "paragraph",
-            "text": "Consequat incididunt in sint cupidatat culpa dolore ipsum in est et Lorem exercitation velit in ad. Eu elit nisi irure nisi elit aliqua officia.",
+            "text": "Veniam proident amet id ex ut ex aute labore non aute duis reprehenderit culpa consequat enim. Culpa nostrud voluptate non id Lorem occaecat commodo nulla veniam.",
             "spans": []
           }
         ]

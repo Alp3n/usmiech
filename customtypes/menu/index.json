@@ -68,9 +68,26 @@
         "config": {
           "label": "Button Link",
           "placeholder": "",
-          "allowTargetBlank": false
+          "allowTargetBlank": false,
+          "select": null
         },
         "type": "Link"
+      },
+      "socialInstagram": {
+        "type": "Link",
+        "config": {
+          "label": "Social Instagram",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "socialFacebook": {
+        "type": "Link",
+        "config": {
+          "label": "Social Facebook",
+          "placeholder": "",
+          "select": null
+        }
       }
     }
   }

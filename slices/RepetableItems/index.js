@@ -9,7 +9,7 @@ import { Media } from '../../components/MediaQueries';
 const RepetableItems = ({ slice }) => (
   <StyledWrapper>
     <StyledHeader>
-      <Title>
+      <Title noBottomMargin>
         {slice.primary.title ? (
           <PrismicRichText field={slice.primary.title} />
         ) : null}
@@ -33,9 +33,15 @@ const RepetableItems = ({ slice }) => (
           <Title gridArea='title'>
             <PrismicRichText field={item.title} />
           </Title>
-          <Description gridArea='description' noBottomMargin>
-            <PrismicRichText field={item.description} />
-          </Description>
+          {slice.variation === 'steps' ? (
+            <Description gridArea='description' noBottomMargin>
+              <PrismicRichText field={item.description} />
+            </Description>
+          ) : (
+            <Description gridArea='description' noBottomMargin borderLeft>
+              <PrismicRichText field={item.description} />
+            </Description>
+          )}
         </StyledItem>
       ))}
       <Media at='sm'>
@@ -91,6 +97,7 @@ const StyledLine = styled.div`
   grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
   border-left: 1px solid black;
   height: 100%;
+  place-self: center;
   @media only screen and (min-width: 768px) {
     display: none;
   }
@@ -136,7 +143,7 @@ const StyledGrid = styled.div`
   }
 
   @media only screen and (max-width: 767px) {
-    #opinion > :nth-of-type(2) {
+    span > p:nth-of-type(2) {
       border-left: 1px solid black;
       margin-left: 5%;
       padding: 0 10%;

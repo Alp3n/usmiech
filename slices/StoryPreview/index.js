@@ -7,14 +7,18 @@ const StoryPreview = ({ slice }) => (
     <StyledGrid>
       <StyledBox>
         {slice.primary.firstText ? (
-          <StyledDescription>
-            <PrismicRichText field={slice.primary.firstText} />
-          </StyledDescription>
+          <div>
+            <StyledDescription>
+              <PrismicRichText field={slice.primary.firstText} />
+            </StyledDescription>
+          </div>
         ) : null}
         {slice.primary.firstDescription ? (
-          <StyledDescription normal>
-            <PrismicRichText field={slice.primary.firstDescription} />
-          </StyledDescription>
+          <div>
+            <StyledDescription normal>
+              <PrismicRichText field={slice.primary.firstDescription} />
+            </StyledDescription>
+          </div>
         ) : null}
       </StyledBox>
 
@@ -71,7 +75,7 @@ const StyledBox = styled.div`
   grid-template-columns: 1fr;
   flex-direction: ${({ direction }) => (direction ? direction : 'row')};
   align-items: center;
-  width: ${({ normal }) => (normal ? '100%' : '35ch')};
+  width: ${({ normal }) => (normal ? '100%' : '1fr')};
 
   @media only screen and (min-width: 768px) {
     grid-template-columns: ${({ normal }) => (normal ? '30% 60%' : '1fr')};
@@ -104,11 +108,10 @@ const StyledLine = styled.div`
   }
 `;
 
-const StyledDescription = styled.span`
+const StyledDescription = styled.p`
   position: relative;
   margin-bottom: 2rem;
   z-index: 100;
-
   ${({ color }) =>
     color === 'white'
       ? `
@@ -117,9 +120,9 @@ const StyledDescription = styled.span`
       : 'color: black;'}
 
   p {
-    font-size: ${({ normal }) => (normal ? '1.1rem' : '1.5rem')};
+    font-size: ${({ normal }) => (normal ? '1.1rem' : '1.4rem')};
     font-weight: 300;
-    line-height: 2.5rem;
+    line-height: 2.4rem;
     margin-top: -1rem;
   }
 
