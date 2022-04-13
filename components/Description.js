@@ -26,7 +26,7 @@ const StyledDescription = styled.p`
   > p {
     margin-top: 0;
     margin-bottom: ${({ noBottomMargin }) => (noBottomMargin ? '0' : null)};
-    font-weight: 300;
+    font-weight: 400;
     line-height: 2rem;
   }
   ${({ borderLeft }) =>

@@ -24,10 +24,12 @@ const SingleImage = ({ slice }) => (
           quality={100}
         />
       </StyledImageWrapper>
-      <StyledStepLineWrapper>
-        <PrismicRichText field={slice.primary.step} />
-        <StyledLine />
-      </StyledStepLineWrapper>
+      {slice.variation === 'step' ? (
+        <StyledStepLineWrapper gridArea='stepLine'>
+          <PrismicRichText field={slice.primary.step} />
+          <StyledLine />
+        </StyledStepLineWrapper>
+      ) : null}
       <Title gridArea='title'>
         {slice.primary.title ? (
           <PrismicRichText field={slice.primary.title} />
@@ -68,10 +70,13 @@ const SingleImage = ({ slice }) => (
         />
       </StyledImageWrapper>
       <StyledSmallerWrapper gridArea='column'>
-        <StyledStepLineWrapper gridArea='stepLine'>
-          <PrismicRichText field={slice.primary.step} />
-          <StyledLine />
-        </StyledStepLineWrapper>
+        {slice.variation === 'step' ? (
+          <StyledStepLineWrapper gridArea='stepLine'>
+            <PrismicRichText field={slice.primary.step} />
+            <StyledLine />
+          </StyledStepLineWrapper>
+        ) : null}
+
         {slice.primary.title ? (
           <Title gridArea='title'>
             <PrismicRichText field={slice.primary.title} />

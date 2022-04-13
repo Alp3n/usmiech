@@ -62,7 +62,7 @@ const StyledGrid = styled.div`
 
   @media only screen and (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
     grid-template-areas:
       'leftWrapper description'
       'leftWrapper button';

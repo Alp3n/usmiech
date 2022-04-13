@@ -64,6 +64,7 @@ export default StoryPreview;
 const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
+  gap: 3rem;
 
   @media only screen and (min-width: 768px) {
     grid-template-columns: 35% 65%;
@@ -121,7 +122,7 @@ const StyledDescription = styled.p`
 
   p {
     font-size: ${({ normal }) => (normal ? '1.1rem' : '1.4rem')};
-    font-weight: 300;
+    font-weight: 400;
     line-height: 2.4rem;
     margin-top: -1rem;
   }
@@ -129,7 +130,7 @@ const StyledDescription = styled.p`
   @media only screen and (min-width: 768px) {
     p {
       margin-top: 1rem;
-      line-height: 2.5rem;
+      line-height: ${({ normal }) => (normal ? '2.2rem' : '3.5rem')};
       font-size: ${({ normal }) => (normal ? '1.1rem' : '2rem')};
       /* width: 100%; */
     }
