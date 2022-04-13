@@ -130,6 +130,28 @@
             }
           }
         }
+      },
+      "mainPage": {
+        "primary": {}
+      },
+      "inside": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      },
+      "outside": {
+        "primary": {}
+      },
+      "HeroPage": {
+        "primary": {}
+      },
+      "heroPage": {
+        "primary": {}
       }
     },
     "RepetableItems": {
@@ -291,6 +313,36 @@
       "default": {
         "primary": {
           "subTitle": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "StoryPreview": {
+      "default": {
+        "primary": {
+          "firstText": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "firstDescription": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "treatmentText": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "satisfactionText": {
             "config": {
               "patternType": "PARAGRAPH",
               "blocks": 1

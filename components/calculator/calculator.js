@@ -33,7 +33,7 @@ const Calculator = ({
 
   return (
     <StyledWrapper>
-      <h2>{title}</h2>
+      <h1>{title}</h1>
       <StyledInputWrapper>
         <span>{firstDesc}</span>
         <StyledOptionsWrapper>

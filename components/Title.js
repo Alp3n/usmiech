@@ -25,26 +25,26 @@ const StyledTitle = styled.span`
   grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
 
   > h1 {
-    font-size: ${({ size }) => (size === 'large' ? '1.8rem' : '3.5rem')};
+    font-size: ${({ size }) => (size ? size : '3.5rem')};
     margin: 0;
     padding: 0;
     bottom: 50px;
-    font-weight: 200;
+    /* font-weight: 200; */
   }
 
   > h2 {
-    font-size: ${({ size }) => (size === 'large' ? '2rem' : '2.2rem')};
+    font-size: ${({ size }) => (size ? size : '2rem')};
     line-height: 1.5;
     margin: 0;
   }
   @media only screen and (min-width: 767px) {
     > h1 {
-      font-size: ${({ size }) => (size === 'large' ? '2rem' : '5vw')};
-      font-weight: 200;
+      font-size: ${({ size }) => (size ? size : '5vw')};
+      /* font-weight: 200; */
     }
 
     > h2 {
-      font-size: ${({ size }) => (size === 'large' ? '2rem' : '2rem')};
+      font-size: ${({ size }) => (size ? size : '2.2rem')};
       line-height: 1.5;
     }
   }

@@ -7,7 +7,7 @@ export const Layout = ({ children, menu }) => {
   return (
     <>
       <Head>
-        <title>u'Smiech - gabinet stomatologii estetycznej</title>
+        <title>{`u'Smiech - gabinet stomatologii estetycznej`}</title>
       </Head>
       <Header menu={menu} />
       <StyledMain>{children}</StyledMain>

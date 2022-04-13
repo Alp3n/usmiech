@@ -82,8 +82,101 @@
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     },
     {
-      "id": "noCta",
-      "name": "noCta",
+      "id": "heroPage",
+      "name": "HeroPage",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "FullBleed",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "Insert title...",
+            "allowTargetBlank": true,
+            "multi": "heading1,heading2"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "Insert descritpion...",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": [
+              {
+                "name": "mobile",
+                "width": 430,
+                "height": 430
+              }
+            ]
+          },
+          "type": "Image"
+        },
+        "color": {
+          "type": "Text",
+          "config": {
+            "label": "Color",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "mainPage",
+      "name": "MainPage",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "FullBleed",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "Insert title...",
+            "allowTargetBlank": true,
+            "multi": "heading1,heading2"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "Insert descritpion...",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": [
+              {
+                "name": "mobile",
+                "width": 400,
+                "height": 600
+              }
+            ]
+          },
+          "type": "Image"
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "outside",
+      "name": "Outside",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "FullBleed",
@@ -120,20 +213,97 @@
           },
           "type": "Image"
         },
-        "inside": {
+        "buttonLink": {
           "config": {
-            "label": "Inside",
-            "placeholder_false": "false",
-            "placeholder_true": "true",
-            "default_value": false
+            "label": "Button Link",
+            "placeholder": "Insert page link...",
+            "allowTargetBlank": false,
+            "select": null
           },
-          "type": "Boolean"
+          "type": "Link"
+        },
+        "buttonLabel": {
+          "config": {
+            "label": "Button Label",
+            "placeholder": "Insert button label...",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
         },
         "color": {
           "type": "Text",
           "config": {
             "label": "Color",
-            "placeholder": ""
+            "placeholder": "Insert color for text"
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "inside",
+      "name": "Inside",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "FullBleed",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "Insert title...",
+            "allowTargetBlank": true,
+            "multi": "heading2"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "Insert descritpion...",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": [
+              {
+                "name": "mobile",
+                "width": 400,
+                "height": 600
+              }
+            ]
+          },
+          "type": "Image"
+        },
+        "buttonLink": {
+          "config": {
+            "label": "Button Link",
+            "placeholder": "Insert page link...",
+            "allowTargetBlank": false,
+            "select": null
+          },
+          "type": "Link"
+        },
+        "buttonLabel": {
+          "config": {
+            "label": "Button Label",
+            "placeholder": "Insert button label...",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "color": {
+          "type": "Text",
+          "config": {
+            "label": "Color",
+            "placeholder": "Insert color for text"
           }
         }
       },

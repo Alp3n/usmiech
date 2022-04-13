@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import { Layout } from '../components/layout/Layout';
-// import styled from '@emotion/styled';
+import Head from 'next/head';
 import { PrismicRichText, SliceZone } from '@prismicio/react';
 import { createClient } from '../prismicio';
 import { components } from '../slices/index';

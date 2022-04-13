@@ -3,7 +3,7 @@ import { PrismicLink, PrismicText, PrismicRichText } from '@prismicio/react';
 import styled from '@emotion/styled';
 import { Media } from './MediaQueries';
 
-const Button = ({ link, label, color, gridArea, plain, normal }) => {
+const NewButton = ({ link, label, color, gridArea, plain, normal }) => {
   if (normal) {
     return (
       <StyledBorderButton field={link} color={color} gridArea={gridArea}>
@@ -22,7 +22,7 @@ const Button = ({ link, label, color, gridArea, plain, normal }) => {
     </StyledLink>
   );
 };
-export default Button;
+export default NewButton;
 
 const StyledLink = styled(PrismicLink)`
   position: relative;
@@ -31,7 +31,6 @@ const StyledLink = styled(PrismicLink)`
   align-items: center;
   grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
   z-index: 100;
-  font-size: 1.1rem;
   ${({ plain }) => (plain ? 'width: fit-content;' : null)}
   p {
     margin: 8px 1rem 8px 0;
@@ -103,7 +102,6 @@ const StyledBorderButton = styled(PrismicLink)`
   padding: 6px 32px;
   border-radius: 32px;
   width: fit-content;
-  font-size: 1.1rem;
   &:link {
     color: ${({ color }) => (color ? color : 'black')};
   }

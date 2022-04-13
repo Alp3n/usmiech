@@ -1,88 +1,52 @@
 import React from 'react';
-// import { PrismicRichText } from '@prismicio/react';
+import { PrismicRichText } from '@prismicio/react';
 import styled from '@emotion/styled';
 import Image from 'next/image';
-// import Button from '../../components/Button';
-// import Title from '../../components/Title';
+import Button from '../../components/Button';
+import Title from '../../components/Title';
 import { Media } from '../../components/MediaQueries';
-import MainPage from './mainPage';
-import Outside from './outside';
-import Inside from './inside';
-import HeroPage from './heroPage';
 
-const FullBleed = ({ slice }) => {
-  if (slice.variation === 'mainPage') {
-    return <MainPage slice={slice} />;
-  }
-  if (slice.variation === 'heroPage') {
-    return <HeroPage slice={slice} />;
-  }
-  if (slice.variation === 'outside') {
-    return <Outside slice={slice} />;
-  }
-  if (slice.variation === 'inside') {
-    return <Inside slice={slice} />;
-  }
-  return null;
-};
-
-{
-  /*  <StyledImageWrapper
+const Outside = ({ slice }) => (
+  <>
+    {/* MOBILE */}
+    <StyledWrapper
       at='sm'
       className='full-bleed'
       color={slice.primary?.color}
       inside={slice.primary?.inside}
     >
-      <div className='full-bleed' style={{ position: 'relative' }}>
+      <StyledImageWrapper className='full-bleed'>
         <Image
-          src={`${slice.primary.image.mobile.url}&auto=noCompress`}
+          src={slice.primary.image.mobile.url}
           alt={slice.primary.image.mobile.alt}
           width={slice.primary.image.mobile.dimensions.width}
           height={slice.primary.image.mobile.dimensions.height}
           layout='responsive'
-          quality={100}
+          quality={90}
         />
-        <StyledAbsoluteWrapper inside={slice.primary.inside}>
-          <Title white={false}>
-            {slice.primary.title ? (
-              <PrismicRichText field={slice.primary.title} />
-            ) : null}
-          </Title>
-          {slice.primary.inside ? (
-            slice.primary.description ? (
-              <>
-                <StyledDescription color={slice.primary?.color}>
-                  <PrismicRichText field={slice.primary.description} />
-                </StyledDescription>
-                {slice.primary.buttonLink ? (
-                  <Button
-                    link={slice.primary.buttonLink}
-                    label={slice.primary.buttonLabel}
-                    plain
-                  />
-                ) : null}
-              </>
-            ) : null
+      </StyledImageWrapper>
+      <StyledGrid>
+        <Title white={false}>
+          {slice.primary.title ? (
+            <PrismicRichText field={slice.primary.title} />
           ) : null}
-        </StyledAbsoluteWrapper>
-      </div>
-      {slice.primary.inside ? null : (
-        <div>
-          {slice.primary.description ? (
-            <StyledDescription>
-              <PrismicRichText field={slice.primary.description} />
-            </StyledDescription>
-          ) : null}
-        </div>
-      )}
-    </StyledImageWrapper> */
-}
+        </Title>
+        {slice.primary.description ? (
+          <StyledDescription>
+            <PrismicRichText field={slice.primary.description} />
+          </StyledDescription>
+        ) : null}
+        {slice.primary.buttonLink ? (
+          <Button
+            link={slice.primary.buttonLink}
+            label={slice.primary.buttonLabel}
+          />
+        ) : null}
+      </StyledGrid>
+    </StyledWrapper>
 
-{
-  /* DEFAULT */
-}
-{
-  /*  <StyledImageWrapper
+    {/* DEFAULT */}
+    <StyledWrapper
       greaterThan='sm'
       className='full-bleed'
       color={slice.primary?.color}
@@ -90,7 +54,7 @@ const FullBleed = ({ slice }) => {
     >
       <StyledAbsoluteWrapper>
         {slice.primary.title ? (
-          <Title white={slice.primary?.color}>
+          <Title white={slice.primary?.color} size='4rem'>
             <PrismicRichText field={slice.primary.title} />
           </Title>
         ) : null}
@@ -107,26 +71,25 @@ const FullBleed = ({ slice }) => {
           />
         ) : null}
       </StyledAbsoluteWrapper>
-      {/* TODO TABLET SIZES */
-}
+      {/* TODO TABLET SIZES */}
 
-{
-  /* <div className='full-bleed' style={{ overflow: 'hidden' }}>
+      <div className='full-bleed' style={{ overflow: 'hidden' }}>
         <Media greaterThan='sm'>
           <Image
-            src={`${slice.primary.image.url}&auto=noCompress`}
+            src={slice.primary.image.url}
             alt={slice.primary.image.alt}
             width={slice.primary.image.dimensions.width}
             height={slice.primary.image.dimensions.height}
             layout='responsive'
-            quality={100}
+            quality={90}
           />
         </Media>
       </div>
-    </StyledImageWrapper> */
-}
+    </StyledWrapper>
+  </>
+);
 
-export default FullBleed;
+export default Outside;
 
 const StyledAbsoluteWrapper = styled.div`
   position: absolute;
@@ -141,10 +104,9 @@ const StyledAbsoluteWrapper = styled.div`
 `;
 
 const StyledDescription = styled.span`
-  position: relative;
   margin-bottom: 2rem;
   z-index: 100;
-  width: 50ch;
+
   ${({ color }) =>
     color === 'white'
       ? `
@@ -153,20 +115,35 @@ const StyledDescription = styled.span`
       : 'color: black;'}
 
   p {
-    font-weight: 300;
+    margin: 0;
+
+    font-weight: 400;
     line-height: 2rem;
   }
 
   @media only screen and (min-width: 768px) {
+    width: 50ch;
     p {
       line-height: 2.2rem;
-      font-size: 1rem;
+      font-size: 1.2rem;
       /* width: 100%; */
     }
   }
 `;
 
-const StyledImageWrapper = styled(Media)`
+const StyledGrid = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  grid-template-columns: 1fr;
+  gap: 0;
+`;
+
+const StyledImageWrapper = styled.div`
+  margin-bottom: 1rem;
+`;
+
+const StyledWrapper = styled(Media)`
   position: relative;
   display: grid;
   margin-bottom: 3rem;

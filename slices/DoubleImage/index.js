@@ -83,7 +83,7 @@ const DoubleImage = ({ slice }) => (
               width={slice.primary.imageBig.dimensions.width}
               height={slice.primary.imageBig.dimensions.height}
               layout='responsive'
-              quality={100}
+              // quality={100}
             />
             <StyledImageSmall width='40vw' left='-25%' bottom='-2rem'>
               <Image
@@ -92,7 +92,7 @@ const DoubleImage = ({ slice }) => (
                 width={slice.primary.imageSmall.dimensions.width}
                 height={slice.primary.imageSmall.dimensions.height}
                 layout='responsive'
-                quality={100}
+                // quality={100}
               />
             </StyledImageSmall>
           </StyledImageBig>

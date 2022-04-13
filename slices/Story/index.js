@@ -3,9 +3,7 @@ import { PrismicRichText } from '@prismicio/react';
 import Image from 'next/image';
 import { Media } from '../../components/MediaQueries';
 import styled from '@emotion/styled';
-import Title from '../../components/Title';
 import Button from '../../components/Button';
-import Description from '../../components/Description';
 
 const Story = ({ slice }) => (
   <>
@@ -30,20 +28,21 @@ const Story = ({ slice }) => (
       />
     </Media>
     <StyledGrid>
-      <Title gridArea='title'>
-        <PrismicRichText field={slice.primary.title} />
-      </Title>
-      <Title gridArea='subtitle'>
-        <PrismicRichText field={slice.primary.subTitle} />
-      </Title>
-      <Description>
+      <StyledLeftWrapper gridArea='leftWrapper'>
+        <StyledTitle gridArea='title'>
+          <PrismicRichText field={slice.primary.title} />
+        </StyledTitle>
+        <StyledSubtitle gridArea='subtitle'>
+          <PrismicRichText field={slice.primary.subTitle} />
+        </StyledSubtitle>
+      </StyledLeftWrapper>
+      <StyledDescription>
         <PrismicRichText field={slice.primary.description} />
-      </Description>
+      </StyledDescription>
       <Button
-        label={slice.primary?.buttonLabel}
-        link={slice.primary?.buttonLink}
+        link={slice.primary.buttonLink}
+        label={slice.primary.buttonLabel}
         gridArea='button'
-        color='black'
       />
     </StyledGrid>
   </>
@@ -56,17 +55,60 @@ const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-    'title'
-    'subtitle'
+    'leftWrapper'
     'description'
     'button';
   margin-bottom: 3rem;
 
   @media only screen and (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 6rem;
+    margin-bottom: 10rem;
     grid-template-areas:
-      'title description'
-      'subtitle button';
+      'leftWrapper description'
+      'leftWrapper button';
+  }
+`;
+
+const StyledDescription = styled.div`
+  font-size: 1.1rem;
+  line-height: 1.5;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+`;
+
+const StyledLeftWrapper = styled.div`
+  grid-area: ${({ gridArea }) => gridArea};
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'title'
+    'subtitle';
+`;
+
+const StyledTitle = styled.span`
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+
+  > h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: 3rem;
+  }
+`;
+
+const StyledSubtitle = styled.span`
+  grid-area: ${({ gridArea }) => gridArea};
+
+  > p {
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
   }
 `;

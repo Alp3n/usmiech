@@ -8,14 +8,14 @@
       "title": [
         {
           "type": "heading1",
-          "text": "Drive dot-com partnerships",
+          "text": "Orchestrate end-to-end convergence",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "Tempor laborum culpa labore adipisicing reprehenderit excepteur esse reprehenderit reprehenderit quis reprehenderit. Nulla amet voluptate sunt enim consectetur tempor sit commodo sint duis consequat irure minim est amet. Voluptate commodo qui esse adipisicing eu.",
+          "text": "Sit ipsum Lorem mollit reprehenderit irure ipsum ad magna.",
           "spans": []
         }
       ],
@@ -26,7 +26,7 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop",
+        "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=900&h=500&fit=crop",
         "mobile": {
           "dimensions": {
             "width": 400,
@@ -34,7 +34,7 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=400&h=600&fit=crop"
+          "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=400&h=600&fit=crop"
         }
       },
       "buttonLink": {
@@ -45,30 +45,111 @@
       "buttonLabel": [
         {
           "type": "paragraph",
-          "text": "Commodo culpa qui nisi quis. Aute cupidatat ex ut reprehenderit culpa qui sunt. Et nulla cillum elit labore pariatur laborum enim irure minim dolor ipsum.",
+          "text": "Dolore ut ut nisi officia incididunt qui Lorem anim ut sint eiusmod voluptate irure et voluptate. Adipisicing laborum cillum non deserunt consequat nulla aute veniam mollit. Aliquip fugiat sunt magna qui excepteur nulla enim.",
           "spans": []
         }
       ],
-      "color": "target e-business supply-chains"
+      "color": "morph transparent technologies"
     }
   },
   {
-    "variation": "noCta",
-    "name": "noCta",
+    "variation": "heroPage",
+    "name": "HeroPage",
     "slice_type": "full_bleed",
     "items": [],
     "primary": {
       "title": [
         {
           "type": "heading1",
-          "text": "Productize world-class initiatives",
+          "text": "Integrate user-centric convergence",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "Elit nulla nulla laborum ipsum quis consequat aliqua esse.",
+          "text": "Aliquip eu ut aliquip sint irure cillum reprehenderit occaecat elit cupidatat adipisicing. Ut elit et consequat reprehenderit. Ex fugiat anim veniam eu magna id occaecat velit elit mollit.",
+          "spans": []
+        }
+      ],
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=900&h=500&fit=crop",
+        "mobile": {
+          "dimensions": {
+            "width": 430,
+            "height": 430
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=430&h=430&fit=crop"
+        }
+      },
+      "color": "grow out-of-the-box vortals"
+    }
+  },
+  {
+    "variation": "mainPage",
+    "name": "MainPage",
+    "slice_type": "full_bleed",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Brand collaborative applications",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "In velit non ea enim ex.",
+          "spans": []
+        }
+      ],
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=900&h=500&fit=crop",
+        "mobile": {
+          "dimensions": {
+            "width": 400,
+            "height": 600
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=400&h=600&fit=crop"
+        }
+      }
+    }
+  },
+  {
+    "variation": "outside",
+    "name": "Outside",
+    "slice_type": "full_bleed",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Facilitate bleeding-edge action-items",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Fugiat cupidatat enim ad esse nulla eu veniam cillum aute quis tempor anim.",
           "spans": []
         }
       ],
@@ -90,8 +171,70 @@
           "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613?w=400&h=600&fit=crop"
         }
       },
-      "inside": true,
-      "color": "whiteboard killer niches"
+      "buttonLink": {
+        "link_type": "Web",
+        "url": "https://slicemachine.dev"
+      },
+      "buttonLabel": [
+        {
+          "type": "paragraph",
+          "text": "Enim quis nostrud elit quis magna. In eiusmod laboris cillum eiusmod mollit incididunt nisi voluptate eu officia incididunt do. Minim consequat laboris consequat consequat consectetur ex.",
+          "spans": []
+        }
+      ],
+      "color": "target end-to-end web services"
+    }
+  },
+  {
+    "variation": "inside",
+    "name": "Inside",
+    "slice_type": "full_bleed",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Target 24/7 e-business",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Proident fugiat excepteur excepteur ea velit. Mollit aliquip deserunt anim ipsum voluptate voluptate aliquip nostrud non in laborum velit sit. Enim nulla ad tempor sit irure sunt esse est quis labore cillum quis occaecat laborum.",
+          "spans": []
+        }
+      ],
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop",
+        "mobile": {
+          "dimensions": {
+            "width": 400,
+            "height": 600
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=400&h=600&fit=crop"
+        }
+      },
+      "buttonLink": {
+        "link_type": "Web",
+        "url": "http://twitter.com"
+      },
+      "buttonLabel": [
+        {
+          "type": "paragraph",
+          "text": "Ad esse ad incididunt pariatur esse pariatur sint amet mollit. Officia ullamco esse Lorem dolore excepteur adipisicing commodo ullamco sit amet elit. Qui voluptate do anim amet aute reprehenderit.",
+          "spans": []
+        }
+      ],
+      "color": "facilitate transparent web-readiness"
     }
   }
 ]

@@ -22,10 +22,10 @@ export function linkResolver(doc) {
       return `/offer`;
     case 'pageHowItWorks':
       return `/howItWorks`;
-    case 'pageBooking':
-      return `/clinics`;
+    case 'story':
+      return `/stories/${doc.uid}`;
     default:
-      return null;
+      return '/';
   }
 }
 

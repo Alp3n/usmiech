@@ -26,16 +26,14 @@ const RepetableItems = ({ slice }) => (
         >
           {slice.variation === 'steps' ? (
             <>
-              <StyledNumber area='number'>{item.number}</StyledNumber>
-              {/* <Media at='sm'> */}
-              <StyledLine area='line' />
-              {/* </Media> */}
+              <StyledNumber gridArea='number'>{item.number}</StyledNumber>
+              <StyledLine gridArea='line' />
             </>
           ) : null}
-          <Title area='title'>
+          <Title gridArea='title'>
             <PrismicRichText field={item.title} />
           </Title>
-          <Description area='description' noBottomMargin>
+          <Description gridArea='description' noBottomMargin>
             <PrismicRichText field={item.description} />
           </Description>
         </StyledItem>
@@ -69,7 +67,7 @@ const StyledHeader = styled.div`
 `;
 
 const StyledNumber = styled.span`
-  grid-area: ${({ area }) => (area ? area : null)};
+  grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
   font-size: 2.2rem;
   @media only screen and (min-width: 768px) {
     font-size: 3rem;
@@ -90,7 +88,7 @@ const StyledDesktopLine = styled(Media)`
 `;
 
 const StyledLine = styled.div`
-  grid-area: ${({ area }) => (area ? area : null)};
+  grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
   border-left: 1px solid black;
   height: 100%;
   @media only screen and (min-width: 768px) {
@@ -151,7 +149,7 @@ const StyledGrid = styled.div`
     gap: 2rem;
 
     div > span:first-of-type {
-      margin: 0;
+      margin-left: 0;
     }
 
     div > span:nth-of-type(2) {

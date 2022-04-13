@@ -34,7 +34,7 @@ const Footer = ({ menu }) => {
         </StyledGrid>
         <StyledLine at='sm' />
         <StyledGrid>
-          <Navigation menu={menu} vertical />
+          <Navigation menu={menu} vertical margin />
         </StyledGrid>
         <StyledLine at='sm' />
         <StyledFlex>

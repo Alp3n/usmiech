@@ -13,32 +13,32 @@ export const Header = ({ menu }) => {
   return (
     <>
       <StyledWrapper>
-        <StyledFlex>
+        <StyledGrid>
           <StyledMobileDiv at='sm'>
             {isOpen ? (
               <VscClose
-                size={34}
+                size={28}
                 onClick={() => {
                   setIsOpen((prev) => !prev);
                 }}
               />
             ) : (
               <VscMenu
-                size={34}
+                size={28}
                 onClick={() => {
                   setIsOpen((prev) => !prev);
                 }}
               />
             )}
           </StyledMobileDiv>
-          <PrismicLink href='/'>
+          <StyledPrismicLink href='/'>
             <Media greaterThan='sm'>
               <Logo width='200' height='68' viewBox='70 -25 100 95' />
             </Media>
             <Media at='sm'>
               <Logo width='150' height='58' viewBox='70 -25 100 95' />
             </Media>
-          </PrismicLink>
+          </StyledPrismicLink>
           <StyledDiv greaterThan='sm'>
             <Navigation menu={menu} />
             <Button
@@ -47,18 +47,18 @@ export const Header = ({ menu }) => {
               color='black'
             />
           </StyledDiv>
-        </StyledFlex>
+        </StyledGrid>
         {isOpen ? <Menu menu={menu} /> : null}
       </StyledWrapper>
     </>
   );
 };
 
-const StyledFlex = styled.header`
+const StyledGrid = styled.header`
   display: grid;
   align-items: center;
   /* justify-content: space-between; */
-  grid-template-columns: 30% 1fr;
+  grid-template-columns: 1fr 80% 1fr;
 
   @media only screen and (min-width: 768px) {
     grid-template-columns: 200px 1fr;
@@ -107,4 +107,8 @@ const StyledWrapper = styled.header`
   @media only screen and (min-width: 1192px) {
     padding: 1rem 0;
   }
+`;
+
+const StyledPrismicLink = styled(PrismicLink)`
+  place-self: center;
 `;

@@ -23,6 +23,7 @@ export default FaQ;
 
 const StyledWrapper = styled.div`
   margin-bottom: 3rem;
+
   @media only screen and (min-width: 768px) {
     margin-bottom: 6rem;
   }
@@ -31,5 +32,4 @@ const StyledWrapper = styled.div`
 const StyledItem = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
 `;

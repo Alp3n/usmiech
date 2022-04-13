@@ -1,53 +1,6 @@
 {
-  "id": "223a8c16-07ce-49dd-8bc5-65b2b10db33f",
-  "uid": "labore-possimus-laudantium",
+  "id": "941a734f-5f39-4eca-a169-a4b1fc48db9f",
+  "uid": "est-nisi-et",
   "type": "story",
-  "data": {
-    "image": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": "Placeholder image",
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&h=500&fit=crop",
-      "mobile": {
-        "dimensions": {
-          "width": 430,
-          "height": 430
-        },
-        "alt": "Placeholder image",
-        "copyright": null,
-        "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=430&h=430&fit=crop"
-      }
-    },
-    "firstText": [
-      {
-        "type": "paragraph",
-        "text": "Ipsum dolor quis magna.",
-        "spans": []
-      }
-    ],
-    "firstDescription": [
-      {
-        "type": "paragraph",
-        "text": "Dolor cupidatat ut dolor velit do veniam id sit cupidatat quis et.",
-        "spans": []
-      }
-    ],
-    "treatmentText": [
-      {
-        "type": "paragraph",
-        "text": "Labore culpa enim dolor aliqua id aliquip eiusmod mollit sit qui.",
-        "spans": []
-      }
-    ],
-    "satisfactionText": [
-      {
-        "type": "paragraph",
-        "text": "Aliqua laboris anim do aute non ipsum fugiat. Ad aliquip occaecat est veniam consequat. Anim laboris sit consequat ut excepteur amet mollit voluptate.",
-        "spans": []
-      }
-    ]
-  }
+  "data": {}
 }
