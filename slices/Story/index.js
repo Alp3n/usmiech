@@ -1,5 +1,5 @@
 import React from 'react';
-import { PrismicRichText } from '@prismicio/react';
+import { PrismicLink, PrismicRichText } from '@prismicio/react';
 import Image from 'next/image';
 import { Media } from '../../components/MediaQueries';
 import styled from '@emotion/styled';
@@ -8,24 +8,28 @@ import Button from '../../components/Button';
 const Story = ({ slice }) => (
   <>
     <Media at='sm' className='full-bleed'>
-      <Image
-        src={`${slice.primary.image.mobile.url}&auto=noCompress`}
-        alt={slice.primary.image.mobile.alt}
-        width={slice.primary.image.mobile.dimensions.width}
-        height={slice.primary.image.mobile.dimensions.height}
-        layout='responsive'
-        quality={100}
-      />
+      <PrismicLink field={slice.primary.buttonLink}>
+        <Image
+          src={`${slice.primary.image.mobile.url}&auto=noCompress`}
+          alt={slice.primary.image.mobile.alt}
+          width={slice.primary.image.mobile.dimensions.width}
+          height={slice.primary.image.mobile.dimensions.height}
+          layout='responsive'
+          quality={100}
+        />
+      </PrismicLink>
     </Media>
     <Media greaterThan='sm' className='full-bleed'>
-      <Image
-        src={`${slice.primary.image.url}&auto=noCompress`}
-        alt={slice.primary.image.alt}
-        width={slice.primary.image.dimensions.width}
-        height={slice.primary.image.dimensions.height}
-        layout='responsive'
-        quality={100}
-      />
+      <PrismicLink field={slice.primary.buttonLink}>
+        <Image
+          src={`${slice.primary.image.url}&auto=noCompress`}
+          alt={slice.primary.image.alt}
+          width={slice.primary.image.dimensions.width}
+          height={slice.primary.image.dimensions.height}
+          layout='responsive'
+          quality={100}
+        />
+      </PrismicLink>
     </Media>
     <StyledGrid>
       <StyledLeftWrapper gridArea='leftWrapper'>

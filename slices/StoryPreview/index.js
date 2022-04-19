@@ -42,19 +42,20 @@ const StoryPreview = ({ slice }) => (
 
     <StyledRight>
       <div />
-      <StyledBox normal>
-        <StyledLine />
-        <StyledTitle>Leczenie</StyledTitle>
-      </StyledBox>
-      <div />
-      <StyledBox normal>
-        <div />
+      <div>
+        <StyledBox normal>
+          <StyledLine />
+          <StyledTitle>Leczenie</StyledTitle>
+        </StyledBox>
+        {/* <div /> */}
+
+        {/* <div /> */}
         {slice.primary.treatmentText ? (
           <StyledDescription normal>
             <PrismicRichText field={slice.primary.treatmentText} />
           </StyledDescription>
         ) : null}
-      </StyledBox>
+      </div>
     </StyledRight>
   </>
 );
@@ -93,19 +94,23 @@ const StyledTitle = styled.h2`
 const StyledRight = styled.div`
   display: grid;
   grid-template-columns: 1fr;
+  column-gap: 10rem;
   justify-content: end;
   align-items: center;
+  margin-bottom: 2rem;
   @media only screen and (min-width: 768px) {
-    grid-template-columns: 30% 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 `;
 
 const StyledLine = styled.div`
   display: hidden;
   @media only screen and (min-width: 768px) {
+    position: absolute;
     border-top: 1px solid black;
-    width: 90%;
+    width: 220px;
     margin-right: 2rem;
+    right: 46%;
   }
 `;
 
@@ -129,10 +134,10 @@ const StyledDescription = styled.p`
 
   @media only screen and (min-width: 768px) {
     p {
-      margin-top: 1rem;
+      margin: 1rem 0;
       line-height: ${({ normal }) => (normal ? '2.2rem' : '3.5rem')};
       font-size: ${({ normal }) => (normal ? '1.1rem' : '2rem')};
-      /* width: 100%; */
+      width: 80%;
     }
   }
 `;

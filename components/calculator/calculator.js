@@ -81,18 +81,20 @@ export default Calculator;
 
 const StyledInputWrapper = styled.div`
   display: grid;
-  gap: 24px;
+  gap: 3rem;
   scroll-margin-top: 15rem;
   @media only screen and (min-width: 768px) {
+    font-size: 1.3rem;
+    font-weight: 300;
     scroll-margin-top: 20rem;
-    grid-template-columns: 20% 1fr;
+    grid-template-columns: 30% 40%;
   }
 `;
 
 const StyledWrapper = styled.div`
   display: grid;
   grid-template-columns: 1;
-  gap: 30px;
+  gap: 5rem;
   margin-bottom: 3rem;
 
   @media only screen and (min-width: 768px) {

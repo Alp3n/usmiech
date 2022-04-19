@@ -42,7 +42,7 @@ const SingleImage = ({ slice }) => (
       </Description>
       {slice.variation === 'product' ? (
         slice.primary.price ? (
-          <Description>
+          <Description gridArea='price'>
             <PrismicRichText field={slice.primary.price} />
           </Description>
         ) : null
@@ -96,22 +96,22 @@ const SingleImage = ({ slice }) => (
         ) : null}
         {slice.variation === 'product' ? (
           slice.primary.price ? (
-            <Description>
+            <Description gridArea='price'>
               <PrismicRichText field={slice.primary.price} />
             </Description>
           ) : null
         ) : null}
       </StyledSmallerWrapper>
     </StyledWrapper>
-    <StyledCalendar greaterThanOrEqual='sm' className='iframe'>
-      {slice.variation === 'clinic' ? (
-        slice.primary.calendarLink ? (
+    {slice.variation === 'clinic' ? (
+      slice.primary.calendarLink ? (
+        <StyledCalendar greaterThanOrEqual='sm' className='iframe'>
           <div
             dangerouslySetInnerHTML={{ __html: slice.primary.calendarLink2 }}
           />
-        ) : null
-      ) : null}
-    </StyledCalendar>
+        </StyledCalendar>
+      ) : null
+    ) : null}
   </>
 );
 
@@ -155,6 +155,7 @@ const StyledWrapper = styled(Media)`
       '. stepLine .'
       '. title .'
       '. description .'
+      '. price .'
       '. button .';
   }
 
@@ -175,15 +176,17 @@ const StyledSmallerWrapper = styled.div`
     'stepLine'
     'title'
     'description'
+    'price'
     'button';
   place-content: start;
   padding-top: 1rem;
+  /* width: 80%; */
 `;
 
 const StyledImageWrapper = styled.div`
   grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
   @media only screen and (max-width: 767px) {
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
   }
 
   @media only screen and (min-width: 768px) {

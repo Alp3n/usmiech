@@ -7,29 +7,6 @@ import Button from '../../components/Button';
 import Image from 'next/image';
 import { Media } from '../../components/MediaQueries';
 
-{
-  /* <StyledImageStack className='full-bleed'>
-      <StyledImageBig width='80vw' left='20px'>
-        <Image
-          src={slice.primary.imageBig.url}
-          alt={slice.primary.imageBig.alt}
-          width={slice.primary.imageBig.dimensions.width}
-          height={slice.primary.imageBig.dimensions.height}
-          layout='responsive'
-        />
-        <StyledImageSmall width='40vw' left='-25%' bottom='-2rem'>
-          <Image
-            src={slice.primary.imageSmall.url}
-            alt={slice.primary.imageSmall.alt}
-            width={slice.primary.imageSmall.dimensions.width}
-            height={slice.primary.imageSmall.dimensions.height}
-            layout='responsive'
-          />
-        </StyledImageSmall>
-      </StyledImageBig>
-    </StyledImageStack> */
-}
-
 const DoubleImage = ({ slice }) => (
   <>
     <Media at='sm'>
@@ -42,7 +19,7 @@ const DoubleImage = ({ slice }) => (
               width={slice.primary.imageBig.dimensions.width}
               height={slice.primary.imageBig.dimensions.height}
               layout='responsive'
-              quality={100}
+              quality={90}
             />
             <StyledImageSmall width='40vw' left='-25%' bottom='-2rem'>
               <Image
@@ -51,7 +28,7 @@ const DoubleImage = ({ slice }) => (
                 width={slice.primary.imageSmall.dimensions.width}
                 height={slice.primary.imageSmall.dimensions.height}
                 layout='responsive'
-                quality={100}
+                quality={90}
               />
             </StyledImageSmall>
           </StyledImageBig>
@@ -83,7 +60,7 @@ const DoubleImage = ({ slice }) => (
               width={slice.primary.imageBig.dimensions.width}
               height={slice.primary.imageBig.dimensions.height}
               layout='responsive'
-              // quality={100}
+              quality={90}
             />
             <StyledImageSmall width='40vw' left='-25%' bottom='-2rem'>
               <Image
@@ -92,7 +69,7 @@ const DoubleImage = ({ slice }) => (
                 width={slice.primary.imageSmall.dimensions.width}
                 height={slice.primary.imageSmall.dimensions.height}
                 layout='responsive'
-                // quality={100}
+                quality={90}
               />
             </StyledImageSmall>
           </StyledImageBig>
@@ -137,7 +114,7 @@ const StyledWrapper = styled.div`
 
   @media only screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 5rem;
+    column-gap: 10rem;
     grid-template-areas: 'rightColumn image';
     margin-bottom: 10rem;
   }
@@ -152,6 +129,7 @@ const StyledSmallerWrapper = styled.div`
     'description'
     'button';
   place-content: center;
+  width: 80%;
 `;
 
 const StyledImageStack = styled.div`
@@ -167,13 +145,17 @@ const StyledImageBig = styled.div`
   position: relative;
   margin: 0 auto;
   width: ${({ width }) => (width ? width : null)};
-  left: ${({ left }) => (left ? left : null)};
-  max-width: 400px;
+  /* left: ${({ left }) => (left ? left : null)}; */
+  /* max-width: 60%; */
+  max-width: 450px;
+
+  @media only screen and (min-width: 768px) {
+    margin: 0;
+  }
 `;
 
 const StyledImageSmall = styled.div`
   position: absolute;
-  margin: 0 auto;
   width: ${({ width }) => (width ? width : null)};
   left: ${({ left }) => (left ? left : null)};
   bottom: ${({ bottom }) => (bottom ? bottom : null)};

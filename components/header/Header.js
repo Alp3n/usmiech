@@ -11,46 +11,44 @@ import Menu from './Menu';
 export const Header = ({ menu }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <>
-      <StyledWrapper>
-        <StyledGrid>
-          <StyledMobileDiv at='sm'>
-            {isOpen ? (
-              <VscClose
-                size={28}
-                onClick={() => {
-                  setIsOpen((prev) => !prev);
-                }}
-              />
-            ) : (
-              <VscMenu
-                size={28}
-                onClick={() => {
-                  setIsOpen((prev) => !prev);
-                }}
-              />
-            )}
-          </StyledMobileDiv>
-          <StyledPrismicLink href='/'>
-            <Media greaterThan='sm'>
-              <Logo width='200' height='68' viewBox='70 -25 100 95' />
-            </Media>
-            <Media at='sm'>
-              <Logo width='150' height='58' viewBox='70 -25 100 95' />
-            </Media>
-          </StyledPrismicLink>
-          <StyledDiv greaterThan='sm'>
-            <Navigation menu={menu} />
-            <Button
-              link={menu.data.buttonLink}
-              label={menu.data.buttonLabel}
-              color='black'
+    <StyledWrapper>
+      <StyledGrid>
+        <StyledMobileDiv at='sm'>
+          {isOpen ? (
+            <VscClose
+              size={28}
+              onClick={() => {
+                setIsOpen((prev) => !prev);
+              }}
             />
-          </StyledDiv>
-        </StyledGrid>
-        {isOpen ? <Menu menu={menu} /> : null}
-      </StyledWrapper>
-    </>
+          ) : (
+            <VscMenu
+              size={28}
+              onClick={() => {
+                setIsOpen((prev) => !prev);
+              }}
+            />
+          )}
+        </StyledMobileDiv>
+        <StyledPrismicLink href='/'>
+          <Media greaterThan='sm'>
+            <Logo width='200' height='68' viewBox='70 -25 100 95' />
+          </Media>
+          <Media at='sm'>
+            <Logo width='150' height='58' viewBox='70 -25 100 95' />
+          </Media>
+        </StyledPrismicLink>
+        <StyledDiv greaterThan='sm'>
+          <Navigation menu={menu} />
+          <Button
+            link={menu.data.buttonLink}
+            label={menu.data.buttonLabel}
+            color='black'
+          />
+        </StyledDiv>
+      </StyledGrid>
+      {isOpen ? <Menu menu={menu} /> : null}
+    </StyledWrapper>
   );
 };
 
@@ -88,7 +86,7 @@ const StyledWrapper = styled.header`
   grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr;
   grid-column-gap: 24px;
   padding: 0.5rem 0;
-  box-shadow: 1px 3px 5px grey;
+  box-shadow: 1px 1px 4px grey;
   z-index: 9999;
   background-color: #fff;
   > * {

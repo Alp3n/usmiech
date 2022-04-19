@@ -92,7 +92,7 @@ const StyledAbsoluteWrapper = styled.div`
   display: grid;
   grid-template-columns: 100%;
   align-self: center;
-
+  /* margin-top: 3rem; */
   @media only screen and (max-width: 767px) {
     margin-left: 1rem;
     ${({ inside }) => (inside ? 'top:3rem;' : 'bottom: 0;')};
@@ -134,6 +134,7 @@ const StyledImageWrapper = styled(Media)`
   grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr;
   grid-column-gap: 24px;
   height: auto;
+  row-gap: 1.5rem;
 
   > * {
     grid-column: 2;
@@ -143,7 +144,7 @@ const StyledImageWrapper = styled(Media)`
     width: 100%;
   }
   @media only screen and (min-width: 768px) {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     ${({ color }) =>
       color === 'white'
         ? ` > * > * {

@@ -89,7 +89,7 @@ const StyledDesktopLine = styled(Media)`
     width: 95%;
     height: 0;
     place-self: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 `;
 

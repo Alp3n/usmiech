@@ -72,6 +72,7 @@ const StyledLink = styled(PrismicLink)`
     padding: 6px 32px;
     border-radius: 32px;
     width: fit-content;
+    font-size: 1.3rem;
     p {
       margin: 8px 0;
     }

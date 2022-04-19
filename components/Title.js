@@ -42,20 +42,20 @@ const StyledTitle = styled.span`
 
   > h2 {
     font-size: ${({ size }) => (size ? size : '2rem')};
-
     line-height: 1.5;
     margin: 0;
   }
   @media only screen and (min-width: 767px) {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     > h1 {
       font-size: ${({ size }) => (size ? size : '5vw')};
       /* font-weight: 200; */
+      line-height: 1;
     }
 
     > h2 {
       font-size: ${({ size }) => (size ? size : '2.2rem')};
-      line-height: 1.5;
+      line-height: 1.2;
     }
   }
 `;

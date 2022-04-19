@@ -126,7 +126,7 @@ const StyledDescription = styled.span`
 `;
 
 const StyledImageWrapper = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 `;
 
 const StyledWrapper = styled(Media)`
@@ -145,7 +145,7 @@ const StyledWrapper = styled(Media)`
     width: 100%;
   }
   @media only screen and (min-width: 768px) {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     ${({ color }) =>
       color === 'white'
         ? ` > * > * {
