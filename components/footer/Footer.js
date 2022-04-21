@@ -55,15 +55,20 @@ const Footer = ({ menu }) => {
         </StyledFlex>
         <StyledLine greaterThan='sm' area='line2' />
       </StyledWrapper>
+      <StyledLine at='sm' marginTop />
       <p>hello</p>
     </StyledFooter>
   );
 };
 export default Footer;
 const StyledSpan = styled.span`
-  font-size: 1.3rem;
-  line-height: 2.4rem;
+  font-size: 1.1rem;
+  line-height: 2.2rem;
   /* font-weight: 300; */
+  @media only screen and (min-width: 768px) {
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+  }
 `;
 
 const StyledFooter = styled.footer`
@@ -106,6 +111,7 @@ const StyledLine = styled(Media)`
   width: 100%;
   border-top: 1px solid black;
   grid-area: ${({ area }) => (area ? area : null)};
+  ${({ marginTop }) => (marginTop ? 'margin: 2rem 0 1rem 0;' : null)}
 `;
 
 const StyledGrid = styled.div`

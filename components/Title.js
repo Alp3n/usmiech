@@ -17,12 +17,12 @@ const Title = ({
     marginBottom={marginBottom}
     line={line}
   >
-    {children}
-    {line ? (
+    {/* {line ? (
       <StyledLineWrapper>
         <StyledLine />
       </StyledLineWrapper>
-    ) : null}
+    ) : null} */}
+    {children}
   </StyledTitle>
 );
 
@@ -35,10 +35,12 @@ const StyledLine = styled.div`
   width: 100%;
   border-top: 1px solid black;
   place-self: start;
-  top: 2.2rem;
+  top: 1.5rem;
   left: 24px;
 
   @media only screen and (min-width: 768px) {
+    /* position: absolute; */
+    top: 2.2rem;
     margin-bottom: 0;
     left: 10%;
     width: 100%;

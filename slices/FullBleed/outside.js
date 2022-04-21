@@ -40,7 +40,7 @@ const Outside = ({ slice }) => (
           <Button
             link={slice.primary.buttonLink}
             label={slice.primary.buttonLabel}
-            color={slice.primary.color}
+            color='black'
           />
         ) : null}
       </StyledGrid>
@@ -106,7 +106,7 @@ const StyledAbsoluteWrapper = styled.div`
 `;
 
 const StyledDescription = styled.span`
-  margin-bottom: 2rem;
+  margin-bottom: 40px;
   z-index: 100;
 
   ${({ color }) =>
@@ -142,7 +142,7 @@ const StyledGrid = styled.div`
 `;
 
 const StyledImageWrapper = styled.div`
-  margin-bottom: 1rem;
+  margin-bottom: 40px;
 `;
 
 const StyledWrapper = styled(Media)`

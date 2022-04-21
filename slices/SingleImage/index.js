@@ -13,6 +13,7 @@ const SingleImage = ({ slice }) => (
       at='sm'
       // className='full-bleed'
       clinic={slice.variation === 'clinic' ? 'clinic' : null}
+      marginTop={slice.primary.title.map((t) => t.text)}
     >
       {slice.variation === 'steps' ? (
         <StyledStepLineWrapper gridArea='stepLine'>
@@ -86,6 +87,7 @@ const SingleImage = ({ slice }) => (
       side={slice.primary.imageSide}
       greaterThan='sm'
       clinic={slice.variation === 'clinic' ? 'clinic' : null}
+      marginTop={slice.primary.title.map((t) => t.text)}
     >
       <StyledImageWrapper gridArea='image'>
         <Image
@@ -152,7 +154,7 @@ const SingleImage = ({ slice }) => (
     </StyledWrapperDesktop>
     {slice.variation === 'clinic' ? (
       slice.primary.calendarLink ? (
-        <StyledCalendar greaterThanOrEqual='sm' className='iframe full-bleed'>
+        <StyledCalendar greaterThanOrEqual='sm' className='iframe'>
           <div
             dangerouslySetInnerHTML={{ __html: slice.primary.calendarLink2 }}
           />
@@ -188,7 +190,8 @@ const StyledWrapperDesktop = styled(Media)`
     display: inline-block;
     position: relative;
     width: 100%;
-    margin-top: ${({ clinic }) => (clinic === 'clinic' ? '50px' : '0')};
+    margin-top: ${({ marginTop }) =>
+      marginTop.includes('Centrum') ? '50px' : '0'};
     margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '0' : '110px')};
     /* margin-top: 1.5rem; */
     display: grid;
@@ -200,22 +203,7 @@ const StyledWrapperDesktop = styled(Media)`
     column-gap: 7rem;
     margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '3rem' : '110px')};
   }
-  @media only screen and (min-width: 1024px) {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    margin-top: ${({ clinic }) => (clinic === 'clinic' ? '50px' : '0')};
-    margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '0' : '110px')};
-    /* margin-top: 1.5rem; */
-    display: grid;
-    /* grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr; */
-    height: auto;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: ${({ side }) =>
-      side === 'left' ? `'image column'` : `'column image'`};
 
-    margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '3rem' : '110px')};
-  }
   @media only screen and (min-width: 1292px) {
     column-gap: 10rem;
   }
@@ -224,37 +212,27 @@ const StyledWrapperDesktop = styled(Media)`
 const StyledWrapper = styled(Media)`
   position: relative;
   width: 100%;
-  margin-top: ${({ clinic }) => (clinic === 'clinic' ? '50px' : '0')};
+  margin-top: ${({ marginTop }) =>
+    marginTop.includes('Centrum') ? '40px' : '0'};
   margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '0' : '90px')};
-  /* margin-top: 1.5rem; */
   display: grid;
-  /* grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr; */
+
   height: auto;
 
-  @media only screen and (max-width: 767px) {
-    > * {
-      grid-column: 2;
-    }
-    .full-bleed {
-      grid-column: 1 / -1;
-      width: 100%;
-    }
-    grid-template-areas:
-      '. stepLine .'
-      '. title .'
-      '. image .'
-      '. description .'
-      '. price .'
-      '. button .';
+  > * {
+    grid-column: 2;
   }
-
-  @media only screen and (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: ${({ side }) =>
-      side === 'left' ? `'image column'` : `'column image'`};
-    column-gap: 10rem;
-    margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '3rem' : '110px')};
+  .full-bleed {
+    grid-column: 1 / -1;
+    width: 100%;
   }
+  grid-template-areas:
+    '. stepLine .'
+    '. title .'
+    '. image .'
+    '. description .'
+    '. price .'
+    '. button .';
 `;
 
 const StyledSmallerWrapper = styled.div`
@@ -286,5 +264,8 @@ const StyledImageWrapper = styled.div`
 `;
 
 const StyledCalendar = styled.div`
-  margin-bottom: 60px;
+  /* margin-bottom: 10px; */
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 60px;
+  }
 `;

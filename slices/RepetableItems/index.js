@@ -9,11 +9,11 @@ import { Media } from '../../components/MediaQueries';
 const RepetableItems = ({ slice }) => (
   <StyledWrapper>
     <StyledHeader>
-      <Title marginBottom={'40px'}>
-        {slice.primary.title ? (
+      {slice.primary.title ? (
+        <Title marginBottom={'40px'} line>
           <PrismicRichText field={slice.primary.title} />
-        ) : null}
-      </Title>
+        </Title>
+      ) : null}
       <StyledDesktopLine greaterThan='sm' />
     </StyledHeader>
 
