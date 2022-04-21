@@ -20,20 +20,20 @@ const Footer = ({ menu }) => {
                 flexDirection: 'column',
               }}
             >
-              <p style={{ marginTop: 0 }}>
+              <StyledSpan>
                 ul. Grzybowska 43 lok. U7
                 <br />
                 00-855 Warszawa, Polska
-              </p>
+              </StyledSpan>
             </div>
           </StyledItem>
           <StyledItem>
             <MdPhone size={'24'} />
-            <span>505 255 600</span>
+            <StyledSpan>505 255 600</StyledSpan>
           </StyledItem>
           <StyledItem>
             <MdMail size={'24'} />
-            <span>kontakt@smiechu.pl</span>
+            <StyledSpan>kontakt@smiechu.pl</StyledSpan>
           </StyledItem>
         </StyledGrid>
         <StyledLine at='sm' />
@@ -60,6 +60,12 @@ const Footer = ({ menu }) => {
   );
 };
 export default Footer;
+const StyledSpan = styled.span`
+  font-size: 1.3rem;
+  line-height: 2.4rem;
+  /* font-weight: 300; */
+`;
+
 const StyledFooter = styled.footer`
   display: grid;
   grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr;

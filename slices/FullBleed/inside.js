@@ -77,7 +77,7 @@ const Inside = ({ slice }) => (
             link={slice.primary.buttonLink}
             label={slice.primary.buttonLabel}
             color={slice.primary.color}
-            size={'1.5rem'}
+            size={'1.2rem'}
           />
         ) : null}
       </StyledAbsoluteWrapper>
@@ -135,7 +135,7 @@ const StyledDescription = styled.span`
     width: 61ch;
     p {
       line-height: 2.6rem;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       /* width: 100%; */
     }
   }
