@@ -20,6 +20,15 @@
             "single": "heading2"
           }
         },
+        "titleMobile": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title Mobile",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
         "description": {
           "type": "StructuredText",
           "config": {
@@ -121,6 +130,15 @@
             "placeholder": ""
           },
           "type": "Text"
+        },
+        "titleMobile": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title Mobile",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
         }
       },
       "items": {},
@@ -221,13 +239,22 @@
             "single": "heading2"
           }
         },
-        "description": {
+        "descriptionOne": {
           "type": "StructuredText",
           "config": {
             "label": "Description",
             "placeholder": "A nice description of your feature",
             "allowTargetBlank": true,
             "multi": "paragraph"
+          }
+        },
+        "descriptionTwo": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description Two",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
         "image": {

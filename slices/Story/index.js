@@ -7,7 +7,7 @@ import Button from '../../components/Button';
 
 const Story = ({ slice }) => (
   <>
-    <Media at='sm' className='full-bleed'>
+    <StyledImageWrapper at='sm' className='full-bleed'>
       <PrismicLink field={slice.primary.buttonLink}>
         <Image
           src={`${slice.primary.image.mobile.url}&auto=noCompress`}
@@ -18,8 +18,8 @@ const Story = ({ slice }) => (
           quality={100}
         />
       </PrismicLink>
-    </Media>
-    <Media greaterThan='sm' className='full-bleed'>
+    </StyledImageWrapper>
+    <StyledImageWrapper greaterThan='sm' className='full-bleed'>
       <PrismicLink field={slice.primary.buttonLink}>
         <Image
           src={`${slice.primary.image.url}&auto=noCompress`}
@@ -30,7 +30,7 @@ const Story = ({ slice }) => (
           quality={100}
         />
       </PrismicLink>
-    </Media>
+    </StyledImageWrapper>
     <StyledGrid>
       <StyledLeftWrapper gridArea='leftWrapper'>
         <StyledTitle gridArea='title'>
@@ -47,12 +47,20 @@ const Story = ({ slice }) => (
         link={slice.primary.buttonLink}
         label={slice.primary.buttonLabel}
         gridArea='button'
+        color='black'
       />
     </StyledGrid>
   </>
 );
 
 export default Story;
+
+const StyledImageWrapper = styled(Media)`
+  margin-bottom: 10px;
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 50px;
+  }
+`;
 
 const StyledGrid = styled.div`
   margin: 2rem 0;
@@ -62,24 +70,28 @@ const StyledGrid = styled.div`
     'leftWrapper'
     'description'
     'button';
-  margin-bottom: 3rem;
+  margin-bottom: 110px;
 
   @media only screen and (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 5rem;
+    margin-bottom: 110px;
     grid-template-areas:
       'leftWrapper description'
       'leftWrapper button';
+    place-items: start;
   }
 `;
 
 const StyledDescription = styled.div`
-  font-size: 1.1rem;
-  line-height: 2.2;
   margin-bottom: 2rem;
-  @media only screen and (min-width: 768px) {
-    font-size: 1.5rem;
-    line-height: 1.6;
+  p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 2.4;
+    @media only screen and (min-width: 768px) {
+      font-size: 2rem;
+      line-height: 1.6;
+    }
   }
 `;
 
@@ -109,7 +121,7 @@ const StyledTitle = styled.span`
 
 const StyledSubtitle = styled.span`
   grid-area: ${({ gridArea }) => gridArea};
-
+  margin-bottom: 1.5rem;
   > p {
     margin: 0;
     padding: 0;

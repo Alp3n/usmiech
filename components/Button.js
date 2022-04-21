@@ -3,14 +3,19 @@ import { PrismicLink, PrismicText, PrismicRichText } from '@prismicio/react';
 import styled from '@emotion/styled';
 import { Media } from './MediaQueries';
 
-const Button = ({ link, label, color, gridArea, plain, normal }) => {
-  if (normal) {
-    return (
-      <StyledBorderButton field={link} color={color} gridArea={gridArea}>
-        <PrismicText field={label} />
-      </StyledBorderButton>
-    );
-  }
+const Button = ({ link, label, color, gridArea, size }) => {
+  // if (normal) {
+  return (
+    <StyledBorderButton
+      field={link}
+      color={color}
+      gridArea={gridArea}
+      size={size}
+    >
+      <PrismicText field={label} />
+    </StyledBorderButton>
+  );
+  /*   }
   return (
     <StyledLink field={link} color={color} gridArea={gridArea}>
       <PrismicText field={label} />
@@ -20,7 +25,7 @@ const Button = ({ link, label, color, gridArea, plain, normal }) => {
         </StyledMedia>
       )}
     </StyledLink>
-  );
+  ); */
 };
 export default Button;
 
@@ -67,13 +72,14 @@ const StyledLink = styled(PrismicLink)`
       : null}
 
   @media only screen and (min-width: 764px) {
-    border: ${({ color }) =>
-      color ? `1px solid ${color}` : `1px solid black`};
+    border: 1px solid black;
+    /*   border: ${({ color }) =>
+      color ? `1px solid ${color}` : `1px solid black`}; */
     padding: 6px 32px;
     border-radius: 32px;
     width: fit-content;
-    font-size: 1.3rem;
     p {
+      font-size: 1.3rem;
       margin: 8px 0;
     }
 
@@ -87,16 +93,6 @@ const StyledLink = styled(PrismicLink)`
   }
 `;
 
-const StyledLine = styled.div`
-  border-top: 1px solid black;
-  width: calc(100% - 1rem);
-  margin-left: 1rem;
-`;
-
-const StyledMedia = styled(Media)`
-  width: 100%;
-`;
-
 const StyledBorderButton = styled(PrismicLink)`
   text-decoration: none;
   align-items: center;
@@ -104,7 +100,10 @@ const StyledBorderButton = styled(PrismicLink)`
   padding: 6px 32px;
   border-radius: 32px;
   width: fit-content;
-  font-size: 1.1rem;
+  z-index: 100;
+  font-size: ${({ size }) => (size ? size : '1.1rem')};
+  grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
+
   &:link {
     color: ${({ color }) => (color ? color : 'black')};
   }
@@ -112,7 +111,10 @@ const StyledBorderButton = styled(PrismicLink)`
     color: ${({ color }) => (color ? color : 'black')};
   }
   &:hover {
-    color: ${({ color }) => (color === 'white' ? 'black' : 'white')};
+    border: ${({ color }) =>
+      color === 'white' ? '1px solid black' : '1px solid black'};
+    background-color: ${({ color }) => (color === 'white' ? 'black' : 'black')};
+    color: ${({ color }) => (color === 'white' ? 'white' : 'white')};
   }
   &:active {
     color: ${({ color }) => (color ? color : 'black')};
@@ -121,11 +123,7 @@ const StyledBorderButton = styled(PrismicLink)`
     margin: 8px 0;
   }
 
-  &:hover {
-    border: ${({ color }) =>
-      color === 'white' ? '1px solid black' : '1px solid black'};
-    background-color: ${({ color }) =>
-      color === 'white' ? 'transparent' : 'black'};
-    color: ${({ color }) => (color === 'white' ? 'black' : 'white')};
+  @media only screen and (min-width: 768px) {
+    font-size: ${({ size }) => (size ? size : '1.3rem')};
   }
 `;

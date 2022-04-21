@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 import Navigation from './Navigation';
 
-const Menu = ({ menu }) => {
+const Menu = ({ menu, bordertop }) => {
   return (
     <StyledMenu>
-      <Navigation menu={menu} vertical />
+      <Navigation menu={menu} vertical bordertop={bordertop} />
     </StyledMenu>
   );
 };

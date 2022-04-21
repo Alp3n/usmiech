@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { PrismicLink } from '@prismicio/react';
 import { MdPhone, MdMail, MdLocationOn } from 'react-icons/md';
 import { RiFacebookCircleLine, RiInstagramLine } from 'react-icons/ri';
 import Navigation from '../header/Navigation';
@@ -8,8 +9,8 @@ const Footer = ({ menu }) => {
   return (
     <StyledFooter>
       <StyledWrapper>
-        <StyledLine greaterThan='sm' area='line' />
-        <StyledLine at='sm' />
+        {/* <StyledLine greaterThan='sm' area='line' />
+        <StyledLine at='sm' /> */}
         <StyledGrid>
           <StyledItem>
             <MdLocationOn size={'24'} />
@@ -19,8 +20,11 @@ const Footer = ({ menu }) => {
                 flexDirection: 'column',
               }}
             >
-              <p style={{ marginTop: 0 }}>ul. Grzybowska 43 lok. U7</p>
-              <p style={{ marginTop: 0 }}>00-855 Warszawa, Polska</p>
+              <p style={{ marginTop: 0 }}>
+                ul. Grzybowska 43 lok. U7
+                <br />
+                00-855 Warszawa, Polska
+              </p>
             </div>
           </StyledItem>
           <StyledItem>
@@ -38,15 +42,20 @@ const Footer = ({ menu }) => {
         </StyledGrid>
         <StyledLine at='sm' />
         <StyledFlex>
-          <StyledItem>
-            <RiFacebookCircleLine size={'34'} />
-          </StyledItem>
-          <StyledItem>
-            <RiInstagramLine size={'34'} />
-          </StyledItem>
+          <PrismicLink field={menu.data.socialInstagram}>
+            <StyledItemSocial>
+              <RiFacebookCircleLine size={'34'} aria-label='facebook' />
+            </StyledItemSocial>
+          </PrismicLink>
+          <PrismicLink field={menu.data.socialFacebook}>
+            <StyledItemSocial>
+              <RiInstagramLine size={'34'} aria-label='instagram' />
+            </StyledItemSocial>
+          </PrismicLink>
         </StyledFlex>
         <StyledLine greaterThan='sm' area='line2' />
       </StyledWrapper>
+      <p>hello</p>
     </StyledFooter>
   );
 };
@@ -63,6 +72,9 @@ const StyledFooter = styled.footer`
   .full-bleed {
     grid-column: 1 / -1;
     width: 100%;
+  }
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 1fr min(135ch, calc(100% - 98px)) 1fr;
   }
 `;
 
@@ -115,9 +127,26 @@ const StyledItem = styled.div`
   grid-template-columns: 1fr;
   place-content: center;
   place-items: center;
-
+  color: black;
   @media only screen and (min-width: 768px) {
     display: flex;
-    place-items: start;
+    /* place-items: top; */
+  }
+`;
+
+const StyledItemSocial = styled.div`
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  place-content: center;
+  place-items: center;
+  color: black;
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    /* place-items: top; */
+
+    :hover > svg {
+      color: grey;
+    }
   }
 `;

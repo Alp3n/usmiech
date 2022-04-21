@@ -12,7 +12,7 @@ const DoubleImage = ({ slice }) => (
     <Media at='sm'>
       <StyledWrapper>
         <StyledImageStack className='full-bleed' gridArea='image'>
-          <StyledImageBig width='80vw' left='20px'>
+          <StyledImageBig width='100%' left='20px'>
             <Image
               src={slice.primary.imageBig.url}
               alt={slice.primary.imageBig.alt}
@@ -21,7 +21,7 @@ const DoubleImage = ({ slice }) => (
               layout='responsive'
               quality={90}
             />
-            <StyledImageSmall width='40vw' left='-25%' bottom='-2rem'>
+            <StyledImageSmall width='42vw' left='-10%' bottom='-2rem'>
               <Image
                 src={slice.primary.imageSmall.url}
                 alt={slice.primary.imageSmall.alt}
@@ -33,27 +33,28 @@ const DoubleImage = ({ slice }) => (
             </StyledImageSmall>
           </StyledImageBig>
         </StyledImageStack>
-        <Title gridArea='title'>
-          {slice.primary.title ? (
+        {slice.primary.title ? (
+          <Title gridArea='title' marginBottom={'40px'} line>
             <PrismicRichText field={slice.primary.title} />
-          ) : null}
-        </Title>
-        <Description gridArea='description'>
-          {slice.primary.description ? (
+          </Title>
+        ) : null}
+        {slice.primary.description ? (
+          <Description gridArea='description' marginBottom={'50px'}>
             <PrismicRichText field={slice.primary.description} />
-          ) : null}
-        </Description>
+          </Description>
+        ) : null}
         <Button
           link={slice.primary.buttonLink}
           label={slice.primary.buttonLabel}
           gridArea='button'
+          color='black'
         />
       </StyledWrapper>
     </Media>
     <Media greaterThan='sm'>
       <StyledWrapper>
         <StyledImageStack gridArea='image'>
-          <StyledImageBig width='80vw' left='20px'>
+          <StyledImageBig width='100%' left='20px'>
             <Image
               src={slice.primary.imageBig.url}
               alt={slice.primary.imageBig.alt}
@@ -62,7 +63,7 @@ const DoubleImage = ({ slice }) => (
               layout='responsive'
               quality={90}
             />
-            <StyledImageSmall width='40vw' left='-25%' bottom='-2rem'>
+            <StyledImageSmall width='45vw' left='-25%' bottom='-2rem'>
               <Image
                 src={slice.primary.imageSmall.url}
                 alt={slice.primary.imageSmall.alt}
@@ -75,20 +76,21 @@ const DoubleImage = ({ slice }) => (
           </StyledImageBig>
         </StyledImageStack>
         <StyledSmallerWrapper gridArea='rightColumn'>
-          <Title gridArea='title'>
-            {slice.primary.title ? (
+          {slice.primary.title ? (
+            <Title gridArea='title' marginBottom={'40px'} line>
               <PrismicRichText field={slice.primary.title} />
-            ) : null}
-          </Title>
-          <Description gridArea='description'>
-            {slice.primary.description ? (
+            </Title>
+          ) : null}
+          {slice.primary.description ? (
+            <Description gridArea='description' marginBottom={'50px'}>
               <PrismicRichText field={slice.primary.description} />
-            ) : null}
-          </Description>
+            </Description>
+          ) : null}
           <Button
             link={slice.primary.buttonLink}
             label={slice.primary.buttonLabel}
             gridArea='button'
+            color='black'
           />
         </StyledSmallerWrapper>
       </StyledWrapper>
@@ -106,17 +108,20 @@ const StyledWrapper = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: repeat(1, 1fr);
   grid-template-areas:
-    'image'
     'title'
+    'image'
     'description'
     'button';
   margin-bottom: 5rem;
 
   @media only screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 10rem;
+    column-gap: 7rem;
     grid-template-areas: 'rightColumn image';
     margin-bottom: 10rem;
+  }
+  @media only screen and (min-width: 1292px) {
+    column-gap: 10rem;
   }
 `;
 
@@ -151,6 +156,7 @@ const StyledImageBig = styled.div`
 
   @media only screen and (min-width: 768px) {
     margin: 0;
+    max-width: 520px;
   }
 `;
 
@@ -161,4 +167,8 @@ const StyledImageSmall = styled.div`
   bottom: ${({ bottom }) => (bottom ? bottom : null)};
   max-width: 200px;
   z-index: 100;
+
+  @media only screen and (min-width: 768px) {
+    max-width: 250px;
+  }
 `;

@@ -35,7 +35,7 @@ const Calculator = ({
     <StyledWrapper>
       <h1>{title}</h1>
       <StyledInputWrapper id='licowki'>
-        <span>{firstDesc}</span>
+        <StyledSpan>{firstDesc}</StyledSpan>
         <StyledOptionsWrapper>
           {months?.map((value, index) => (
             <>
@@ -54,7 +54,7 @@ const Calculator = ({
         </StyledOptionsWrapper>
       </StyledInputWrapper>
       <StyledInputWrapper id='ortodontist'>
-        <span>{secondDesc}</span>
+        <StyledSpan>{secondDesc}</StyledSpan>
         <StyledOptionsWrapper>
           {rates.map((value, index) => (
             <>
@@ -78,11 +78,10 @@ const Calculator = ({
 };
 
 export default Calculator;
-
 const StyledInputWrapper = styled.div`
   display: grid;
-  gap: 3rem;
   scroll-margin-top: 15rem;
+  gap: 3rem;
   @media only screen and (min-width: 768px) {
     font-size: 1.3rem;
     font-weight: 300;
@@ -90,11 +89,15 @@ const StyledInputWrapper = styled.div`
     grid-template-columns: 30% 40%;
   }
 `;
-
+const StyledSpan = styled.span`
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 2.2rem;
+`;
 const StyledWrapper = styled.div`
   display: grid;
   grid-template-columns: 1;
-  gap: 5rem;
+  row-gap: 2rem;
   margin-bottom: 3rem;
 
   @media only screen and (min-width: 768px) {

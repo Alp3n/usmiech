@@ -2,10 +2,15 @@ import { Layout } from '../components/layout/Layout';
 import { SliceZone } from '@prismicio/react';
 import { createClient } from '../prismicio';
 import { components } from '../slices/index';
+import SEO from '../components/SEO';
 
 export default function Clinics({ menu, page }) {
   return (
     <Layout menu={menu}>
+      <SEO
+        metaTitle={page.data.metaTitle}
+        metaDescription={page.data.metaDescription}
+      />
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   );

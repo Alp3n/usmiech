@@ -11,10 +11,32 @@ const SingleImage = ({ slice }) => (
   <>
     <StyledWrapper
       at='sm'
-      className='full-bleed'
+      // className='full-bleed'
       clinic={slice.variation === 'clinic' ? 'clinic' : null}
     >
-      <StyledImageWrapper gridArea='image' className='full-bleed'>
+      {slice.variation === 'steps' ? (
+        <StyledStepLineWrapper gridArea='stepLine'>
+          <PrismicRichText field={slice.primary.step} />
+          <StyledLine />
+        </StyledStepLineWrapper>
+      ) : null}
+      {slice.primary.title ? (
+        <Title
+          gridArea='title'
+          marginBottom='40px'
+          line={slice.variation === 'steps' ? false : true}
+        >
+          <PrismicRichText
+            field={
+              slice.primary.titleMobile
+                ? slice.primary.titleMobile
+                : slice.primary.title
+            }
+          />
+        </Title>
+      ) : null}
+
+      <StyledImageWrapper gridArea='image' /* className='full-bleed' */>
         <Image
           src={slice.primary.image.mobile.url}
           alt={slice.primary.image.mobile.alt}
@@ -24,37 +46,43 @@ const SingleImage = ({ slice }) => (
           quality={100}
         />
       </StyledImageWrapper>
-      {slice.variation === 'step' ? (
-        <StyledStepLineWrapper gridArea='stepLine'>
-          <PrismicRichText field={slice.primary.step} />
-          <StyledLine />
-        </StyledStepLineWrapper>
-      ) : null}
-      <Title gridArea='title'>
-        {slice.primary.title ? (
-          <PrismicRichText field={slice.primary.title} />
-        ) : null}
-      </Title>
-      <Description gridArea='description'>
-        {slice.primary.description ? (
+      {slice.variation === 'clinic' ? (
+        <>
+          <Description gridArea='description' marginBottom={'40px'}>
+            <PrismicRichText field={slice.primary.descriptionOne} />
+          </Description>
+
+          <Description gridArea='price' marginBottom={'40px'}>
+            <PrismicRichText field={slice.primary.descriptionTwo} />
+          </Description>
+        </>
+      ) : (
+        <Description
+          gridArea='description'
+          marginBottom={'40px'}
+          width={slice.primary.imageSide === 'right' ? '80%' : null}
+        >
           <PrismicRichText field={slice.primary.description} />
-        ) : null}
-      </Description>
+        </Description>
+      )}
+
       {slice.variation === 'product' ? (
         slice.primary.price ? (
-          <Description gridArea='price'>
+          <Description gridArea='price' marginBottom={'40px'}>
             <PrismicRichText field={slice.primary.price} />
           </Description>
         ) : null
       ) : null}
+
       <Button
         link={slice.primary.buttonLink}
         label={slice.primary.buttonLabel}
         gridArea='button'
+        color='black'
       />
     </StyledWrapper>
 
-    <StyledWrapper
+    <StyledWrapperDesktop
       side={slice.primary.imageSide}
       greaterThan='sm'
       clinic={slice.variation === 'clinic' ? 'clinic' : null}
@@ -66,11 +94,11 @@ const SingleImage = ({ slice }) => (
           width={slice.primary.image.dimensions.width}
           height={slice.primary.image.dimensions.height}
           layout='responsive'
-          quality={100}
+          // quality={100}
         />
       </StyledImageWrapper>
       <StyledSmallerWrapper gridArea='column'>
-        {slice.variation === 'step' ? (
+        {slice.variation === 'steps' ? (
           <StyledStepLineWrapper gridArea='stepLine'>
             <PrismicRichText field={slice.primary.step} />
             <StyledLine />
@@ -78,34 +106,53 @@ const SingleImage = ({ slice }) => (
         ) : null}
 
         {slice.primary.title ? (
-          <Title gridArea='title'>
+          <Title
+            gridArea='title'
+            marginBottom='40px'
+            line={slice.variation === 'steps' ? false : true}
+          >
             <PrismicRichText field={slice.primary.title} />
           </Title>
         ) : null}
-        {slice.primary.description ? (
-          <Description gridArea='description'>
+        {slice.variation === 'clinic' ? (
+          <>
+            <Description gridArea='description' marginBottom={'40px'}>
+              <PrismicRichText field={slice.primary.descriptionOne} />
+            </Description>
+
+            <Description gridArea='price' marginBottom={'40px'}>
+              <PrismicRichText field={slice.primary.descriptionTwo} />
+            </Description>
+          </>
+        ) : (
+          <Description
+            gridArea='description'
+            marginBottom={'40px'}
+            width={slice.primary.imageSide === 'right' ? '80%' : null}
+          >
             <PrismicRichText field={slice.primary.description} />
           </Description>
-        ) : null}
+        )}
         {slice.primary.buttonLink ? (
           <Button
             link={slice.primary.buttonLink}
             label={slice.primary.buttonLabel}
             gridArea='button'
+            color='black'
           />
         ) : null}
         {slice.variation === 'product' ? (
-          slice.primary.price ? (
-            <Description gridArea='price'>
-              <PrismicRichText field={slice.primary.price} />
-            </Description>
-          ) : null
-        ) : null}
+          // slice.primary.price ? (
+          <Description gridArea='price' marginBottom={'50px'}>
+            <PrismicRichText field={slice.primary.price} />
+          </Description>
+        ) : // ) : null
+        null}
       </StyledSmallerWrapper>
-    </StyledWrapper>
+    </StyledWrapperDesktop>
     {slice.variation === 'clinic' ? (
       slice.primary.calendarLink ? (
-        <StyledCalendar greaterThanOrEqual='sm' className='iframe'>
+        <StyledCalendar greaterThanOrEqual='sm' className='iframe full-bleed'>
           <div
             dangerouslySetInnerHTML={{ __html: slice.primary.calendarLink2 }}
           />
@@ -119,7 +166,9 @@ export default SingleImage;
 
 const StyledStepLineWrapper = styled.div`
   grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
-  display: flex;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: auto 1fr;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
@@ -130,16 +179,56 @@ const StyledStepLineWrapper = styled.div`
 
 const StyledLine = styled.div`
   border-top: 1px solid black;
-  width: 80%;
+  width: 100%;
+`;
+
+const StyledWrapperDesktop = styled(Media)`
+  @media only screen and (min-width: 768px) {
+    column-gap: 4rem;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin-top: ${({ clinic }) => (clinic === 'clinic' ? '50px' : '0')};
+    margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '0' : '110px')};
+    /* margin-top: 1.5rem; */
+    display: grid;
+    /* grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr; */
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: ${({ side }) =>
+      side === 'left' ? `'image column'` : `'column image'`};
+    column-gap: 7rem;
+    margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '3rem' : '110px')};
+  }
+  @media only screen and (min-width: 1024px) {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin-top: ${({ clinic }) => (clinic === 'clinic' ? '50px' : '0')};
+    margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '0' : '110px')};
+    /* margin-top: 1.5rem; */
+    display: grid;
+    /* grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr; */
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: ${({ side }) =>
+      side === 'left' ? `'image column'` : `'column image'`};
+
+    margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '3rem' : '110px')};
+  }
+  @media only screen and (min-width: 1292px) {
+    column-gap: 10rem;
+  }
 `;
 
 const StyledWrapper = styled(Media)`
   position: relative;
   width: 100%;
-  margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '0' : '1rem')};
-  margin-top: 1.5rem;
+  margin-top: ${({ clinic }) => (clinic === 'clinic' ? '50px' : '0')};
+  margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '0' : '90px')};
+  /* margin-top: 1.5rem; */
   display: grid;
-  grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr;
+  /* grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr; */
   height: auto;
 
   @media only screen and (max-width: 767px) {
@@ -151,9 +240,9 @@ const StyledWrapper = styled(Media)`
       width: 100%;
     }
     grid-template-areas:
-      '. image .'
       '. stepLine .'
       '. title .'
+      '. image .'
       '. description .'
       '. price .'
       '. button .';
@@ -164,7 +253,7 @@ const StyledWrapper = styled(Media)`
     grid-template-areas: ${({ side }) =>
       side === 'left' ? `'image column'` : `'column image'`};
     column-gap: 10rem;
-    margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '3rem' : '10rem')};
+    margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '3rem' : '110px')};
   }
 `;
 
@@ -185,7 +274,9 @@ const StyledSmallerWrapper = styled.div`
 
 const StyledImageWrapper = styled.div`
   grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
+  margin-bottom: 50px;
   @media only screen and (max-width: 767px) {
+    /* width: 90vw; */
     margin-bottom: 2.5rem;
   }
 
@@ -194,4 +285,6 @@ const StyledImageWrapper = styled.div`
   }
 `;
 
-const StyledCalendar = styled.div``;
+const StyledCalendar = styled.div`
+  margin-bottom: 60px;
+`;

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Button from '../../components/Button';
 import Title from '../../components/Title';
 import { Media } from '../../components/MediaQueries';
+import Description from '../../components/Description';
 
 const MainPage = ({ slice }) => (
   <>
@@ -15,7 +16,7 @@ const MainPage = ({ slice }) => (
       color={slice.primary?.color}
       inside={slice.primary?.inside}
     >
-      <div className='full-bleed' style={{ position: 'relative' }}>
+      <StyledMobileImageWrapper className='full-bleed'>
         <Image
           src={slice.primary.image.mobile.url}
           alt={slice.primary.image.mobile.alt}
@@ -26,19 +27,20 @@ const MainPage = ({ slice }) => (
         />
         <StyledAbsoluteWrapper inside={slice.primary.inside}>
           {slice.primary.title ? (
-            <Title white={false}>
+            <Title white={false} marginBottom='40px'>
               <PrismicRichText field={slice.primary.title} />
             </Title>
           ) : null}
         </StyledAbsoluteWrapper>
-      </div>
-      <div>
-        {slice.primary.description ? (
+      </StyledMobileImageWrapper>
+
+      {slice.primary.description ? (
+        <div>
           <StyledDescription>
             <PrismicRichText field={slice.primary.description} />
           </StyledDescription>
-        ) : null}
-      </div>
+        </div>
+      ) : null}
     </StyledImageWrapper>
 
     {/* DEFAULT */}
@@ -50,7 +52,7 @@ const MainPage = ({ slice }) => (
     >
       <StyledAbsoluteWrapper>
         {slice.primary.title ? (
-          <Title white={slice.primary?.color}>
+          <Title white={slice.primary?.color} marginBottom={'40px'}>
             <PrismicRichText field={slice.primary.title} />
           </Title>
         ) : null}
@@ -63,7 +65,7 @@ const MainPage = ({ slice }) => (
           <Button
             link={slice.primary.buttonLink}
             label={slice.primary.buttonLabel}
-            color={slice.primary?.color}
+            color='black'
           />
         ) : null}
       </StyledAbsoluteWrapper>
@@ -86,6 +88,11 @@ const MainPage = ({ slice }) => (
 );
 
 export default MainPage;
+
+const StyledMobileImageWrapper = styled.div`
+  position: relative;
+  margin-bottom: 20px;
+`;
 
 const StyledAbsoluteWrapper = styled.div`
   position: absolute;
@@ -115,7 +122,7 @@ const StyledDescription = styled.span`
   p {
     font-size: 1.1rem;
     line-height: 2.2rem;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   @media only screen and (min-width: 768px) {
@@ -131,7 +138,8 @@ const StyledImageWrapper = styled(Media)`
   position: relative;
   display: grid;
   margin-bottom: 3rem;
-  grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr;
+  grid-template-columns: 1fr min(135ch, calc(100% - 48px)) 1fr;
+  /* grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr; */
   grid-column-gap: 24px;
   height: auto;
   row-gap: 1.5rem;
@@ -144,6 +152,8 @@ const StyledImageWrapper = styled(Media)`
     width: 100%;
   }
   @media only screen and (min-width: 768px) {
+    grid-template-columns: 1fr min(135ch, calc(100% - 98px)) 1fr;
+
     margin-bottom: 5rem;
     ${({ color }) =>
       color === 'white'

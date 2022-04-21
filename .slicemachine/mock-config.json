@@ -36,6 +36,12 @@
               "patternType": "PARAGRAPH",
               "blocks": 1
             }
+          },
+          "descriptionOne": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
           }
         }
       },

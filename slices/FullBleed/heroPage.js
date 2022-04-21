@@ -6,7 +6,7 @@ import Button from '../../components/Button';
 import Title from '../../components/Title';
 import { Media } from '../../components/MediaQueries';
 
-const Outside = ({ slice }) => (
+const heroPage = ({ slice }) => (
   <>
     {/* MOBILE */}
     <StyledWrapper at='sm' className='full-bleed'>
@@ -20,9 +20,9 @@ const Outside = ({ slice }) => (
           quality={100}
         />
       </StyledImageWrapper>
-      <div>
+      <StyleMobileWrapper>
         {slice.primary.title ? (
-          <Title white={false}>
+          <Title white={false} marginBottom='40px'>
             <PrismicRichText field={slice.primary.title} />
           </Title>
         ) : null}
@@ -38,7 +38,7 @@ const Outside = ({ slice }) => (
             plain
           />
         ) : null}
-      </div>
+      </StyleMobileWrapper>
     </StyledWrapper>
 
     {/* DEFAULT */}
@@ -50,7 +50,7 @@ const Outside = ({ slice }) => (
     >
       <StyledAbsoluteWrapper>
         {slice.primary.title ? (
-          <Title white={slice.primary?.color}>
+          <Title white={slice.primary?.color} marginBottom='40px'>
             <PrismicRichText field={slice.primary.title} />
           </Title>
         ) : null}
@@ -85,8 +85,11 @@ const Outside = ({ slice }) => (
   </>
 );
 
-export default Outside;
-
+export default heroPage;
+const StyleMobileWrapper = styled.div`
+  display: grid;
+  margin-bottom: 20px;
+`;
 const StyledAbsoluteWrapper = styled.div`
   position: absolute;
   display: grid;
@@ -99,11 +102,11 @@ const StyledAbsoluteWrapper = styled.div`
   }
 `;
 
-const StyledDescription = styled.span`
+const StyledDescription = styled.div`
   position: relative;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   z-index: 100;
-  width: 50ch;
+  /* width: 50ch; */
   ${({ color }) =>
     color === 'white'
       ? `
@@ -117,6 +120,7 @@ const StyledDescription = styled.span`
   }
 
   @media only screen and (min-width: 768px) {
+    width: 50ch;
     p {
       line-height: 2.2rem;
       font-size: 1.1rem;
@@ -133,7 +137,8 @@ const StyledWrapper = styled(Media)`
   position: relative;
   display: grid;
   margin-bottom: 3rem;
-  grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr;
+  grid-template-columns: 1fr min(135ch, calc(100% - 48px)) 1fr;
+  /* grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr; */
   grid-column-gap: 24px;
   height: auto;
 
@@ -145,6 +150,8 @@ const StyledWrapper = styled(Media)`
     width: 100%;
   }
   @media only screen and (min-width: 768px) {
+    grid-template-columns: 1fr min(135ch, calc(100% - 98px)) 1fr;
+
     margin-bottom: 5rem;
     ${({ color }) =>
       color === 'white'

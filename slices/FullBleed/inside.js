@@ -27,7 +27,7 @@ const Inside = ({ slice }) => (
       </div>
       <StyledAbsoluteWrapper inside={slice.primary.inside}>
         {slice.primary.title ? (
-          <Title white={slice.primary.color} size='2.2rem' noBottomMargin>
+          <Title white={slice.primary.color} size='2.2rem' marginBottom='1rem'>
             <PrismicRichText
               field={
                 slice.primary.titleMobile
@@ -42,12 +42,13 @@ const Inside = ({ slice }) => (
             <PrismicRichText field={slice.primary.descriptionMobile} />
           </StyledDescription>
         ) : null}
+
         {slice.primary.buttonLink ? (
           <Button
             link={slice.primary.buttonLink}
             label={slice.primary.buttonLabel}
             color={slice.primary.color}
-            normal
+            // normal
           />
         ) : null}
       </StyledAbsoluteWrapper>
@@ -62,7 +63,7 @@ const Inside = ({ slice }) => (
     >
       <StyledAbsoluteWrapper>
         {slice.primary.title ? (
-          <Title white={slice.primary?.color} size='4rem'>
+          <Title white={slice.primary?.color} size='4rem' marginBottom='40px'>
             <PrismicRichText field={slice.primary.title} />
           </Title>
         ) : null}
@@ -76,6 +77,7 @@ const Inside = ({ slice }) => (
             link={slice.primary.buttonLink}
             label={slice.primary.buttonLabel}
             color={slice.primary.color}
+            size={'1.5rem'}
           />
         ) : null}
       </StyledAbsoluteWrapper>
@@ -109,7 +111,6 @@ const StyledAbsoluteWrapper = styled.div`
   } */
 
   @media only screen and (min-width: 768px) {
-    /* top: 3rem; */
   }
 `;
 
@@ -133,8 +134,8 @@ const StyledDescription = styled.span`
   @media only screen and (min-width: 768px) {
     width: 61ch;
     p {
-      line-height: 2.2rem;
-      font-size: 1.2rem;
+      line-height: 2.6rem;
+      font-size: 1.5rem;
       /* width: 100%; */
     }
   }
@@ -143,8 +144,9 @@ const StyledDescription = styled.span`
 const StyledImageWrapper = styled(Media)`
   position: relative;
   display: grid;
-  margin-bottom: 3rem;
-  grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr;
+  margin-bottom: 110px;
+  grid-template-columns: 1fr min(135ch, calc(100% - 48px)) 1fr;
+  /* grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr; */
   grid-column-gap: 24px;
   height: auto;
 
@@ -156,7 +158,9 @@ const StyledImageWrapper = styled(Media)`
     width: 100%;
   }
   @media only screen and (min-width: 768px) {
-    margin-bottom: 3rem;
+    grid-template-columns: 1fr min(135ch, calc(100% - 98px)) 1fr;
+
+    margin-bottom: 110px;
     ${({ color }) =>
       color === 'white'
         ? ` > * > * {

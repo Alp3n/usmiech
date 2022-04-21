@@ -6,12 +6,17 @@ import { components } from '../slices/index';
 import Calculator from '../components/calculator/calculator';
 import Title from '../components/Title';
 import styled from '@emotion/styled';
+import SEO from '../components/SEO';
 
 export default function Offer({ menu, page }) {
   return (
     <Layout menu={menu}>
+      <SEO
+        metaTitle={page.data.metaTitle}
+        metaDescription={page.data.metaDescription}
+      />
       <SliceZone slices={page.data.slices} components={components} />
-      <Title>
+      <Title marginBottom='40px'>
         <PrismicRichText field={page.data.title} />
       </Title>
 

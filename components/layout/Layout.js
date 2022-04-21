@@ -6,9 +6,6 @@ import Footer from '../footer/Footer';
 export const Layout = ({ children, menu }) => {
   return (
     <>
-      <Head>
-        <title>{`u'Smiech - gabinet stomatologii estetycznej`}</title>
-      </Head>
       <Header menu={menu} />
       <StyledMain>{children}</StyledMain>
       <Footer menu={menu}></Footer>
@@ -18,7 +15,8 @@ export const Layout = ({ children, menu }) => {
 
 const StyledMain = styled.main`
   display: grid;
-  grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr;
+  grid-template-columns: 1fr min(135ch, calc(100% - 48px)) 1fr;
+  /* grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr; */
   grid-column-gap: 24px;
   > * {
     grid-column: 2;
@@ -27,5 +25,8 @@ const StyledMain = styled.main`
   .full-bleed {
     grid-column: 1 / -1;
     width: 100%;
+  }
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 1fr min(135ch, calc(100% - 98px)) 1fr;
   }
 `;

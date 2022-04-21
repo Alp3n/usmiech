@@ -18,6 +18,13 @@ p {
   font-weight: 400;
 }
 
+p {
+  font-size: 1.1rem;
+  line-height: 2.2;
+  margin: 0;
+  padding: 0;
+}
+
 .calendesk-frame {
   width: 100%;
   display: block;

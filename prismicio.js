@@ -21,7 +21,7 @@ export function linkResolver(doc) {
     case 'pageOffer':
       return `/offer`;
     case 'pageHowItWorks':
-      return `/howItWorks`;
+      return `/how-it-works`;
     case 'story':
       return `/stories/${doc.uid}`;
     default:

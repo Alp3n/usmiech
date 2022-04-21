@@ -13,13 +13,14 @@ export const Header = ({ menu }) => {
   return (
     <StyledWrapper>
       <StyledGrid>
-        <StyledMobileDiv at='sm'>
+        <StyledMobileDiv between={['sm', 'xl']} /* at={`'sm' | 'md'`} */>
           {isOpen ? (
             <VscClose
               size={28}
               onClick={() => {
                 setIsOpen((prev) => !prev);
               }}
+              aria-label='zamknij menu'
             />
           ) : (
             <VscMenu
@@ -27,18 +28,19 @@ export const Header = ({ menu }) => {
               onClick={() => {
                 setIsOpen((prev) => !prev);
               }}
+              aria-label='otwórz menu'
             />
           )}
         </StyledMobileDiv>
         <StyledPrismicLink href='/'>
-          <Media greaterThan='sm'>
+          <Media greaterThan='sm' aria-label='logo'>
             <Logo width='200' height='68' viewBox='70 -25 100 95' />
           </Media>
-          <Media at='sm'>
+          <Media at='sm' aria-label='logo'>
             <Logo width='150' height='58' viewBox='70 -25 100 95' />
           </Media>
         </StyledPrismicLink>
-        <StyledDiv greaterThan='sm'>
+        <StyledDiv at='xl'>
           <Navigation menu={menu} />
           <Button
             link={menu.data.buttonLink}
@@ -47,7 +49,7 @@ export const Header = ({ menu }) => {
           />
         </StyledDiv>
       </StyledGrid>
-      {isOpen ? <Menu menu={menu} /> : null}
+      {isOpen ? <Menu menu={menu} bordertop /> : null}
     </StyledWrapper>
   );
 };
@@ -58,7 +60,7 @@ const StyledGrid = styled.header`
   /* justify-content: space-between; */
   grid-template-columns: 1fr 80% 1fr;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1192px) {
     grid-template-columns: 200px 1fr;
     /* place-content: space-around;
     place-items: space-between; */
@@ -83,7 +85,8 @@ const StyledWrapper = styled.header`
   left: 0;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr;
+  grid-template-columns: 1fr min(135ch, calc(100% - 48px)) 1fr;
+  /* grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr; */
   grid-column-gap: 24px;
   padding: 0.5rem 0;
   box-shadow: 1px 1px 4px grey;
@@ -99,6 +102,7 @@ const StyledWrapper = styled.header`
   }
 
   @media only screen and (min-width: 768px) {
+    grid-template-columns: 1fr min(135ch, calc(100% - 98px)) 1fr;
     padding: 0;
   }
 

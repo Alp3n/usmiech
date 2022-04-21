@@ -9,7 +9,7 @@ import { Media } from '../../components/MediaQueries';
 const RepetableItems = ({ slice }) => (
   <StyledWrapper>
     <StyledHeader>
-      <Title noBottomMargin>
+      <Title marginBottom={'40px'}>
         {slice.primary.title ? (
           <PrismicRichText field={slice.primary.title} />
         ) : null}
@@ -30,7 +30,7 @@ const RepetableItems = ({ slice }) => (
               <StyledLine gridArea='line' />
             </>
           ) : null}
-          <Title gridArea='title'>
+          <Title gridArea='title' marginBottom={'40px'}>
             <PrismicRichText field={item.title} />
           </Title>
           {slice.variation === 'steps' ? (
@@ -49,6 +49,8 @@ const RepetableItems = ({ slice }) => (
           <Button
             label={slice.primary.buttonLabel}
             link={slice.primary.buttonLink}
+            color='black'
+            gridArea={'button'}
           />
         ) : null}
       </Media>
@@ -60,36 +62,42 @@ export default RepetableItems;
 
 const StyledWrapper = styled.div`
   display: grid;
-  gap: 3rem;
   grid-template-areas:
     'header'
     'content';
+  margin-bottom: 110px;
 `;
 const StyledHeader = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
   grid-area: header;
   place-content: center;
+  margin-bottom: 10px;
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
 `;
 
 const StyledNumber = styled.span`
   grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
   font-size: 2.2rem;
+
   @media only screen and (min-width: 768px) {
     font-size: 3rem;
   }
   @media only screen and (min-width: 1024px) {
-    font-size: 8rem;
+    font-size: 9.5rem;
   }
 `;
 
 const StyledDesktopLine = styled(Media)`
   @media only screen and (min-width: 768px) {
     border-top: 1px solid black;
-    width: 95%;
+    width: 85%;
     height: 0;
-    place-self: center;
-    margin-bottom: 1rem;
+    place-self: center end;
+    /* margin-bottom: 90px; */
+    padding-bottom: 35px;
   }
 `;
 
@@ -105,7 +113,7 @@ const StyledLine = styled.div`
 
 const StyledItem = styled.div`
   display: grid;
-  place-items: baseline;
+  /* place-items: baseline; */
   column-gap: 15%;
   grid-template-areas: ${({ variation }) =>
     variation === 'steps'
@@ -130,7 +138,7 @@ const StyledGrid = styled.div`
   display: grid;
   grid-area: content;
   grid-template-columns: 1fr;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
   column-gap: 2rem;
   row-gap: 2rem;
 
@@ -153,7 +161,7 @@ const StyledGrid = styled.div`
 
   @media only screen and (min-width: 768px) {
     place-items: baseline;
-    gap: 2rem;
+    gap: 3rem;
 
     div > span:first-of-type {
       margin-left: 0;
@@ -168,6 +176,6 @@ const StyledGrid = styled.div`
   @media only screen and (min-width: 1024px) {
     grid-template-columns: ${({ variation }) =>
       variation === 'steps' ? `repeat(4, 1fr)` : 'repeat(3, 1fr)'};
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
   }
 `;

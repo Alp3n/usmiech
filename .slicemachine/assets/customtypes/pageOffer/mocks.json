@@ -1,28 +1,30 @@
 {
-  "id": "ca171885-8544-4e3e-afce-93d78796757a",
-  "uid": "et-quisquam-soluta",
+  "id": "b9a9f40c-ad12-4683-8d50-8744892b217f",
+  "uid": "laborum-qui-molestiae",
   "type": "pageOffer",
   "data": {
     "title": [
       {
         "type": "heading2",
-        "text": "Benchmark global mindshare",
+        "text": "Redefine robust e-commerce",
         "spans": []
       }
     ],
     "description": [
       {
         "type": "paragraph",
-        "text": "Deserunt cillum ex dolore anim pariatur laboris mollit nisi dolore ea sint sunt pariatur quis.",
+        "text": "Labore deserunt sit culpa esse id veniam pariatur mollit dolore dolor exercitation aliqua sit. Deserunt duis Lorem duis veniam tempor aliquip tempor nostrud id consequat est officia. Officia labore laborum adipisicing fugiat esse.",
         "spans": []
       }
     ],
     "installmentsSummary": [
       {
         "type": "heading4",
-        "text": "Seize viral e-business",
+        "text": "Evolve innovative architectures",
         "spans": []
       }
-    ]
+    ],
+    "metaTitle": "grow sexy communities",
+    "metaDescription": "synthesize cross-platform applications"
   }
 }

@@ -45,7 +45,7 @@ const StoryPreview = ({ slice }) => (
       <div>
         <StyledBox normal>
           <StyledLine />
-          <StyledTitle>Leczenie</StyledTitle>
+          <StyledTitle>Jakie Leczenie</StyledTitle>
         </StyledBox>
         {/* <div /> */}
 
@@ -86,6 +86,7 @@ const StyledBox = styled.div`
 
 const StyledTitle = styled.h2`
   font-size: 2rem;
+  margin-bottom: 50px;
   @media only screen and (min-width: 768px) {
     font-size: 2.2rem;
   }

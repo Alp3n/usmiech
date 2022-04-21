@@ -1755,6 +1755,15 @@
                     "single": "heading2"
                   }
                 },
+                "titleMobile": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title Mobile",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
                 "description": {
                   "type": "StructuredText",
                   "config": {
@@ -1856,6 +1865,15 @@
                     "placeholder": ""
                   },
                   "type": "Text"
+                },
+                "titleMobile": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title Mobile",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
                 }
               },
               "items": {},
@@ -1956,13 +1974,22 @@
                     "single": "heading2"
                   }
                 },
-                "description": {
+                "descriptionOne": {
                   "type": "StructuredText",
                   "config": {
                     "label": "Description",
                     "placeholder": "A nice description of your feature",
                     "allowTargetBlank": true,
                     "multi": "paragraph"
+                  }
+                },
+                "descriptionTwo": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description Two",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 },
                 "image": {
@@ -2099,25 +2126,32 @@
               "title": [
                 {
                   "type": "heading2",
-                  "text": "Cultivate killer relationships",
+                  "text": "Envisioneer holistic eyeballs",
+                  "spans": []
+                }
+              ],
+              "titleMobile": [
+                {
+                  "type": "paragraph",
+                  "text": "Deserunt laboris pariatur aute ea pariatur ipsum proident sunt labore consectetur adipisicing esse. Fugiat enim enim aute occaecat ad voluptate tempor id irure.",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Laboris labore laboris do veniam aliquip minim deserunt magna. Voluptate non esse sint Lorem occaecat nostrud. Tempor excepteur do cupidatat elit ea cillum consequat et fugiat ullamco ex.",
+                  "text": "Culpa aliqua occaecat anim esse proident do occaecat sunt excepteur mollit mollit pariatur ut. Commodo adipisicing cupidatat id qui ipsum commodo excepteur eiusmod aliqua velit ipsum laboris est nisi.",
                   "spans": []
                 }
               ],
               "buttonLink": {
                 "link_type": "Web",
-                "url": "http://twitter.com"
+                "url": "http://google.com"
               },
               "buttonLabel": [
                 {
                   "type": "paragraph",
-                  "text": "Amet eu dolor eiusmod reprehenderit exercitation commodo et aliqua. Laborum magna ut cillum esse reprehenderit eiusmod pariatur est tempor anim.",
+                  "text": "Irure elit cupidatat eiusmod fugiat proident ad reprehenderit enim ut non. Magna cillum fugiat excepteur magna aute elit tempor consequat consectetur velit.",
                   "spans": []
                 }
               ],
@@ -2139,7 +2173,7 @@
                   "url": "https://images.unsplash.com/photo-1499651681375-8afc5a4db253?w=640&h=600&fit=crop"
                 }
               },
-              "imageSide": "evolve collaborative relationships"
+              "imageSide": "monetize intuitive web services"
             }
           },
           "noCta": {
@@ -2151,14 +2185,14 @@
               "title": [
                 {
                   "type": "heading2",
-                  "text": "Incubate innovative partnerships",
+                  "text": "Extend virtual ROI",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Aute excepteur proident veniam non dolore duis nisi do qui tempor.",
+                  "text": "Incididunt qui id laboris amet ipsum magna do quis eu eiusmod in enim. Deserunt quis pariatur velit.",
                   "spans": []
                 }
               ],
@@ -2169,7 +2203,7 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89?w=900&h=780&fit=crop",
+                "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=780&fit=crop",
                 "mobile": {
                   "dimensions": {
                     "width": 640,
@@ -2177,10 +2211,17 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89?w=640&h=600&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=640&h=600&fit=crop"
                 }
               },
-              "imageSide": "incentivize customized infrastructures"
+              "imageSide": "iterate seamless technologies",
+              "titleMobile": [
+                {
+                  "type": "paragraph",
+                  "text": "Consectetur incididunt labore non dolore eiusmod Lorem amet deserunt est irure occaecat amet dolor. Aliqua consequat nisi officia. Veniam excepteur non non irure proident nostrud aliqua cupidatat irure do.",
+                  "spans": []
+                }
+              ]
             }
           },
           "product": {
@@ -2192,25 +2233,25 @@
               "title": [
                 {
                   "type": "heading2",
-                  "text": "Transition frictionless mindshare",
+                  "text": "Leverage magnetic e-services",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Duis ullamco culpa sint sit sit Lorem nisi id quis eiusmod voluptate mollit.",
+                  "text": "Esse ullamco proident fugiat eiusmod non laborum. Exercitation ad dolor exercitation culpa ut sit eu.",
                   "spans": []
                 }
               ],
               "buttonLink": {
                 "link_type": "Web",
-                "url": "https://slicemachine.dev"
+                "url": "https://prismic.io"
               },
               "buttonLabel": [
                 {
                   "type": "paragraph",
-                  "text": "Ex aliqua consequat non id duis fugiat id. In do laboris qui mollit elit do. Deserunt irure nostrud sunt ut consequat mollit eu enim mollit aliqua.",
+                  "text": "Non deserunt et aliqua nostrud consectetur ipsum officia commodo aliquip. Tempor anim mollit ea consequat enim amet consequat aute et. Reprehenderit velit in veniam elit dolor et.",
                   "spans": []
                 }
               ],
@@ -2221,7 +2262,7 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&h=780&fit=crop",
+                "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=780&fit=crop",
                 "mobile": {
                   "dimensions": {
                     "width": 640,
@@ -2229,14 +2270,14 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=640&h=600&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=640&h=600&fit=crop"
                 }
               },
-              "imageSide": "target proactive functionalities",
+              "imageSide": "brand next-generation deliverables",
               "price": [
                 {
                   "type": "paragraph",
-                  "text": "Duis laborum aute proident pariatur pariatur.",
+                  "text": "Sint fugiat sint sint amet eu sit sit incididunt laborum. Ex ea officia ea duis ex consequat sit deserunt deserunt cillum laborum.",
                   "spans": []
                 }
               ]
@@ -2251,14 +2292,21 @@
               "title": [
                 {
                   "type": "heading2",
-                  "text": "Visualize compelling models",
+                  "text": "Evolve bleeding-edge users",
                   "spans": []
                 }
               ],
-              "description": [
+              "descriptionOne": [
                 {
                   "type": "paragraph",
-                  "text": "Ea culpa nisi labore id cillum enim Lorem duis commodo magna proident excepteur.",
+                  "text": "Enim pariatur id velit commodo. Aute anim enim aute cupidatat dolore incididunt sint incididunt aliquip laboris.",
+                  "spans": []
+                }
+              ],
+              "descriptionTwo": [
+                {
+                  "type": "paragraph",
+                  "text": "Mollit voluptate velit exercitation amet sit magna. Fugiat laborum exercitation et ipsum nostrud irure non incididunt sunt esse amet.",
                   "spans": []
                 }
               ],
@@ -2269,7 +2317,7 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=900&h=780&fit=crop",
+                "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=780&fit=crop",
                 "mobile": {
                   "dimensions": {
                     "width": 640,
@@ -2277,18 +2325,18 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=640&h=600&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=640&h=600&fit=crop"
                 }
               },
-              "imageSide": "mesh synergistic architectures",
+              "imageSide": "iterate next-generation supply-chains",
               "calendarLink": [
                 {
                   "type": "paragraph",
-                  "text": "Aliquip do sunt veniam deserunt sunt excepteur. Qui occaecat laborum aliquip veniam culpa veniam. Ex ullamco consequat sit esse commodo.",
+                  "text": "Eu pariatur dolore irure excepteur eiusmod exercitation ea dolore reprehenderit id sint excepteur eiusmod et cupidatat. Fugiat ipsum amet ex fugiat excepteur enim nostrud incididunt ad.",
                   "spans": []
                 }
               ],
-              "calendarLink2": "expedite distributed initiatives"
+              "calendarLink2": "morph rich communities"
             }
           },
           "steps": {
@@ -2300,25 +2348,25 @@
               "title": [
                 {
                   "type": "heading2",
-                  "text": "Iterate proactive technologies",
+                  "text": "Matrix ubiquitous channels",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Laborum aliqua in deserunt dolore non do commodo excepteur culpa. Cupidatat nulla mollit irure aliqua pariatur non laborum. Est cillum officia aute nostrud velit ad ea commodo Lorem voluptate aliquip.",
+                  "text": "Anim nulla voluptate magna deserunt aliquip consectetur fugiat adipisicing Lorem duis dolore veniam dolore exercitation aliquip.",
                   "spans": []
                 }
               ],
               "buttonLink": {
                 "link_type": "Web",
-                "url": "http://google.com"
+                "url": "https://prismic.io"
               },
               "buttonLabel": [
                 {
                   "type": "paragraph",
-                  "text": "Culpa mollit officia amet dolor sint ut. Incididunt officia velit culpa tempor nulla qui pariatur qui dolore. Officia aliquip dolor Lorem aute velit.",
+                  "text": "Ullamco aliquip proident pariatur deserunt laborum commodo tempor occaecat ad enim reprehenderit. Dolore do in occaecat esse consequat amet velit velit duis sint aute nisi id sit.",
                   "spans": []
                 }
               ],
@@ -2329,7 +2377,7 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=780&fit=crop",
+                "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=780&fit=crop",
                 "mobile": {
                   "dimensions": {
                     "width": 640,
@@ -2337,14 +2385,14 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=640&h=600&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=640&h=600&fit=crop"
                 }
               },
-              "imageSide": "reintermediate wireless platforms",
+              "imageSide": "brand killer methodologies",
               "step": [
                 {
                   "type": "paragraph",
-                  "text": "Voluptate duis elit nostrud incididunt ea quis ea enim aliqua laborum duis quis enim irure.",
+                  "text": "Reprehenderit reprehenderit ut exercitation incididunt.",
                   "spans": []
                 }
               ]

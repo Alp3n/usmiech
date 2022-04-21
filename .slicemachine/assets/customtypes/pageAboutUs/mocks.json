@@ -1,6 +1,9 @@
 {
-  "id": "af5d3dd9-b83d-478c-adc1-3e06cdbb62ea",
-  "uid": "eum-consequatur-ullam",
+  "id": "76b5c48f-4fd1-4072-a47a-9f5570e395bf",
+  "uid": "ipsum-ipsa-nam",
   "type": "pageAboutUs",
-  "data": {}
+  "data": {
+    "metaTitle": "syndicate enterprise technologies",
+    "metaDescription": "incubate robust portals"
+  }
 }

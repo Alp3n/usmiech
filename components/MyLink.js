@@ -18,7 +18,6 @@ const StyledListElement = styled.li`
 const StyledLink = styled(PrismicLink)`
   text-decoration: none;
   color: black;
-  font-size: 1.2rem;
 
   &:link {
     color: black;
@@ -31,5 +30,20 @@ const StyledLink = styled(PrismicLink)`
   }
   &:active {
     color: black;
+  }
+
+  > p {
+    font-size: 1.1rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    > p {
+      font-size: 1.2rem;
+    }
+  }
+  @media only screen and (min-width: 1000px) {
+    > p {
+      font-size: 1.3rem;
+    }
   }
 `;

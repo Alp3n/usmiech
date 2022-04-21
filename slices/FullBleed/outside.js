@@ -15,7 +15,7 @@ const Outside = ({ slice }) => (
       color={slice.primary?.color}
       inside={slice.primary?.inside}
     >
-      <StyledImageWrapper className='full-bleed'>
+      <StyledImageWrapper /* className='full-bleed' */>
         <Image
           src={slice.primary.image.mobile.url}
           alt={slice.primary.image.mobile.alt}
@@ -26,7 +26,7 @@ const Outside = ({ slice }) => (
         />
       </StyledImageWrapper>
       <StyledGrid>
-        <Title white={false}>
+        <Title white={false} marginBottom='40px'>
           {slice.primary.title ? (
             <PrismicRichText field={slice.primary.title} />
           ) : null}
@@ -40,6 +40,7 @@ const Outside = ({ slice }) => (
           <Button
             link={slice.primary.buttonLink}
             label={slice.primary.buttonLabel}
+            color={slice.primary.color}
           />
         ) : null}
       </StyledGrid>
@@ -54,7 +55,7 @@ const Outside = ({ slice }) => (
     >
       <StyledAbsoluteWrapper>
         {slice.primary.title ? (
-          <Title white={slice.primary?.color} size='4rem'>
+          <Title white={slice.primary?.color} size='4rem' marginBottom='40px'>
             <PrismicRichText field={slice.primary.title} />
           </Title>
         ) : null}
@@ -68,6 +69,7 @@ const Outside = ({ slice }) => (
             link={slice.primary.buttonLink}
             label={slice.primary.buttonLabel}
             color={slice.primary?.color}
+            size={'1.5rem'}
           />
         ) : null}
       </StyledAbsoluteWrapper>
@@ -116,16 +118,16 @@ const StyledDescription = styled.span`
 
   p {
     margin: 0;
-
     font-weight: 400;
     line-height: 2rem;
   }
 
-  @media only screen and (min-width: 768px) {
-    width: 50ch;
+  @media only screen and (min-width: 1024px) {
+    /* width: 50ch; */
     p {
-      line-height: 2.2rem;
-      font-size: 1.2rem;
+      line-height: 2.6rem;
+      font-size: 1.5rem;
+      /* width: 23ch; */
       /* width: 100%; */
     }
   }
@@ -146,8 +148,9 @@ const StyledImageWrapper = styled.div`
 const StyledWrapper = styled(Media)`
   position: relative;
   display: grid;
-  margin-bottom: 3rem;
-  grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr;
+  margin-bottom: 110px;
+  grid-template-columns: 1fr min(135ch, calc(100% - 48px)) 1fr;
+  /* grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr; */
   grid-column-gap: 24px;
   height: auto;
 
@@ -159,7 +162,9 @@ const StyledWrapper = styled(Media)`
     width: 100%;
   }
   @media only screen and (min-width: 768px) {
-    margin-bottom: 5rem;
+    grid-template-columns: 1fr min(135ch, calc(100% - 98px)) 1fr;
+
+    margin-bottom: 110px;
     ${({ color }) =>
       color === 'white'
         ? ` > * > * {

@@ -8,7 +8,7 @@ const FaQ = ({ slice }) => (
   <StyledWrapper>
     {slice.items.map((item) => (
       <StyledItem key={item.uid}>
-        <Title>
+        <Title marginBottom='40px'>
           <PrismicRichText field={item.Question} />
         </Title>
         <Description>
@@ -31,5 +31,10 @@ const StyledWrapper = styled.div`
 
 const StyledItem = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
+  /* width: 60%; */
+  /* grid-template-columns: 80%; */
+  margin-bottom: 50px;
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 80%;
+  }
 `;
