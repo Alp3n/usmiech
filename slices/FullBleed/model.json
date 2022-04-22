@@ -199,6 +199,15 @@
             "multi": "paragraph"
           }
         },
+        "descriptionMobile": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description Mobile",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
         "image": {
           "config": {
             "label": "Image",
@@ -206,7 +215,7 @@
             "thumbnails": [
               {
                 "name": "mobile",
-                "width": 400,
+                "width": 600,
                 "height": 600
               }
             ]

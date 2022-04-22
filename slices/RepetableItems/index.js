@@ -14,7 +14,7 @@ const RepetableItems = ({ slice }) => (
           <PrismicRichText field={slice.primary.title} />
         </Title>
       ) : null}
-      <StyledDesktopLine greaterThan='sm' />
+      <StyledDesktopLine greaterThanOrEqual='sm' />
     </StyledHeader>
 
     <StyledGrid variation={slice.variation}>
@@ -26,34 +26,34 @@ const RepetableItems = ({ slice }) => (
         >
           {slice.variation === 'steps' ? (
             <>
-              <StyledNumber gridArea='number'>{item.number}</StyledNumber>
-              <StyledLine gridArea='line' />
+              <StyledNumber area='number'>{item.number}</StyledNumber>
+              <StyledLine area='line' />
             </>
           ) : null}
-          <Title gridArea='title' marginBottom={'40px'}>
+          <Title area='title' marginBottom={'40px'}>
             <PrismicRichText field={item.title} />
           </Title>
           {slice.variation === 'steps' ? (
-            <Description gridArea='description' noBottomMargin>
+            <Description area='description' noBottomMargin>
               <PrismicRichText field={item.description} />
             </Description>
           ) : (
-            <Description gridArea='description' noBottomMargin borderLeft>
+            <Description area='description' noBottomMargin borderLeft>
               <PrismicRichText field={item.description} />
             </Description>
           )}
         </StyledItem>
       ))}
-      <Media at='sm'>
+      {/* <Media at='sm'>
         {slice.primary.buttonLink ? (
           <Button
             label={slice.primary.buttonLabel}
             link={slice.primary.buttonLink}
             color='black'
-            gridArea={'button'}
+            area={'button'}
           />
         ) : null}
-      </Media>
+      </Media> */}
     </StyledGrid>
   </StyledWrapper>
 );
@@ -79,7 +79,7 @@ const StyledHeader = styled.div`
 `;
 
 const StyledNumber = styled.span`
-  grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
+  grid-area: ${({ area }) => (area ? area : null)};
   font-size: 2.2rem;
 
   @media only screen and (min-width: 768px) {
@@ -91,18 +91,16 @@ const StyledNumber = styled.span`
 `;
 
 const StyledDesktopLine = styled(Media)`
-  @media only screen and (min-width: 768px) {
-    border-top: 1px solid black;
-    width: 85%;
-    height: 0;
-    place-self: center end;
-    /* margin-bottom: 90px; */
-    padding-bottom: 35px;
-  }
+  border-top: 1px solid black;
+  width: 85%;
+  height: 0;
+  place-self: center end;
+  /* margin-bottom: 90px; */
+  padding-bottom: 35px;
 `;
 
 const StyledLine = styled.div`
-  grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
+  grid-area: ${({ area }) => (area ? area : null)};
   border-left: 1px solid black;
   height: 100%;
   place-self: center;

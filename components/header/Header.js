@@ -40,7 +40,7 @@ export const Header = ({ menu }) => {
             <Logo width='150' height='58' viewBox='70 -25 100 95' />
           </Media>
         </StyledPrismicLink>
-        <StyledDiv at='xl'>
+        <StyledDiv greaterThan='md'>
           <Navigation menu={menu} />
           <Button
             link={menu.data.buttonLink}

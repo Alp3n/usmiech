@@ -58,7 +58,7 @@ const StyledFlex = styled.div`
 `;
 
 const StyledText = styled.span`
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.3rem;
   text-align: center;
 `;

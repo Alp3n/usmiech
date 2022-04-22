@@ -8,29 +8,36 @@
       "title": [
         {
           "type": "heading2",
-          "text": "Harness web-enabled experiences",
+          "text": "Integrate turn-key e-services",
+          "spans": []
+        }
+      ],
+      "titleMobile": [
+        {
+          "type": "paragraph",
+          "text": "Nostrud nostrud tempor elit cupidatat sint adipisicing quis enim laboris excepteur dolor magna id proident ex. Occaecat enim proident est laborum ullamco esse.",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "Lorem consequat quis nisi excepteur. Ipsum eiusmod irure culpa ut.",
+          "text": "Excepteur nulla consequat pariatur sit ullamco labore sunt pariatur aliqua quis esse anim culpa sit.",
           "spans": []
         }
       ],
       "buttonLink": {
         "link_type": "Web",
-        "url": "https://slicemachine.dev"
+        "url": "http://google.com"
       },
       "imageBig": {
         "dimensions": {
           "width": 900,
-          "height": 780
+          "height": null
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=780&fit=crop",
+        "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=null&fit=crop",
         "mobile": {
           "dimensions": {
             "width": 640,
@@ -44,11 +51,11 @@
       "imageSmall": {
         "dimensions": {
           "width": 900,
-          "height": 780
+          "height": null
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=780&fit=crop",
+        "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=null&fit=crop",
         "mobile": {
           "dimensions": {
             "width": 640,
@@ -62,7 +69,7 @@
       "buttonLabel": [
         {
           "type": "paragraph",
-          "text": "Consequat labore aute ex nostrud proident officia mollit duis consectetur adipisicing. Incididunt eiusmod irure commodo sunt officia nisi.",
+          "text": "Ullamco esse minim commodo aliquip.",
           "spans": []
         }
       ]
@@ -77,25 +84,32 @@
       "title": [
         {
           "type": "heading2",
-          "text": "Incubate end-to-end e-markets",
+          "text": "Leverage synergistic niches",
+          "spans": []
+        }
+      ],
+      "titleMobile": [
+        {
+          "type": "paragraph",
+          "text": "Aute elit sint officia mollit incididunt ea nostrud aliquip anim.",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "In ea esse do consequat amet enim id est eiusmod velit. Consectetur in esse enim ipsum eu eiusmod eiusmod non. Cillum ut Lorem anim excepteur in cillum nisi.",
+          "text": "Voluptate nulla Lorem velit culpa minim officia ut commodo occaecat dolore nulla.",
           "spans": []
         }
       ],
       "imageBig": {
         "dimensions": {
           "width": 900,
-          "height": 780
+          "height": null
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51?w=900&h=780&fit=crop",
+        "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=null&fit=crop",
         "mobile": {
           "dimensions": {
             "width": 640,
@@ -103,17 +117,17 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51?w=640&h=600&fit=crop"
+          "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=640&h=600&fit=crop"
         }
       },
       "imageSmall": {
         "dimensions": {
           "width": 900,
-          "height": 780
+          "height": null
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=900&h=780&fit=crop",
+        "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=null&fit=crop",
         "mobile": {
           "dimensions": {
             "width": 640,
@@ -121,7 +135,7 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=640&h=600&fit=crop"
+          "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=640&h=600&fit=crop"
         }
       }
     }

@@ -12,12 +12,12 @@ const heroPage = ({ slice }) => (
     <StyledWrapper at='sm' className='full-bleed'>
       <StyledImageWrapper className='full-bleed'>
         <Image
-          src={slice.primary.image.mobile.url}
+          src={`${slice.primary.image.mobile.url}&dpr=2`}
           alt={slice.primary.image.mobile.alt}
           width={slice.primary.image.mobile.dimensions.width}
           height={slice.primary.image.mobile.dimensions.height}
           layout='responsive'
-          quality={100}
+          quality={85}
         />
       </StyledImageWrapper>
       <StyleMobileWrapper>
@@ -72,12 +72,12 @@ const heroPage = ({ slice }) => (
       <div className='full-bleed' style={{ overflow: 'hidden' }}>
         <Media greaterThan='sm'>
           <Image
-            src={slice.primary.image.url}
+            src={`${slice.primary.image.url}?dpr=2`}
             alt={slice.primary.image.alt}
             width={slice.primary.image.dimensions.width}
             height={slice.primary.image.dimensions.height}
             layout='responsive'
-            quality={100}
+            quality={85}
           />
         </Media>
       </div>
@@ -123,7 +123,7 @@ const StyledDescription = styled.div`
     width: 50ch;
     p {
       line-height: 2.2rem;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       /* width: 100%; */
     }
   }

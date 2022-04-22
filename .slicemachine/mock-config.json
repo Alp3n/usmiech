@@ -183,7 +183,14 @@
         }
       },
       "outside": {
-        "primary": {}
+        "primary": {
+          "descriptionMobile": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       },
       "HeroPage": {
         "primary": {}

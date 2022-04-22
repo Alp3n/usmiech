@@ -20,6 +20,15 @@
             "single": "heading2"
           }
         },
+        "titleMobile": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title Mobile",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
         "description": {
           "type": "StructuredText",
           "config": {
@@ -33,7 +42,8 @@
           "config": {
             "label": "Button Link",
             "placeholder": "Insert link to a page...",
-            "allowTargetBlank": false
+            "allowTargetBlank": false,
+            "select": null
           },
           "type": "Link"
         },
@@ -41,7 +51,7 @@
           "config": {
             "label": "Image Big",
             "constraint": {
-              "height": 780
+              "height": null
             },
             "thumbnails": [
               {
@@ -57,7 +67,7 @@
           "config": {
             "label": "Image Small",
             "constraint": {
-              "height": 780
+              "height": null
             },
             "thumbnails": [
               {
@@ -79,7 +89,8 @@
           "type": "StructuredText"
         }
       },
-      "items": {}
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     },
     {
       "id": "noCta",
@@ -97,6 +108,15 @@
             "single": "heading2"
           }
         },
+        "titleMobile": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title Mobile",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
         "description": {
           "type": "StructuredText",
           "config": {
@@ -110,7 +130,7 @@
           "config": {
             "label": "Image Big",
             "constraint": {
-              "height": 780
+              "height": null
             },
             "thumbnails": [
               {
@@ -126,7 +146,7 @@
           "config": {
             "label": "Image Small",
             "constraint": {
-              "height": 780
+              "height": null
             },
             "thumbnails": [
               {
@@ -139,7 +159,8 @@
           "type": "Image"
         }
       },
-      "items": {}
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]
 }

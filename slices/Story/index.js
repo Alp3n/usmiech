@@ -10,33 +10,33 @@ const Story = ({ slice }) => (
     <StyledImageWrapper at='sm' className='full-bleed'>
       <PrismicLink field={slice.primary.buttonLink}>
         <Image
-          src={`${slice.primary.image.mobile.url}&auto=noCompress`}
+          src={`${slice.primary.image.mobile.url}?auto=noCompress&dpr=2`}
           alt={slice.primary.image.mobile.alt}
           width={slice.primary.image.mobile.dimensions.width}
           height={slice.primary.image.mobile.dimensions.height}
           layout='responsive'
-          quality={100}
+          // quality={85}
         />
       </PrismicLink>
     </StyledImageWrapper>
     <StyledImageWrapper greaterThan='sm' className='full-bleed'>
       <PrismicLink field={slice.primary.buttonLink}>
         <Image
-          src={`${slice.primary.image.url}&auto=noCompress`}
+          src={`${slice.primary.image.url}?auto=noCompress&dpr=2`}
           alt={slice.primary.image.alt}
           width={slice.primary.image.dimensions.width}
           height={slice.primary.image.dimensions.height}
           layout='responsive'
-          quality={100}
+          // quality={85}
         />
       </PrismicLink>
     </StyledImageWrapper>
     <StyledGrid>
-      <StyledLeftWrapper gridArea='leftWrapper'>
-        <StyledTitle gridArea='title'>
+      <StyledLeftWrapper area='leftWrapper'>
+        <StyledTitle area='title'>
           <PrismicRichText field={slice.primary.title} />
         </StyledTitle>
-        <StyledSubtitle gridArea='subtitle'>
+        <StyledSubtitle area='subtitle'>
           <PrismicRichText field={slice.primary.subTitle} />
         </StyledSubtitle>
       </StyledLeftWrapper>
@@ -46,7 +46,7 @@ const Story = ({ slice }) => (
       <Button
         link={slice.primary.buttonLink}
         label={slice.primary.buttonLabel}
-        gridArea='button'
+        area='button'
         color='black'
       />
     </StyledGrid>
@@ -96,7 +96,7 @@ const StyledDescription = styled.div`
 `;
 
 const StyledLeftWrapper = styled.div`
-  grid-area: ${({ gridArea }) => gridArea};
+  grid-area: ${({ area }) => area};
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -120,7 +120,7 @@ const StyledTitle = styled.span`
 `;
 
 const StyledSubtitle = styled.span`
-  grid-area: ${({ gridArea }) => gridArea};
+  grid-area: ${({ area }) => area};
   margin-bottom: 1.5rem;
   > p {
     margin: 0;

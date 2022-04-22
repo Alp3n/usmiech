@@ -3,16 +3,16 @@ import { PrismicLink, PrismicText, PrismicRichText } from '@prismicio/react';
 import styled from '@emotion/styled';
 import { Media } from './MediaQueries';
 
-const NewButton = ({ link, label, color, gridArea, plain, normal }) => {
+const NewButton = ({ link, label, color, area, plain, normal }) => {
   if (normal) {
     return (
-      <StyledBorderButton field={link} color={color} gridArea={gridArea}>
+      <StyledBorderButton field={link} color={color} area={area}>
         <PrismicText field={label} />
       </StyledBorderButton>
     );
   }
   return (
-    <StyledLink field={link} color={color} gridArea={gridArea}>
+    <StyledLink field={link} color={color} area={area}>
       <PrismicText field={label} />
       {plain ? null : (
         <StyledMedia at='sm'>
@@ -29,7 +29,7 @@ const StyledLink = styled(PrismicLink)`
   display: flex;
   text-decoration: none;
   align-items: center;
-  grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
+  grid-area: ${({ area }) => (area ? area : null)};
   z-index: 100;
   ${({ plain }) => (plain ? 'width: fit-content;' : null)}
   p {

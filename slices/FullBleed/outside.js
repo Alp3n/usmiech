@@ -15,25 +15,28 @@ const Outside = ({ slice }) => (
       color={slice.primary?.color}
       inside={slice.primary?.inside}
     >
+      {slice.primary.title ? (
+        <StyledHeader>
+          <StyledLineTitle />
+          <Title white={false} marginBottom='40px'>
+            <PrismicRichText field={slice.primary.title} />
+          </Title>
+        </StyledHeader>
+      ) : null}
       <StyledImageWrapper /* className='full-bleed' */>
         <Image
-          src={slice.primary.image.mobile.url}
+          src={`${slice.primary.image.mobile.url}&dpr=2`}
           alt={slice.primary.image.mobile.alt}
           width={slice.primary.image.mobile.dimensions.width}
           height={slice.primary.image.mobile.dimensions.height}
           layout='responsive'
-          quality={90}
+          // quality={85}
         />
       </StyledImageWrapper>
       <StyledGrid>
-        <Title white={false} marginBottom='40px'>
-          {slice.primary.title ? (
-            <PrismicRichText field={slice.primary.title} />
-          ) : null}
-        </Title>
         {slice.primary.description ? (
           <StyledDescription>
-            <PrismicRichText field={slice.primary.description} />
+            <PrismicRichText field={slice.primary.descriptionMobile} />
           </StyledDescription>
         ) : null}
         {slice.primary.buttonLink ? (
@@ -78,12 +81,12 @@ const Outside = ({ slice }) => (
       <div className='full-bleed' style={{ overflow: 'hidden' }}>
         <Media greaterThan='sm'>
           <Image
-            src={slice.primary.image.url}
+            src={`${slice.primary.image.url}&dpr=2`}
             alt={slice.primary.image.alt}
             width={slice.primary.image.dimensions.width}
             height={slice.primary.image.dimensions.height}
             layout='responsive'
-            quality={90}
+            // quality={85}
           />
         </Media>
       </div>
@@ -92,7 +95,17 @@ const Outside = ({ slice }) => (
 );
 
 export default Outside;
-
+const StyledHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const StyledLineTitle = styled.div`
+  position: relative;
+  border-top: 1px solid black;
+  width: 40%;
+  align-self: end;
+  top: 1.6rem;
+`;
 const StyledAbsoluteWrapper = styled.div`
   position: absolute;
   display: grid;

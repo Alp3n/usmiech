@@ -17,12 +17,12 @@ const Inside = ({ slice }) => (
     >
       <div className='full-bleed'>
         <Image
-          src={slice.primary.image.mobile.url}
+          src={`${slice.primary.image.mobile.url}&dpr=2`}
           alt={slice.primary.image.mobile.alt}
           width={slice.primary.image.mobile.dimensions.width}
           height={slice.primary.image.mobile.dimensions.height}
           layout='responsive'
-          quality={90}
+          // quality={85}
         />
       </div>
       <StyledAbsoluteWrapper inside={slice.primary.inside}>
@@ -77,7 +77,7 @@ const Inside = ({ slice }) => (
             link={slice.primary.buttonLink}
             label={slice.primary.buttonLabel}
             color={slice.primary.color}
-            size={'1.2rem'}
+            size={'1.5rem'}
           />
         ) : null}
       </StyledAbsoluteWrapper>
@@ -86,12 +86,12 @@ const Inside = ({ slice }) => (
       <div className='full-bleed' style={{ overflow: 'hidden' }}>
         <Media greaterThan='sm'>
           <Image
-            src={slice.primary.image.url}
+            src={`${slice.primary.image.url}&dpr=2`}
             alt={slice.primary.image.alt}
             width={slice.primary.image.dimensions.width}
             height={slice.primary.image.dimensions.height}
             layout='responsive'
-            quality={90}
+            // quality={85}
           />
         </Media>
       </div>
@@ -128,6 +128,7 @@ const StyledDescription = styled.span`
 
   p {
     /* font-weight: 300; */
+
     line-height: 2rem;
   }
 
@@ -135,7 +136,7 @@ const StyledDescription = styled.span`
     width: 61ch;
     p {
       line-height: 2.6rem;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       /* width: 100%; */
     }
   }

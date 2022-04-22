@@ -3,21 +3,16 @@ import { PrismicLink, PrismicText, PrismicRichText } from '@prismicio/react';
 import styled from '@emotion/styled';
 import { Media } from './MediaQueries';
 
-const Button = ({ link, label, color, gridArea, size }) => {
+const Button = ({ link, label, color, area, size }) => {
   // if (normal) {
   return (
-    <StyledBorderButton
-      field={link}
-      color={color}
-      gridArea={gridArea}
-      size={size}
-    >
+    <StyledBorderButton field={link} color={color} area={area} size={size}>
       <PrismicText field={label} />
     </StyledBorderButton>
   );
   /*   }
   return (
-    <StyledLink field={link} color={color} gridArea={gridArea}>
+    <StyledLink field={link} color={color} area={area}>
       <PrismicText field={label} />
       {plain ? null : (
         <StyledMedia at='sm'>
@@ -34,7 +29,7 @@ const StyledLink = styled(PrismicLink)`
   display: flex;
   text-decoration: none;
   align-items: center;
-  grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
+  grid-area: ${({ area }) => (area ? area : null)};
   z-index: 100;
   font-size: 1.1rem;
   ${({ plain }) => (plain ? 'width: fit-content;' : null)}
@@ -102,7 +97,7 @@ const StyledBorderButton = styled(PrismicLink)`
   width: fit-content;
   z-index: 100;
   font-size: ${({ size }) => (size ? size : '1.1rem')};
-  grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
+  grid-area: ${({ area }) => (area ? area : null)};
 
   &:link {
     color: ${({ color }) => (color ? color : 'black')};

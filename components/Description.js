@@ -4,7 +4,7 @@ const Description = ({
   children,
   absolute,
   noBottomMargin,
-  gridArea,
+  area,
   borderLeft,
   marginBottom,
   width,
@@ -12,7 +12,7 @@ const Description = ({
   <StyledDescription
     absolute={absolute}
     noBottomMargin={noBottomMargin}
-    gridArea={gridArea}
+    area={area}
     borderLeft={borderLeft}
     marginBottom={marginBottom}
     width={width}
@@ -26,7 +26,7 @@ export default Description;
 const StyledDescription = styled.span`
   overflow: hidden;
   margin-top: 0;
-  grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
+  grid-area: ${({ area }) => (area ? area : null)};
   ${({ marginBottom }) =>
     marginBottom ? `margin-bottom: ${marginBottom};` : null}
   ${({ borderLeft }) =>

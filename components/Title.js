@@ -4,7 +4,7 @@ const Title = ({
   children,
   absolute,
   size,
-  gridArea,
+  area,
   white,
   marginBottom,
   line,
@@ -12,7 +12,7 @@ const Title = ({
   <StyledTitle
     absolute={absolute}
     size={size}
-    gridArea={gridArea}
+    area={area}
     white={white}
     marginBottom={marginBottom}
     line={line}
@@ -71,7 +71,7 @@ const StyledTitle = styled.span`
   place-self: baseline;
   z-index: 1000;
   margin-bottom: ${({ marginBottom }) => (marginBottom ? marginBottom : '0')};
-  grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
+  grid-area: ${({ area }) => (area ? area : null)};
 
   > h1 {
     font-size: ${({ size }) => (size ? size : '3.5rem')};

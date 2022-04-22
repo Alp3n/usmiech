@@ -87,8 +87,9 @@ const StyledBox = styled.div`
 const StyledTitle = styled.h2`
   font-size: 2rem;
   margin-bottom: 50px;
+  font-weight: 300;
   @media only screen and (min-width: 768px) {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
 `;
 
@@ -115,9 +116,10 @@ const StyledLine = styled.div`
   }
 `;
 
-const StyledDescription = styled.p`
+const StyledDescription = styled.div`
   position: relative;
-  margin-bottom: 2rem;
+
+  margin-bottom: 80px;
   z-index: 100;
   ${({ color }) =>
     color === 'white'
@@ -128,16 +130,17 @@ const StyledDescription = styled.p`
 
   p {
     font-size: ${({ normal }) => (normal ? '1.1rem' : '1.4rem')};
-    font-weight: 400;
+    font-weight: 300;
     line-height: 2.4rem;
     margin-top: -1rem;
   }
 
   @media only screen and (min-width: 768px) {
+    margin-bottom: 110px;
     p {
-      margin: 1rem 0;
+      margin-bottom: 1rem;
       line-height: ${({ normal }) => (normal ? '2.2rem' : '3.5rem')};
-      font-size: ${({ normal }) => (normal ? '1.1rem' : '2rem')};
+      font-size: ${({ normal }) => (normal ? '1.2rem' : '2rem')};
       width: 80%;
     }
   }

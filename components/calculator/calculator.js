@@ -84,14 +84,14 @@ const StyledInputWrapper = styled.div`
   gap: 3rem;
   @media only screen and (min-width: 768px) {
     font-size: 1.3rem;
-    font-weight: 300;
+    font-weight: 400;
     scroll-margin-top: 20rem;
     grid-template-columns: 30% 40%;
   }
 `;
 const StyledSpan = styled.span`
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 2.2rem;
 `;
 const StyledWrapper = styled.div`

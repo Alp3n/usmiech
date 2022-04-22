@@ -11,85 +11,107 @@ const DoubleImage = ({ slice }) => (
   <>
     <Media at='sm'>
       <StyledWrapper>
-        <StyledImageStack className='full-bleed' gridArea='image'>
+        <StyledImageStack className='full-bleed' area='image'>
           <StyledImageBig width='100%' left='20px'>
             <Image
-              src={slice.primary.imageBig.url}
+              src={`${slice.primary.imageBig.url}&dpr=2`}
               alt={slice.primary.imageBig.alt}
               width={slice.primary.imageBig.dimensions.width}
               height={slice.primary.imageBig.dimensions.height}
               layout='responsive'
-              quality={90}
+              // quality={85}
             />
             <StyledImageSmall width='42vw' left='-10%' bottom='-2rem'>
               <Image
-                src={slice.primary.imageSmall.url}
+                src={`${slice.primary.imageSmall.url}&dpr=2`}
                 alt={slice.primary.imageSmall.alt}
                 width={slice.primary.imageSmall.dimensions.width}
                 height={slice.primary.imageSmall.dimensions.height}
                 layout='responsive'
-                quality={90}
+                quality={100}
               />
             </StyledImageSmall>
           </StyledImageBig>
         </StyledImageStack>
         {slice.primary.title ? (
-          <Title gridArea='title' marginBottom={'40px'} line>
-            <PrismicRichText field={slice.primary.title} />
-          </Title>
-        ) : null}
+          <StyledHeader>
+            <StyledLineTitle />
+            <Title
+              area='title'
+              marginBottom='40px'
+              line={slice.variation === 'steps' ? false : true}
+            >
+              <PrismicRichText
+                field={
+                  slice.primary.titleMobile
+                    ? slice.primary.titleMobile
+                    : slice.primary.title
+                }
+              />
+            </Title>
+          </StyledHeader>
+        ) : /*  <Title area='title' marginBottom={'40px'} line>
+            <PrismicRichText
+              field={
+                slice.primary.titleMobile
+                  ? slice.primary.titleMobile
+                  : slice.primary.title
+              }
+            />
+          </Title> */
+        null}
         {slice.primary.description ? (
-          <Description gridArea='description' marginBottom={'50px'}>
+          <Description area='description' marginBottom={'50px'}>
             <PrismicRichText field={slice.primary.description} />
           </Description>
         ) : null}
         <Button
           link={slice.primary.buttonLink}
           label={slice.primary.buttonLabel}
-          gridArea='button'
+          area='button'
           color='black'
         />
       </StyledWrapper>
     </Media>
     <Media greaterThan='sm'>
       <StyledWrapper>
-        <StyledImageStack gridArea='image'>
+        <StyledImageStack area='image'>
           <StyledImageBig width='100%' left='20px'>
             <Image
-              src={slice.primary.imageBig.url}
+              src={`${slice.primary.imageBig.url}&dpr=2`}
               alt={slice.primary.imageBig.alt}
               width={slice.primary.imageBig.dimensions.width}
               height={slice.primary.imageBig.dimensions.height}
               layout='responsive'
-              quality={90}
+              // quality={85}
             />
             <StyledImageSmall width='45vw' left='-25%' bottom='-2rem'>
               <Image
-                src={slice.primary.imageSmall.url}
+                src={`${slice.primary.imageSmall.url}&dpr=2`}
                 alt={slice.primary.imageSmall.alt}
                 width={slice.primary.imageSmall.dimensions.width}
                 height={slice.primary.imageSmall.dimensions.height}
                 layout='responsive'
-                quality={90}
+                quality={100}
               />
             </StyledImageSmall>
           </StyledImageBig>
         </StyledImageStack>
-        <StyledSmallerWrapper gridArea='rightColumn'>
+        <StyledSmallerWrapper area='rightColumn'>
           {slice.primary.title ? (
-            <Title gridArea='title' marginBottom={'40px'} line>
+            <Title area='title' marginBottom={'40px'} line>
               <PrismicRichText field={slice.primary.title} />
             </Title>
           ) : null}
           {slice.primary.description ? (
-            <Description gridArea='description' marginBottom={'50px'}>
+            <Description area='description' marginBottom={'50px'}>
               <PrismicRichText field={slice.primary.description} />
             </Description>
           ) : null}
           <Button
             link={slice.primary.buttonLink}
             label={slice.primary.buttonLabel}
-            gridArea='button'
+            area='button'
             color='black'
           />
         </StyledSmallerWrapper>
@@ -99,7 +121,20 @@ const DoubleImage = ({ slice }) => (
 );
 
 export default DoubleImage;
-
+const StyledHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const StyledLineTitle = styled.div`
+  position: relative;
+  border-top: 1px solid black;
+  width: 40%;
+  align-self: end;
+  top: 1.6rem;
+  @media only screen and (min-width: 768px) {
+    width: 50%;
+  }
+`;
 const StyledWrapper = styled.div`
   display: grid;
   margin-bottom: 3rem;
@@ -127,7 +162,7 @@ const StyledWrapper = styled.div`
 
 const StyledSmallerWrapper = styled.div`
   display: grid;
-  grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
+  grid-area: ${({ area }) => (area ? area : null)};
   grid-template-columns: 1fr;
   grid-template-areas:
     'title'
@@ -139,7 +174,7 @@ const StyledSmallerWrapper = styled.div`
 
 const StyledImageStack = styled.div`
   position: relative;
-  grid-area: ${({ gridArea }) => (gridArea ? gridArea : null)};
+  grid-area: ${({ area }) => (area ? area : null)};
   margin-bottom: 5rem;
   @media only screen and (min-width: 768px) {
     margin-bottom: 0;
