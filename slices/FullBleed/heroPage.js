@@ -50,7 +50,11 @@ const heroPage = ({ slice }) => (
     >
       <StyledAbsoluteWrapper>
         {slice.primary.title ? (
-          <Title white={slice.primary?.color} marginBottom='40px'>
+          <Title
+            white={slice.primary?.color}
+            marginBottom='40px'
+            story={slice.primary.image.alt}
+          >
             <PrismicRichText field={slice.primary.title} />
           </Title>
         ) : null}
@@ -77,7 +81,7 @@ const heroPage = ({ slice }) => (
             width={slice.primary.image.dimensions.width}
             height={slice.primary.image.dimensions.height}
             layout='responsive'
-            quality={85}
+            quality={100}
           />
         </Media>
       </div>
@@ -120,7 +124,15 @@ const StyledDescription = styled.div`
   }
 
   @media only screen and (min-width: 768px) {
-    width: 50ch;
+    width: 40ch;
+    p {
+      line-height: 2.2rem;
+      font-size: 1.1rem;
+      /* width: 100%; */
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    width: 45ch;
     p {
       line-height: 2.2rem;
       font-size: 1.2rem;
@@ -151,7 +163,7 @@ const StyledWrapper = styled(Media)`
   }
   @media only screen and (min-width: 768px) {
     grid-template-columns: 1fr min(135ch, calc(100% - 98px)) 1fr;
-
+    max-width: 1920px;
     margin-bottom: 5rem;
     ${({ color }) =>
       color === 'white'

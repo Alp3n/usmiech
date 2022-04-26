@@ -27,7 +27,7 @@ const Story = ({ slice }) => (
           width={slice.primary.image.dimensions.width}
           height={slice.primary.image.dimensions.height}
           layout='responsive'
-          // quality={85}
+          quality={90}
         />
       </PrismicLink>
     </StyledImageWrapper>

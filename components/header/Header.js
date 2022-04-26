@@ -40,7 +40,7 @@ export const Header = ({ menu }) => {
             <Logo width='150' height='58' viewBox='70 -25 100 95' />
           </Media>
         </StyledPrismicLink>
-        <StyledDiv greaterThan='md'>
+        <StyledDiv greaterThanOrEqual='xl'>
           <Navigation menu={menu} />
           <Button
             link={menu.data.buttonLink}
@@ -54,7 +54,7 @@ export const Header = ({ menu }) => {
   );
 };
 
-const StyledGrid = styled.header`
+const StyledGrid = styled.div`
   display: grid;
   align-items: center;
   /* justify-content: space-between; */

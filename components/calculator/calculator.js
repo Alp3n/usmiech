@@ -1,24 +1,24 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import Price from './price';
 
 const Calculator = ({
-  monthsData,
+  firstValuesData,
   ratesData,
   priceData,
   title,
   firstDesc,
   secondDesc,
 }) => {
-  const [months, setMonths] = useState(monthsData);
+  const [firstValues, setFirstValues] = useState(firstValuesData);
   const [rates, setRates] = useState(ratesData);
-  const [selectedMonth, setSelectedMonth] = useState([months[0], 'index']);
+  const [selectedValue, setSelectedValue] = useState([firstValues[0], 'index']);
   const [selectedRate, setSelectedRate] = useState([rates[0], 'index']);
   const [price, setPrice] = useState('Wybierz wartości');
   const priceOfRate = priceData;
 
-  const handleSelectMonths = (value, index) => {
-    setSelectedMonth([value, index]);
+  const handleSelectValue = (value, index) => {
+    setSelectedValue([value, index]);
   };
 
   const handleSelectRates = (value, index) => {
@@ -26,10 +26,9 @@ const Calculator = ({
   };
 
   useEffect(() => {
-    let licowkiPrice = 500;
     let numberOfRates = selectedRate[0] === 0 ? 1 : selectedRate[0];
-    setPrice((selectedMonth[0] * licowkiPrice) / numberOfRates);
-  }, [price, priceOfRate, selectedMonth, selectedRate]);
+    setPrice(selectedValue[0].price / numberOfRates);
+  }, [price, priceOfRate, selectedValue, selectedRate, firstValues]);
 
   return (
     <StyledWrapper>
@@ -37,19 +36,19 @@ const Calculator = ({
       <StyledInputWrapper id='licowki'>
         <StyledSpan>{firstDesc}</StyledSpan>
         <StyledOptionsWrapper>
-          {months?.map((value, index) => (
-            <>
+          {firstValues?.map((value, index) => (
+            <React.Fragment key={value.first}>
               <StyledValueWrapper>
-                <StyledCircle
-                  values={months}
-                  selectedValue={selectedMonth}
+                <StyledValuesCircle
+                  values={firstValues}
+                  selectedValue={selectedValue}
                   index={index}
-                  onClick={() => handleSelectMonths(value, index)}
-                ></StyledCircle>
-                <StyledValue>{value}</StyledValue>
+                  onClick={() => handleSelectValue(value, index)}
+                ></StyledValuesCircle>
+                <StyledValue>{value.first}</StyledValue>
               </StyledValueWrapper>
-              {index === months.length - 1 ? null : <StyledLine />}
-            </>
+              {index === firstValues.length - 1 ? null : <StyledLine />}
+            </React.Fragment>
           ))}
         </StyledOptionsWrapper>
       </StyledInputWrapper>
@@ -57,18 +56,18 @@ const Calculator = ({
         <StyledSpan>{secondDesc}</StyledSpan>
         <StyledOptionsWrapper>
           {rates.map((value, index) => (
-            <>
-              <StyledValueWrapper>
-                <StyledCircle
-                  values={rates}
-                  selectedValue={selectedRate}
+            <React.Fragment key={value}>
+              <StyledValueWrapper key={value}>
+                <StyledRatesCircle
+                  rates={rates}
+                  selectedRate={selectedRate}
                   index={index}
                   onClick={() => handleSelectRates(value, index)}
-                ></StyledCircle>
+                ></StyledRatesCircle>
                 <StyledValue>{value}</StyledValue>
               </StyledValueWrapper>
               {index === rates.length - 1 ? null : <StyledLine />}
-            </>
+            </React.Fragment>
           ))}
         </StyledOptionsWrapper>
       </StyledInputWrapper>
@@ -118,13 +117,23 @@ const StyledValueWrapper = styled.div`
   /* grid-template-columns: repeat(2, 1fr); */
 `;
 
-const StyledCircle = styled.div`
+const StyledValuesCircle = styled.div`
   width: 30px;
   height: 30px;
   border: 1px solid #a79797;
   border-radius: 100%;
   background-color: ${({ selectedValue, index, values }) =>
-    selectedValue[0] === values[index] ? '#A79797' : 'transparent'};
+    selectedValue[0].first === values[index].first ? '#A79797' : 'transparent'};
+  cursor: pointer;
+`;
+
+const StyledRatesCircle = styled.div`
+  width: 30px;
+  height: 30px;
+  border: 1px solid #a79797;
+  border-radius: 100%;
+  background-color: ${({ selectedRate, index, rates }) =>
+    selectedRate[0] === rates[index] ? '#A79797' : 'transparent'};
   cursor: pointer;
 `;
 

@@ -7,7 +7,6 @@ import { Layout } from '../../components/layout/Layout';
 import SEO from '../../components/SEO';
 export default function Story({ story, menu }) {
   const slices = story?.data?.slices ? story.data.slices : null;
-  console.log(slices);
   return (
     <Layout menu={menu}>
       <SEO

@@ -88,6 +88,40 @@
           "placeholder": "",
           "select": null
         }
+      },
+      "linkTerms": {
+        "type": "Link",
+        "config": {
+          "label": "Link Terms",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "linkPrivacy": {
+        "type": "Link",
+        "config": {
+          "label": "Link Privacy",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "linkTermsLabel": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Link Terms Label",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "linkPrivacyLabel": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Link Privacy Label",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
       }
     }
   }

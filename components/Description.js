@@ -40,10 +40,16 @@ const StyledDescription = styled.span`
     `
       : null}
 
-@media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) {
     width: ${({ width }) => (width ? width : '90%')};
     > p {
+      font-size: 1.1rem;
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    > p {
       font-size: 1.2rem;
+      line-height: 2.2rem;
     }
   }
 `;

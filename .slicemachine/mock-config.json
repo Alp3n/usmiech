@@ -455,6 +455,22 @@
       }
     },
     "menu": {},
-    "story": {}
+    "story": {},
+    "pageTerms": {
+      "text": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "pagePrivacy": {
+      "text": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   }
 }

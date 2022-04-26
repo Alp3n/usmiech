@@ -147,7 +147,7 @@ const SingleImage = ({ slice }) => (
           <Description
             area='description'
             marginBottom={'40px'}
-            width={slice.primary.imageSide === 'right' ? '80%' : null}
+            // width={slice.primary.imageSide === 'right' ? '80%' : null}
           >
             <PrismicRichText field={slice.primary.description} />
           </Description>
@@ -217,16 +217,13 @@ const StyledLine = styled.div`
 const StyledWrapperDesktop = styled(Media)`
   @media only screen and (min-width: 768px) {
     column-gap: 4rem;
-    display: inline-block;
     position: relative;
     width: 100%;
     margin-top: ${({ marginTop }) =>
-      marginTop.includes('Centrum') ? '50px' : '0'};
+      marginTop.includes('Ursynów') ? '50px' : '0'};
     margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '0' : '110px')};
-    /* margin-top: 1.5rem; */
     display: grid;
-    /* grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr; */
-    height: auto;
+
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: ${({ side }) =>
       side === 'left' ? `'image column'` : `'column image'`};
@@ -235,7 +232,7 @@ const StyledWrapperDesktop = styled(Media)`
   }
 
   @media only screen and (min-width: 1292px) {
-    column-gap: 10rem;
+    column-gap: 5rem;
   }
 `;
 
@@ -243,7 +240,7 @@ const StyledWrapper = styled(Media)`
   position: relative;
   width: 100%;
   margin-top: ${({ marginTop }) =>
-    marginTop.includes('Centrum') ? '40px' : '0'};
+    marginTop.includes('Ursynów') ? '40px' : '0'};
   margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '0' : '90px')};
   display: grid;
 
@@ -276,7 +273,7 @@ const StyledSmallerWrapper = styled.div`
     'price'
     'button';
   place-content: start;
-  padding-top: 1rem;
+
   /* width: 80%; */
 `;
 
@@ -289,8 +286,9 @@ const StyledImageWrapper = styled.div`
   }
 
   @media only screen and (min-width: 768px) {
-    align-self: center;
-    max-width: 500px;
+    align-self: start;
+    /* max-width: 800px; */
+    /* width: 100%; */
   }
 `;
 

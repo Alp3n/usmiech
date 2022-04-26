@@ -22,6 +22,10 @@ export function linkResolver(doc) {
       return `/offer`;
     case 'pageHowItWorks':
       return `/how-it-works`;
+    case 'pagePrivacy':
+      return `/privacy`;
+    case 'pageTerms':
+      return `/terms`;
     case 'story':
       return `/stories/${doc.uid}`;
     default:

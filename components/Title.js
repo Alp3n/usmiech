@@ -8,6 +8,7 @@ const Title = ({
   white,
   marginBottom,
   line,
+  story,
 }) => (
   <StyledTitle
     absolute={absolute}
@@ -16,6 +17,7 @@ const Title = ({
     white={white}
     marginBottom={marginBottom}
     line={line}
+    story={story}
   >
     {/* {line ? (
       <StyledLineWrapper>
@@ -71,6 +73,7 @@ const StyledTitle = styled.span`
   place-self: baseline;
   z-index: 1000;
   margin-bottom: ${({ marginBottom }) => (marginBottom ? marginBottom : '0')};
+
   grid-area: ${({ area }) => (area ? area : null)};
 
   > h1 {
@@ -91,11 +94,12 @@ const StyledTitle = styled.span`
   }
   @media only screen and (min-width: 767px) {
     ${({ line }) => (line ? 'grid-template-columns: auto 1fr;' : null)};
-    /* margin-bottom: 1rem; */
+    ${({ story }) => (story === 'Annie' ? 'margin-bottom: 0.5rem;' : null)}
+    ${({ story }) => (story === 'Viola' ? 'margin-bottom: 0.5rem;' : null)}
+    ${({ story }) => (story === 'Karolina' ? 'margin-bottom: 0.5rem;' : null)}
     > h1 {
       font-size: ${({ size }) => (size ? size : '5vw')};
       line-height: ${({ size }) => (size === '4rem' ? '2' : '1.5')};
-      /* font-weight: 200; */
       line-height: 1;
       width: fit-content;
     }

@@ -13,7 +13,7 @@ const StoryPreview = ({ slice }) => (
             </StyledDescription>
           </div>
         ) : null}
-        {slice.primary.firstDescription ? (
+        {slice.primary.firstDescription.length > 0 ? (
           <div>
             <StyledDescription normal>
               <PrismicRichText field={slice.primary.firstDescription} />
@@ -28,8 +28,8 @@ const StoryPreview = ({ slice }) => (
         <div
           style={{
             display: 'flex',
-            width: '100%',
-            height: '80%',
+            width: '80%',
+            height: '70%',
             backgroundColor: 'grey',
             alignItems: 'center',
             justifyContent: 'center',
@@ -118,7 +118,6 @@ const StyledLine = styled.div`
 
 const StyledDescription = styled.div`
   position: relative;
-
   margin-bottom: 80px;
   z-index: 100;
   ${({ color }) =>
@@ -130,8 +129,8 @@ const StyledDescription = styled.div`
 
   p {
     font-size: ${({ normal }) => (normal ? '1.1rem' : '1.4rem')};
-    font-weight: 300;
-    line-height: 2.4rem;
+    font-weight: 400;
+    line-height: 2.2rem;
     margin-top: -1rem;
   }
 

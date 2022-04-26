@@ -139,8 +139,15 @@ const StyledDescription = styled.span`
     /* width: 50ch; */
     p {
       line-height: 2.6rem;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       /* width: 23ch; */
+      /* width: 100%; */
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    p {
+      line-height: 2.6rem;
+      font-size: 1.5rem;
       /* width: 100%; */
     }
   }
@@ -176,7 +183,7 @@ const StyledWrapper = styled(Media)`
   }
   @media only screen and (min-width: 768px) {
     grid-template-columns: 1fr min(135ch, calc(100% - 98px)) 1fr;
-
+    max-width: 1920px;
     margin-bottom: 110px;
     ${({ color }) =>
       color === 'white'

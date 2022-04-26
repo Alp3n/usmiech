@@ -26,17 +26,25 @@ export default function Offer({ menu, page }) {
       </StyledWrapper>
 
       <Calculator
-        monthsData={[6, 10, 12, 24]}
-        ratesData={[0, 12, 18, 24]}
-        priceData={500}
+        firstValuesData={[
+          { first: 6, price: 10800 },
+          { first: 10, price: 18000 },
+          { first: 12, price: 21600 },
+          { first: 20, price: 30000 },
+          { first: 24, price: 43200 },
+        ]}
+        ratesData={[0, 12, 18, 24, 36, 48, 60]}
         title='Licówki'
         firstDesc='Wybierz ilość licówek'
         secondDesc='Wybierz ilość rat'
       />
       <Calculator
-        monthsData={[6, 9, 12]}
+        firstValuesData={[
+          { first: 6, price: 6000 },
+          { first: 9, price: 8000 },
+          { first: 12, price: 10000 },
+        ]}
         ratesData={[0, 12, 18, 24]}
-        priceData={500}
         title='Leczenie Ortodontyczne'
         firstDesc='Wybierz czas leczenia'
         secondDesc='Wybierz ilość rat'

@@ -79,7 +79,7 @@ const MainPage = ({ slice }) => (
             width={slice.primary.image.dimensions.width}
             height={slice.primary.image.dimensions.height}
             layout='responsive'
-            // quality={85}
+            quality={85}
           />
         </Media>
       </div>
@@ -128,6 +128,13 @@ const StyledDescription = styled.span`
   @media only screen and (min-width: 768px) {
     p {
       line-height: 2.2rem;
+      font-size: 1.1rem;
+      /* width: 100%; */
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    p {
+      line-height: 2.2rem;
       font-size: 1.2rem;
       /* width: 100%; */
     }
@@ -153,7 +160,7 @@ const StyledImageWrapper = styled(Media)`
   }
   @media only screen and (min-width: 768px) {
     grid-template-columns: 1fr min(135ch, calc(100% - 98px)) 1fr;
-
+    max-width: 1920px;
     margin-bottom: 5rem;
     ${({ color }) =>
       color === 'white'
