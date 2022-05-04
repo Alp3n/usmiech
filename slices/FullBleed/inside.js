@@ -157,7 +157,7 @@ const StyledImageWrapper = styled(Media)`
   grid-template-columns: 1fr min(135ch, calc(100% - 48px)) 1fr;
   /* grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr; */
   grid-column-gap: 24px;
-  height: auto;
+  height: fit-content;
 
   > * {
     grid-column: 2;
@@ -168,7 +168,6 @@ const StyledImageWrapper = styled(Media)`
   }
   @media only screen and (min-width: 768px) {
     grid-template-columns: 1fr min(135ch, calc(100% - 98px)) 1fr;
-    max-width: 1920px;
     margin-bottom: 110px;
     ${({ color }) =>
       color === 'white'
@@ -176,5 +175,21 @@ const StyledImageWrapper = styled(Media)`
     color: white;
   }`
         : '#000;'}
+    h2 {
+      font-size: 4vw;
+    }
+    p,
+    a {
+      font-size: 2vw;
+    }
+  }
+  @media only screen and (min-width: 1524px) {
+    h2 {
+      font-size: 3.5vw;
+    }
+    p,
+    a {
+      font-size: 1.3vw;
+    }
   }
 `;

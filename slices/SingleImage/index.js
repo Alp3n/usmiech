@@ -36,8 +36,7 @@ const SingleImage = ({ slice }) => (
           />
         </Title>
       ) : (
-        <StyledHeader>
-          <StyledLineTitle />
+        <StyledHeader area='title'>
           <Title
             area='title'
             marginBottom='40px'
@@ -51,6 +50,7 @@ const SingleImage = ({ slice }) => (
               }
             />
           </Title>
+          <StyledLineTitle area='line' />
         </StyledHeader>
       )}
 
@@ -106,6 +106,9 @@ const SingleImage = ({ slice }) => (
       clinic={slice.variation === 'clinic' ? 'clinic' : null}
       marginTop={slice.primary.title.map((t) => t.text)}
     >
+      {slice.variation === 'steps' ? null : (
+        <StyledLineTitle side={slice.primary.imageSide} />
+      )}
       <StyledImageWrapper area='image'>
         <Image
           src={`${slice.primary.image.url}&dpr=2`}
@@ -127,26 +130,27 @@ const SingleImage = ({ slice }) => (
         {slice.primary.title ? (
           <Title
             area='title'
-            marginBottom='40px'
+            marginBottom='50px'
             // line={slice.variation === 'steps' ? false : true}
           >
             <PrismicRichText field={slice.primary.title} />
+            {/* <StyledLineTitle side={slice.primary.imageSide} /> */}
           </Title>
         ) : null}
         {slice.variation === 'clinic' ? (
           <>
-            <Description area='description' marginBottom={'40px'}>
+            <Description area='description' marginBottom={'50px'}>
               <PrismicRichText field={slice.primary.descriptionOne} />
             </Description>
 
-            <Description area='price' marginBottom={'40px'}>
+            <Description area='price' marginBottom={'50px'}>
               <PrismicRichText field={slice.primary.descriptionTwo} />
             </Description>
           </>
         ) : (
           <Description
             area='description'
-            marginBottom={'40px'}
+            marginBottom={'50px'}
             // width={slice.primary.imageSide === 'right' ? '80%' : null}
           >
             <PrismicRichText field={slice.primary.description} />
@@ -183,17 +187,26 @@ const SingleImage = ({ slice }) => (
 
 export default SingleImage;
 const StyledHeader = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-area: ${({ area }) => (area ? area : null)};
+  grid-template-areas: 'title line';
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  @media only screen and (min-width: 768px) {
+    gap: 3rem;
+  }
 `;
 const StyledLineTitle = styled.div`
   position: relative;
-  border-top: 1px solid black;
-  width: 40%;
-  align-self: end;
+  border-top: 1px solid #707070;
   top: 1.6rem;
+  grid-area: ${({ area }) => (area ? area : null)};
   @media only screen and (min-width: 768px) {
-    width: 50%;
+    position: absolute;
+    width: 15%;
+    top: 2.3rem;
+    ${({ side }) => (side === 'left' ? `right: 50%;` : `left: 30%;`)};
+    z-index: 9;
   }
 `;
 const StyledStepLineWrapper = styled.div`
@@ -232,7 +245,7 @@ const StyledWrapperDesktop = styled(Media)`
   }
 
   @media only screen and (min-width: 1292px) {
-    column-gap: 5rem;
+    column-gap: 10rem;
   }
 `;
 

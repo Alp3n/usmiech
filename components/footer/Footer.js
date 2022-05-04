@@ -192,7 +192,7 @@ const StyledItem = styled.div`
   place-items: center;
   color: black;
   @media only screen and (min-width: 768px) {
-    display: flex;
+    grid-template-columns: 40px 1fr;
     /* place-items: top; */
   }
 `;
@@ -204,10 +204,12 @@ const StyledItemSocial = styled.div`
   place-content: center;
   place-items: center;
   color: black;
+
   :hover > svg {
     color: grey;
   }
   @media only screen and (min-width: 768px) {
+    margin-right: 16px;
     display: flex;
     /* place-items: top; */
   }
@@ -216,7 +218,7 @@ const StyledItemSocial = styled.div`
 const StyledLink = styled(PrismicLink)`
   text-decoration: none;
   color: black;
-
+  margin-right: 32px;
   &:link {
     color: black;
   }

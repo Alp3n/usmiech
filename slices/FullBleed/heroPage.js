@@ -159,11 +159,11 @@ const StyledWrapper = styled(Media)`
   }
   .full-bleed {
     grid-column: 1 / -1;
+    grid-template-columns: 1fr min(135ch, calc(100% - 98px)) 1fr;
     width: 100%;
   }
   @media only screen and (min-width: 768px) {
-    grid-template-columns: 1fr min(135ch, calc(100% - 98px)) 1fr;
-    max-width: 1920px;
+    /* max-height: 780px; */
     margin-bottom: 5rem;
     ${({ color }) =>
       color === 'white'
@@ -171,5 +171,21 @@ const StyledWrapper = styled(Media)`
     color: white;
   }`
         : '#000;'}
+    h2 {
+      font-size: 4vw;
+    }
+    p,
+    a {
+      font-size: 1.5vw;
+    }
+  }
+  @media only screen and (min-width: 1524px) {
+    h2 {
+      font-size: 3.5vw;
+    }
+    p,
+    a {
+      font-size: 1vw;
+    }
   }
 `;

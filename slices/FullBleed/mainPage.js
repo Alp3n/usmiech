@@ -126,6 +126,7 @@ const StyledDescription = styled.span`
   }
 
   @media only screen and (min-width: 768px) {
+    /* width: 50ch; */
     p {
       line-height: 2.2rem;
       font-size: 1.1rem;
@@ -158,9 +159,10 @@ const StyledImageWrapper = styled(Media)`
     grid-column: 1 / -1;
     width: 100%;
   }
+
   @media only screen and (min-width: 768px) {
     grid-template-columns: 1fr min(135ch, calc(100% - 98px)) 1fr;
-    max-width: 1920px;
+    max-height: 780px;
     margin-bottom: 5rem;
     ${({ color }) =>
       color === 'white'
@@ -168,5 +170,19 @@ const StyledImageWrapper = styled(Media)`
     color: white;
   }`
         : '#000;'}
+    h1 {
+      font-size: 5vw;
+    }
+    p {
+      font-size: 1.3vw;
+    }
+  }
+  @media only screen and (min-width: 1524px) {
+    h1 {
+      font-size: 5.5vw;
+    }
+    p {
+      font-size: 1.3vw;
+    }
   }
 `;

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { PrismicLink } from '@prismicio/react';
 import styled from '@emotion/styled';
 import Button from '../Button';
@@ -10,8 +10,37 @@ import Menu from './Menu';
 
 export const Header = ({ menu }) => {
   const [isOpen, setIsOpen] = useState(false);
+  /* const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const controlNavbar = () => {
+      if (typeof window !== 'undefined') {
+        if (window.scrollY > lastScrollY) {
+          // if scroll down hide the navbar
+          setShow(false);
+        } else {
+          // if scroll up show the navbar
+          setShow(true);
+        }
+
+        // remember current page location to use in the next move
+        setLastScrollY(window.scrollY);
+      }
+    };
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]); */
+
   return (
-    <StyledWrapper>
+    <StyledWrapper /* className={`${show ? 'active' : 'hidden'}`} */>
       <StyledGrid>
         <StyledMobileDiv between={['sm', 'xl']} /* at={`'sm' | 'md'`} */>
           {isOpen ? (

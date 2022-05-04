@@ -34,8 +34,7 @@ const DoubleImage = ({ slice }) => (
           </StyledImageBig>
         </StyledImageStack>
         {slice.primary.title ? (
-          <StyledHeader>
-            <StyledLineTitle />
+          <StyledHeader area='title'>
             <Title
               area='title'
               marginBottom='40px'
@@ -49,6 +48,7 @@ const DoubleImage = ({ slice }) => (
                 }
               />
             </Title>
+            <StyledLineTitle area='line' />
           </StyledHeader>
         ) : /*  <Title area='title' marginBottom={'40px'} line>
             <PrismicRichText
@@ -101,6 +101,7 @@ const DoubleImage = ({ slice }) => (
           {slice.primary.title ? (
             <Title area='title' marginBottom={'40px'} line>
               <PrismicRichText field={slice.primary.title} />
+              <StyledLineTitle side={slice.primary.imageSide} />
             </Title>
           ) : null}
           {slice.primary.description ? (
@@ -122,17 +123,22 @@ const DoubleImage = ({ slice }) => (
 
 export default DoubleImage;
 const StyledHeader = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-area: ${({ area }) => (area ? area : null)};
+  grid-template-areas: 'title line';
+  grid-template-columns: auto 1fr;
+  gap: 3rem;
 `;
 const StyledLineTitle = styled.div`
   position: relative;
-  border-top: 1px solid black;
-  width: 40%;
-  align-self: end;
+  border-top: 1px solid #707070;
   top: 1.6rem;
+  grid-area: ${({ area }) => (area ? area : null)};
   @media only screen and (min-width: 768px) {
+    position: absolute;
     width: 50%;
+    top: 2.3rem;
+    right: -60%;
   }
 `;
 const StyledWrapper = styled.div`

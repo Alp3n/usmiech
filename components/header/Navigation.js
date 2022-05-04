@@ -32,7 +32,13 @@ const StyledUl = styled.ul`
   display: flex;
   margin: 0;
   padding: 0;
-  ${({ vertical }) => (vertical ? `flex-direction: column; gap: 8px;` : null)}
+  ${({ vertical }) =>
+    vertical
+      ? `flex-direction: column; > li {
+      margin-bottom: 8px;
+      
+    }`
+      : null}
 
   @media only screen and (max-width: 768px) {
     padding: 1rem 0 1.5rem 0;

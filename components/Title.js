@@ -64,8 +64,7 @@ const StyledTitle = styled.span`
   position: ${({ absolute }) => (absolute ? 'absolute' : 'relative')};
   display: grid;
   ${({ line }) => (line ? 'grid-template-columns: auto 1fr;' : null)};
-
-  width: 100%;
+  width: fit-content;
   bottom: 0;
   place-content: bottom;
   margin: 0;
@@ -98,7 +97,7 @@ const StyledTitle = styled.span`
     ${({ story }) => (story === 'Viola' ? 'margin-bottom: 0.5rem;' : null)}
     ${({ story }) => (story === 'Karolina' ? 'margin-bottom: 0.5rem;' : null)}
     > h1 {
-      font-size: ${({ size }) => (size ? size : '5vw')};
+      font-size: ${({ size }) => (size ? size : '6.5rem')};
       line-height: ${({ size }) => (size === '4rem' ? '2' : '1.5')};
       line-height: 1;
       width: fit-content;

@@ -20,7 +20,7 @@ const Story = ({ slice }) => (
       </PrismicLink>
     </StyledImageWrapper>
     <StyledImageWrapper greaterThan='sm' className='full-bleed'>
-      <PrismicLink field={slice.primary.buttonLink}>
+      <StyledLink field={slice.primary.buttonLink}>
         <Image
           src={`${slice.primary.image.url}?auto=noCompress&dpr=2`}
           alt={slice.primary.image.alt}
@@ -29,7 +29,7 @@ const Story = ({ slice }) => (
           layout='responsive'
           quality={90}
         />
-      </PrismicLink>
+      </StyledLink>
     </StyledImageWrapper>
     <StyledGrid>
       <StyledLeftWrapper area='leftWrapper'>
@@ -54,6 +54,14 @@ const Story = ({ slice }) => (
 );
 
 export default Story;
+
+const StyledLink = styled(PrismicLink)`
+  display: block;
+
+  > span {
+    max-height: 780px;
+  }
+`;
 
 const StyledImageWrapper = styled(Media)`
   margin-bottom: 10px;

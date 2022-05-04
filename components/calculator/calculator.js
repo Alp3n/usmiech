@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import Price from './price';
+import { number } from 'sharp/lib/is';
 
 const Calculator = ({
   firstValuesData,
@@ -24,10 +25,12 @@ const Calculator = ({
   const handleSelectRates = (value, index) => {
     setSelectedRate([value, index]);
   };
-
   useEffect(() => {
-    let numberOfRates = selectedRate[0] === 0 ? 1 : selectedRate[0];
-    setPrice(selectedValue[0].price / numberOfRates);
+    console.log(selectedRate[0], 'Selected RATE');
+    let numberOfRates = selectedRate[0].rates === 0 ? 1 : selectedRate[0].rates;
+    let interest = selectedRate[0].interest;
+    console.log(interest, 'Interest');
+    setPrice((selectedValue[0].price * (1 + interest)) / numberOfRates);
   }, [price, priceOfRate, selectedValue, selectedRate, firstValues]);
 
   return (
@@ -56,15 +59,15 @@ const Calculator = ({
         <StyledSpan>{secondDesc}</StyledSpan>
         <StyledOptionsWrapper>
           {rates.map((value, index) => (
-            <React.Fragment key={value}>
-              <StyledValueWrapper key={value}>
+            <React.Fragment key={value.rates}>
+              <StyledValueWrapper key={value.rates}>
                 <StyledRatesCircle
                   rates={rates}
                   selectedRate={selectedRate}
                   index={index}
                   onClick={() => handleSelectRates(value, index)}
                 ></StyledRatesCircle>
-                <StyledValue>{value}</StyledValue>
+                <StyledValue>{value.rates}</StyledValue>
               </StyledValueWrapper>
               {index === rates.length - 1 ? null : <StyledLine />}
             </React.Fragment>
@@ -96,7 +99,7 @@ const StyledSpan = styled.span`
 const StyledWrapper = styled.div`
   display: grid;
   grid-template-columns: 1;
-  row-gap: 2rem;
+  row-gap: 3.5rem;
   margin-bottom: 3rem;
 
   @media only screen and (min-width: 768px) {
@@ -133,7 +136,7 @@ const StyledRatesCircle = styled.div`
   border: 1px solid #a79797;
   border-radius: 100%;
   background-color: ${({ selectedRate, index, rates }) =>
-    selectedRate[0] === rates[index] ? '#A79797' : 'transparent'};
+    selectedRate[0].rates === rates[index].rates ? '#A79797' : 'transparent'};
   cursor: pointer;
 `;
 

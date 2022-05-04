@@ -17,10 +17,10 @@ const Outside = ({ slice }) => (
     >
       {slice.primary.title ? (
         <StyledHeader>
-          <StyledLineTitle />
-          <Title white={false} marginBottom='40px'>
+          <Title white={false} marginBottom='40px' area='title'>
             <PrismicRichText field={slice.primary.title} />
           </Title>
+          <StyledLineTitle area='line' />
         </StyledHeader>
       ) : null}
       <StyledImageWrapper /* className='full-bleed' */>
@@ -96,15 +96,20 @@ const Outside = ({ slice }) => (
 
 export default Outside;
 const StyledHeader = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-area: ${({ area }) => (area ? area : null)};
+  grid-template-areas: 'title line';
+  grid-template-columns: auto 1fr;
+  gap: 3rem;
 `;
 const StyledLineTitle = styled.div`
   position: relative;
   border-top: 1px solid black;
-  width: 40%;
-  align-self: end;
   top: 1.6rem;
+  grid-area: ${({ area }) => (area ? area : null)};
+  @media only screen and (min-width: 768px) {
+    width: 50%;
+  }
 `;
 const StyledAbsoluteWrapper = styled.div`
   position: absolute;
@@ -183,7 +188,8 @@ const StyledWrapper = styled(Media)`
   }
   @media only screen and (min-width: 768px) {
     grid-template-columns: 1fr min(135ch, calc(100% - 98px)) 1fr;
-    max-width: 1920px;
+    max-height: 780px;
+    width: 100%;
     margin-bottom: 110px;
     ${({ color }) =>
       color === 'white'
@@ -191,5 +197,21 @@ const StyledWrapper = styled(Media)`
     color: white;
   }`
         : '#000;'}
+    h2 {
+      font-size: 4vw;
+    }
+    p,
+    a {
+      font-size: 1.5vw;
+    }
+  }
+  @media only screen and (min-width: 1524px) {
+    h2 {
+      font-size: 3.5vw;
+    }
+    p,
+    a {
+      font-size: 1.3vw;
+    }
   }
 `;

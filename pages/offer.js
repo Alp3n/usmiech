@@ -30,10 +30,18 @@ export default function Offer({ menu, page }) {
           { first: 6, price: 10800 },
           { first: 10, price: 18000 },
           { first: 12, price: 21600 },
-          { first: 20, price: 30000 },
+          { first: 20, price: 36000 },
           { first: 24, price: 43200 },
         ]}
-        ratesData={[0, 12, 18, 24, 36, 48, 60]}
+        // ratesData={[0, 12, 24, 36, 48, 60]}
+        ratesData={[
+          { rates: 0, interest: 0 },
+          { rates: 12, interest: 0.06 },
+          { rates: 24, interest: 0.12 },
+          { rates: 36, interest: 0.18 },
+          { rates: 48, interest: 0.24 },
+          { rates: 60, interest: 0.3 },
+        ]}
         title='Licówki'
         firstDesc='Wybierz ilość licówek'
         secondDesc='Wybierz ilość rat'
@@ -44,7 +52,14 @@ export default function Offer({ menu, page }) {
           { first: 9, price: 8000 },
           { first: 12, price: 10000 },
         ]}
-        ratesData={[0, 12, 18, 24]}
+        ratesData={[
+          { rates: 0, interest: 0 },
+          { rates: 12, interest: 0.06 },
+          { rates: 24, interest: 0.12 },
+          { rates: 36, interest: 0.18 },
+          { rates: 48, interest: 0.24 },
+          { rates: 60, interest: 0.3 },
+        ]}
         title='Leczenie Ortodontyczne'
         firstDesc='Wybierz czas leczenia'
         secondDesc='Wybierz ilość rat'

@@ -33,6 +33,16 @@ p {
   margin: 0 auto;
 }
 
+/* .active {
+  display: block;
+  transition: ease-in 0.3s;
+}
+.hidden {
+  visibility: hidden;
+  transform: translate3d(0, -100%, 0);
+  transition: ease-out 0.3s;
+} */
+
 @media only screen and (max-width: 767px) {
   .calendesk-frame {
     height: 1000px;
