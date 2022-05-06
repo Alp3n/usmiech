@@ -205,7 +205,7 @@ const StyledLineTitle = styled.div`
     position: absolute;
     width: 15%;
     top: 2.3rem;
-    ${({ side }) => (side === 'left' ? `right: 50%;` : `left: 30%;`)};
+    ${({ side }) => (side === 'left' ? `right: 50%;` : `left: 40%;`)};
     z-index: 9;
   }
 `;

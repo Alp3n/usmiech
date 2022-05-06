@@ -58,14 +58,14 @@ const Footer = ({ menu }) => {
       </StyledWrapper>
       <StyledLine at='sm' marginTop />
       <StyledBottomWrapper>
-        <StyledFlex>
+        <StyledBottomLinks>
           <StyledLink href={menu.data.linkTerms}>
             <PrismicRichText field={menu.data.linkTermsLabel} />
           </StyledLink>
           <StyledLink href={menu.data.linkPrivacy}>
             <PrismicRichText field={menu.data.linkPrivacyLabel} />
           </StyledLink>
-        </StyledFlex>
+        </StyledBottomLinks>
         <span>
           Designed by{' '}
           <StyledHref href='https://ilovegrid.com'>ilovegrid.com</StyledHref>
@@ -113,8 +113,10 @@ const StyledBottomWrapper = styled.div`
 const StyledSpan = styled.span`
   font-size: 1.1rem;
   line-height: 2.2rem;
+  text-align: center;
   /* font-weight: 300; */
   @media only screen and (min-width: 768px) {
+    text-align: start;
     font-size: 1.3rem;
     line-height: 2.4rem;
   }
@@ -135,6 +137,10 @@ const StyledFooter = styled.footer`
   }
   @media only screen and (min-width: 768px) {
     grid-template-columns: 1fr min(135ch, calc(100% - 98px)) 1fr;
+
+    .full-bleed {
+      max-height: 780px;
+    }
   }
 `;
 
@@ -172,10 +178,22 @@ const StyledGrid = styled.div`
     place-items: flex-start;
   }
 `;
+const StyledBottomLinks = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  margin-bottom: 1.5rem;
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 0;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+`;
 
 const StyledFlex = styled.div`
   display: flex;
   gap: 2rem;
+
   align-content: center;
   @media only screen and (max-width: 768px) {
     align-items: center;
@@ -218,7 +236,7 @@ const StyledItemSocial = styled.div`
 const StyledLink = styled(PrismicLink)`
   text-decoration: none;
   color: black;
-  margin-right: 32px;
+  /* margin-right: 32px; */
   &:link {
     color: black;
   }

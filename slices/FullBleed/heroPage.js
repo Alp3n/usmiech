@@ -179,7 +179,7 @@ const StyledWrapper = styled(Media)`
       font-size: 1.5vw;
     }
   }
-  @media only screen and (min-width: 1524px) {
+  @media only screen and (min-width: 1564px) {
     h2 {
       font-size: 3.5vw;
     }
