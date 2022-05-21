@@ -64,6 +64,26 @@ export default function Offer({ menu, page }) {
         firstDesc='Wybierz czas leczenia'
         secondDesc='Wybierz ilość rat'
       />
+      <Calculator
+        firstValuesData={[
+          { first: 6, price: 4200 },
+          { first: 10, price: 7000 },
+          { first: 12, price: 8400 },
+          { first: 20, price: 14000 },
+          { first: 24, price: 16800 },
+        ]}
+        ratesData={[
+          { rates: 0, interest: 0 },
+          { rates: 12, interest: 0.06 },
+          { rates: 24, interest: 0.12 },
+          { rates: 36, interest: 0.18 },
+          { rates: 48, interest: 0.24 },
+          { rates: 60, interest: 0.3 },
+        ]}
+        title='Bonding Hybrydowy'
+        firstDesc='Wybierz czas leczenia'
+        secondDesc='Wybierz ilość rat'
+      />
     </Layout>
   );
 }
