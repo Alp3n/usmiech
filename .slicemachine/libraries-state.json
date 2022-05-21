@@ -19,32 +19,53 @@
               "version": "sktwi1xtmkfgx8626",
               "description": "Calculator",
               "primary": {
-                "productName": {
+                "sectionId": {
+                  "type": "Text",
                   "config": {
-                    "label": "Product Name",
+                    "label": "Section Id",
+                    "placeholder": ""
+                  }
+                },
+                "productTitle": {
+                  "config": {
+                    "label": "Product Title",
                     "placeholder": "Insert product name...",
                     "allowTargetBlank": true,
-                    "single": "heading2"
+                    "single": "heading1"
                   },
                   "type": "StructuredText"
                 },
-                "installmentsText": {
+                "firstDescription": {
+                  "type": "StructuredText",
                   "config": {
-                    "label": "Installments Text",
+                    "label": "First Description",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  },
-                  "type": "StructuredText"
+                    "single": "paragraph"
+                  }
                 },
-                "installmentsArray": {
+                "firstValuesData": {
+                  "type": "Text",
                   "config": {
-                    "label": "Array Of Installments",
-                    "placeholder": "Enter values separated with comma",
+                    "label": "First Values Data",
+                    "placeholder": ""
+                  }
+                },
+                "secondDescription": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Second Description",
+                    "placeholder": "",
                     "allowTargetBlank": true,
                     "single": "paragraph"
-                  },
-                  "type": "StructuredText"
+                  }
+                },
+                "ratesData": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Rates Data",
+                    "placeholder": ""
+                  }
                 }
               },
               "items": {},
@@ -171,27 +192,30 @@
             "slice_type": "calculator",
             "items": [],
             "primary": {
-              "productName": [
+              "sectionId": "engage cross-media markets",
+              "productTitle": [
                 {
-                  "type": "heading2",
-                  "text": "Brand dot-com technologies",
+                  "type": "heading1",
+                  "text": "Redefine e-business solutions",
                   "spans": []
                 }
               ],
-              "installmentsText": [
+              "firstDescription": [
                 {
                   "type": "paragraph",
-                  "text": "Eiusmod proident Lorem in. Pariatur sit nulla ullamco ipsum. Duis esse commodo dolor qui anim sunt quis adipisicing aliquip in.",
+                  "text": "Anim aliquip nostrud velit ex aute occaecat irure commodo id. Ex adipisicing est in. Duis cillum adipisicing dolor laboris ea ipsum et aliquip amet dolore.",
                   "spans": []
                 }
               ],
-              "installmentsArray": [
+              "firstValuesData": "enable transparent e-markets",
+              "secondDescription": [
                 {
                   "type": "paragraph",
-                  "text": "Velit cillum proident consequat deserunt ea ea ipsum velit culpa enim dolore proident sint id pariatur. Ex aliquip mollit nulla cillum dolore sunt.",
+                  "text": "Occaecat in aute eiusmod sit commodo nulla sit pariatur.",
                   "spans": []
                 }
-              ]
+              ],
+              "ratesData": "exploit intuitive ROI"
             }
           },
           "licowki": {
@@ -203,35 +227,35 @@
               "productName": [
                 {
                   "type": "heading2",
-                  "text": "Visualize innovative infrastructures",
+                  "text": "Optimize holistic convergence",
                   "spans": []
                 }
               ],
               "installmentsText": [
                 {
                   "type": "paragraph",
-                  "text": "Sunt aute in mollit proident anim esse dolore ipsum nulla labore exercitation elit.",
+                  "text": "Incididunt ea excepteur adipisicing sit velit deserunt ex aute mollit mollit labore consequat aute eu.",
                   "spans": []
                 }
               ],
               "installmentsArray": [
                 {
                   "type": "paragraph",
-                  "text": "Adipisicing ipsum sit elit adipisicing adipisicing dolore laboris qui dolor duis incididunt sit non non. Cillum laboris culpa mollit amet in officia ex ipsum tempor enim incididunt fugiat eu. Excepteur ipsum minim veniam.",
+                  "text": "Dolor qui labore do consectetur dolore amet id excepteur pariatur fugiat tempor sint aliqua eiusmod. Elit sunt tempor eiusmod deserunt sunt tempor eu sit ex dolor qui adipisicing laboris. Et aliquip ut est eiusmod est velit ullamco laboris exercitation commodo consequat.",
                   "spans": []
                 }
               ],
               "licowkiText": [
                 {
                   "type": "paragraph",
-                  "text": "Esse aute irure voluptate. Laboris et irure ipsum. Tempor non proident ex.",
+                  "text": "Excepteur in eiusmod eu aliquip esse ullamco sit mollit ut fugiat ea occaecat incididunt nostrud est.",
                   "spans": []
                 }
               ],
               "licowkiArray": [
                 {
                   "type": "paragraph",
-                  "text": "Quis qui voluptate enim commodo dolor ea sunt Lorem. Do nostrud minim dolore exercitation tempor.",
+                  "text": "Ullamco aute eiusmod irure proident excepteur ut dolor Lorem voluptate in sunt aliqua tempor. Minim magna magna dolore mollit do culpa magna occaecat duis amet proident.",
                   "spans": []
                 }
               ]
@@ -246,35 +270,35 @@
               "productName": [
                 {
                   "type": "heading2",
-                  "text": "Expedite integrated channels",
+                  "text": "Syndicate world-class synergies",
                   "spans": []
                 }
               ],
               "installmentsText": [
                 {
                   "type": "paragraph",
-                  "text": "Consequat Lorem consequat voluptate pariatur.",
+                  "text": "Adipisicing incididunt ipsum ea esse dolore quis eu. Id enim reprehenderit ex in et cillum est eu. Voluptate magna aliquip adipisicing fugiat aliquip cupidatat exercitation ut labore ullamco minim fugiat officia mollit est.",
                   "spans": []
                 }
               ],
               "installmentsArray": [
                 {
                   "type": "paragraph",
-                  "text": "Ea commodo enim est tempor aute ea ullamco reprehenderit consectetur sunt et id irure ullamco. Consequat deserunt reprehenderit aliqua magna excepteur ea anim labore ut pariatur pariatur incididunt pariatur elit.",
+                  "text": "Consequat ipsum irure sunt id sint non adipisicing. Est culpa ex magna ad dolore. Nulla ad laboris pariatur dolore velit fugiat dolore magna deserunt officia sit in mollit irure.",
                   "spans": []
                 }
               ],
               "treatmentText": [
                 {
                   "type": "paragraph",
-                  "text": "Occaecat culpa quis excepteur exercitation sit ut ut voluptate reprehenderit enim et tempor.",
+                  "text": "Pariatur mollit nostrud nostrud.",
                   "spans": []
                 }
               ],
               "treatmentTimeArray": [
                 {
                   "type": "paragraph",
-                  "text": "Cillum aute est magna minim Lorem mollit voluptate ad aliqua minim irure.",
+                  "text": "Ea sunt magna reprehenderit incididunt nostrud cillum aute cillum amet veniam anim dolore commodo laboris. Irure labore aliquip sunt minim veniam sit anim proident.",
                   "spans": []
                 }
               ]
@@ -2717,6 +2741,77 @@
                 "link_type": "Web",
                 "url": "http://twitter.com"
               }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "title_description": {
+        "library": "slices",
+        "id": "title_description",
+        "name": "TitleDescription",
+        "description": "TitleDescription",
+        "model": {
+          "id": "title_description",
+          "type": "SharedSlice",
+          "name": "TitleDescription",
+          "description": "TitleDescription",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TitleDescription",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "title_description",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Transition collaborative niches",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Eu anim nisi eiusmod Lorem ullamco dolore eu est nostrud aute eiusmod esse sit consectetur id.",
+                  "spans": []
+                }
+              ]
             }
           }
         },

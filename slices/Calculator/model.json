@@ -11,35 +11,57 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Calculator",
       "primary": {
-        "productName": {
+        "sectionId": {
+          "type": "Text",
           "config": {
-            "label": "Product Name",
+            "label": "Section Id",
+            "placeholder": ""
+          }
+        },
+        "productTitle": {
+          "config": {
+            "label": "Product Title",
             "placeholder": "Insert product name...",
             "allowTargetBlank": true,
-            "single": "heading2"
+            "single": "heading1"
           },
           "type": "StructuredText"
         },
-        "installmentsText": {
+        "firstDescription": {
+          "type": "StructuredText",
           "config": {
-            "label": "Installments Text",
+            "label": "First Description",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          },
-          "type": "StructuredText"
+            "single": "paragraph"
+          }
         },
-        "installmentsArray": {
+        "firstValuesData": {
+          "type": "Text",
           "config": {
-            "label": "Array Of Installments",
-            "placeholder": "Enter values separated with comma",
+            "label": "First Values Data",
+            "placeholder": ""
+          }
+        },
+        "secondDescription": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Second Description",
+            "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph"
-          },
-          "type": "StructuredText"
+          }
+        },
+        "ratesData": {
+          "type": "Text",
+          "config": {
+            "label": "Rates Data",
+            "placeholder": ""
+          }
         }
       },
-      "items": {}
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     },
     {
       "id": "licowki",
@@ -94,7 +116,8 @@
           "type": "StructuredText"
         }
       },
-      "items": {}
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     },
     {
       "id": "ortodoncja",
@@ -149,7 +172,8 @@
           "type": "StructuredText"
         }
       },
-      "items": {}
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]
 }

@@ -8,6 +8,7 @@ import RepetableItems from './RepetableItems';
 import SingleImage from './SingleImage';
 import Story from './Story';
 import StoryPreview from './StoryPreview';
+import TitleDescription from './TitleDescription';
 
 export {
 	Calculator,
@@ -18,6 +19,7 @@ export {
 	SingleImage,
 	Story,
 	StoryPreview,
+	TitleDescription,
 };
 
 export const components = {
@@ -29,4 +31,5 @@ export const components = {
 	single_image: SingleImage,
 	story: Story,
 	story_preview: StoryPreview,
+	title_description: TitleDescription,
 };

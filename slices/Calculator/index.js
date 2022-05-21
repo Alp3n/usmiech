@@ -1,74 +1,72 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import Price from './price';
-//TODO
-const Calculator = ({
-  monthsData,
-  ratesData,
-  priceData,
-  title,
-  firstDesc,
-  secondDesc,
-}) => {
-  const [months, setMonths] = useState(monthsData);
-  const [rates, setRates] = useState(ratesData);
-  const [selectedMonth, setSelectedMonth] = useState([months[0], 'index']);
+import { PrismicRichText } from '@prismicio/react';
+
+const Calculator = ({ slice }) => {
+  const [firstValues, setFirstValues] = useState(
+    JSON.parse(slice.primary.firstValuesData)
+  );
+  const [rates, setRates] = useState(JSON.parse(slice.primary.ratesData));
+  const [selectedValue, setSelectedValue] = useState([firstValues[0], 'index']);
   const [selectedRate, setSelectedRate] = useState([rates[0], 'index']);
   const [price, setPrice] = useState('Wybierz wartości');
-  const priceOfRate = priceData;
 
-  const handleSelectMonths = (value, index) => {
-    setSelectedMonth([value, index]);
+  const handleSelectValue = (value, index) => {
+    setSelectedValue([value, index]);
   };
 
   const handleSelectRates = (value, index) => {
     setSelectedRate([value, index]);
   };
-
   useEffect(() => {
-    let licowkiPrice = 500;
-    let numberOfRates = selectedRate[0] === 0 ? 1 : selectedRate[0];
-    setPrice((selectedMonth[0] * licowkiPrice) / numberOfRates);
-  }, [price, priceOfRate, selectedMonth, selectedRate]);
-
+    let numberOfRates = selectedRate[0].rates === 0 ? 1 : selectedRate[0].rates;
+    let interest = selectedRate[0].interest;
+    console.log(interest, 'Interest');
+    setPrice((selectedValue[0].price * (1 + interest)) / numberOfRates);
+  }, [price, selectedValue, selectedRate, firstValues]);
   return (
-    <StyledWrapper>
-      <h2>{title}</h2>
-      <StyledInputWrapper>
-        <span>{firstDesc}</span>
+    <StyledWrapper id={slice.primary.sectionId}>
+      <PrismicRichText field={slice.primary.productTitle} />
+      <StyledInputWrapper id='licowki'>
+        <StyledSpan>
+          <PrismicRichText field={slice.primary.firstDescription} />
+        </StyledSpan>
         <StyledOptionsWrapper>
-          {months?.map((value, index) => (
-            <>
+          {firstValues?.map((value, index) => (
+            <React.Fragment key={value.first}>
               <StyledValueWrapper>
-                <StyledCircle
-                  values={months}
-                  selectedValue={selectedMonth}
+                <StyledValuesCircle
+                  values={firstValues}
+                  selectedValue={selectedValue}
                   index={index}
-                  onClick={() => handleSelectMonths(value, index)}
-                ></StyledCircle>
-                <StyledValue>{value}</StyledValue>
+                  onClick={() => handleSelectValue(value, index)}
+                ></StyledValuesCircle>
+                <StyledValue>{value.first}</StyledValue>
               </StyledValueWrapper>
-              {index === months.length - 1 ? null : <StyledLine />}
-            </>
+              {index === firstValues.length - 1 ? null : <StyledLine />}
+            </React.Fragment>
           ))}
         </StyledOptionsWrapper>
       </StyledInputWrapper>
-      <StyledInputWrapper>
-        <span>{secondDesc}</span>
+      <StyledInputWrapper id='ortodontist'>
+        <StyledSpan>
+          <PrismicRichText field={slice.primary.secondDescription} />
+        </StyledSpan>
         <StyledOptionsWrapper>
           {rates.map((value, index) => (
-            <>
-              <StyledValueWrapper>
-                <StyledCircle
-                  values={rates}
-                  selectedValue={selectedRate}
+            <React.Fragment key={value.rates}>
+              <StyledValueWrapper key={value.rates}>
+                <StyledRatesCircle
+                  rates={rates}
+                  selectedRate={selectedRate}
                   index={index}
                   onClick={() => handleSelectRates(value, index)}
-                ></StyledCircle>
-                <StyledValue>{value}</StyledValue>
+                ></StyledRatesCircle>
+                <StyledValue>{value.rates}</StyledValue>
               </StyledValueWrapper>
               {index === rates.length - 1 ? null : <StyledLine />}
-            </>
+            </React.Fragment>
           ))}
         </StyledOptionsWrapper>
       </StyledInputWrapper>
@@ -78,17 +76,31 @@ const Calculator = ({
 };
 
 export default Calculator;
-
 const StyledInputWrapper = styled.div`
   display: grid;
-  gap: 24px;
+  scroll-margin-top: 15rem;
+  gap: 3rem;
+  @media only screen and (min-width: 768px) {
+    font-size: 1.3rem;
+    font-weight: 400;
+    scroll-margin-top: 20rem;
+    grid-template-columns: 30% 40%;
+  }
 `;
-
+const StyledSpan = styled.span`
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+`;
 const StyledWrapper = styled.div`
   display: grid;
   grid-template-columns: 1;
-  gap: 30px;
+  row-gap: 3.5rem;
   margin-bottom: 3rem;
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 5rem;
+  }
 `;
 
 const StyledOptionsWrapper = styled.div`
@@ -104,13 +116,23 @@ const StyledValueWrapper = styled.div`
   /* grid-template-columns: repeat(2, 1fr); */
 `;
 
-const StyledCircle = styled.div`
+const StyledValuesCircle = styled.div`
   width: 30px;
   height: 30px;
   border: 1px solid #a79797;
   border-radius: 100%;
   background-color: ${({ selectedValue, index, values }) =>
-    selectedValue[0] === values[index] ? '#A79797' : 'transparent'};
+    selectedValue[0].first === values[index].first ? '#A79797' : 'transparent'};
+  cursor: pointer;
+`;
+
+const StyledRatesCircle = styled.div`
+  width: 30px;
+  height: 30px;
+  border: 1px solid #a79797;
+  border-radius: 100%;
+  background-color: ${({ selectedRate, index, rates }) =>
+    selectedRate[0].rates === rates[index].rates ? '#A79797' : 'transparent'};
   cursor: pointer;
 `;
 

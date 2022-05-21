@@ -287,13 +287,19 @@
     "Calculator": {
       "default": {
         "primary": {
-          "productName": {
+          "productTitle": {
             "config": {
               "patternType": "HEADING",
               "blocks": 1
             }
           },
-          "installmentsArray": {
+          "firstDescription": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "secondDescription": {
             "config": {
               "patternType": "PARAGRAPH",
               "blocks": 1
@@ -395,6 +401,18 @@
           }
         }
       }
+    },
+    "TitleDescription": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   },
   "_cts": {
@@ -403,18 +421,6 @@
     "pageHowItWorks": {},
     "pageOffer": {
       "installmentsSummary": {
-        "config": {
-          "patternType": "HEADING",
-          "blocks": 1
-        }
-      },
-      "description": {
-        "config": {
-          "patternType": "PARAGRAPH",
-          "blocks": 1
-        }
-      },
-      "title": {
         "config": {
           "patternType": "HEADING",
           "blocks": 1

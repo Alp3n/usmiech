@@ -12,24 +12,6 @@
         },
         "type": "UID"
       },
-      "title": {
-        "config": {
-          "label": "Title",
-          "placeholder": "Insert title for this page...",
-          "allowTargetBlank": true,
-          "single": "heading2"
-        },
-        "type": "StructuredText"
-      },
-      "description": {
-        "config": {
-          "label": "Description",
-          "placeholder": "Insert descritpion for this page...",
-          "allowTargetBlank": true,
-          "single": "paragraph"
-        },
-        "type": "StructuredText"
-      },
       "installmentsSummary": {
         "config": {
           "label": "Installments Summary",
@@ -48,6 +30,9 @@
               "type": "SharedSlice"
             },
             "calculator": {
+              "type": "SharedSlice"
+            },
+            "title_description": {
               "type": "SharedSlice"
             }
           }

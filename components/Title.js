@@ -19,46 +19,11 @@ const Title = ({
     line={line}
     story={story}
   >
-    {/* {line ? (
-      <StyledLineWrapper>
-        <StyledLine />
-      </StyledLineWrapper>
-    ) : null} */}
     {children}
   </StyledTitle>
 );
 
 export default Title;
-const StyledLineWrapper = styled.div`
-  position: relative;
-`;
-const StyledLine = styled.div`
-  position: absolute;
-  width: 100%;
-  border-top: 1px solid black;
-  place-self: start;
-  top: 1.5rem;
-  left: 24px;
-
-  @media only screen and (min-width: 768px) {
-    /* position: absolute; */
-    top: 2.2rem;
-    margin-bottom: 0;
-    left: 10%;
-    width: 100%;
-    /* top: 50%; */
-    /* left: 10%; */
-    /* width: 100%; */
-  }
-  @media only screen and (min-width: 1292px) {
-    margin-bottom: 0;
-    right: 0;
-    /* width: 65%; */
-    /* top: 50%; */
-    /* left: 10%; */
-    /* width: 100%; */
-  }
-`;
 
 const StyledTitle = styled.span`
   position: ${({ absolute }) => (absolute ? 'absolute' : 'relative')};

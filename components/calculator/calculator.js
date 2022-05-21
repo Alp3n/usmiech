@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import Price from './price';
-import { number } from 'sharp/lib/is';
 
 const Calculator = ({
   firstValuesData,
@@ -26,7 +25,7 @@ const Calculator = ({
     setSelectedRate([value, index]);
   };
   useEffect(() => {
-    console.log(selectedRate[0], 'Selected RATE');
+    // console.log(selectedRate[0], 'Selected RATE');
     let numberOfRates = selectedRate[0].rates === 0 ? 1 : selectedRate[0].rates;
     let interest = selectedRate[0].interest;
     console.log(interest, 'Interest');
