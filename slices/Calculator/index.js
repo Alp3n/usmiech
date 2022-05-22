@@ -88,10 +88,13 @@ const StyledInputWrapper = styled.div`
   }
 `;
 const StyledSpan = styled.span`
-  font-size: 1.3rem;
   font-weight: 400;
   line-height: 2.2rem;
+  p {
+    font-size: 1.3rem;
+  }
 `;
+
 const StyledWrapper = styled.div`
   display: grid;
   grid-template-columns: 1;

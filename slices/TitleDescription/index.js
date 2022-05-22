@@ -18,11 +18,17 @@ const TitleDescription = ({ slice }) => (
 export default TitleDescription;
 const StyledWrapper = styled.div`
   width: 100%;
-  line-height: 2;
   margin-bottom: 3rem;
-
+  p {
+    line-height: 2rem;
+    font-size: 1.1rem;
+  }
   @media only screen and (min-width: 768px) {
     width: 50%;
     margin-bottom: 4rem;
+    p {
+      line-height: 2.2rem;
+      font-size: 1.2rem;
+    }
   }
 `;
