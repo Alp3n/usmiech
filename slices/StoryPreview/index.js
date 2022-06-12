@@ -2,54 +2,57 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { PrismicRichText } from '@prismicio/react';
 
-const StoryPreview = ({ slice }) => (
-  <>
-    <StyledGrid>
-      <StyledBox>
-        {slice.primary.firstText ? (
-          <div>
-            <StyledDescription>
-              <PrismicRichText field={slice.primary.firstText} />
-            </StyledDescription>
-          </div>
-        ) : null}
-        {slice.primary.firstDescription.length > 0 ? (
-          <div>
-            <StyledDescription normal>
-              <PrismicRichText field={slice.primary.firstDescription} />
-            </StyledDescription>
-          </div>
-        ) : null}
-      </StyledBox>
-
-      {slice.primary.video ? (
-        <StyledVideo
-          dangerouslySetInnerHTML={{
-            __html: slice.primary.video.html,
-          }}
-        />
-      ) : null}
-    </StyledGrid>
-
-    <StyledRight>
-      <div />
-      <div>
-        <StyledBox normal>
-          <StyledLine />
-          <StyledTitle>Jakie Leczenie</StyledTitle>
+const StoryPreview = ({ slice }) => {
+  console.log(slice.primary.video);
+  return (
+    <>
+      <StyledGrid>
+        <StyledBox>
+          {slice.primary.firstText ? (
+            <div>
+              <StyledDescription mb>
+                <PrismicRichText field={slice.primary.firstText} />
+              </StyledDescription>
+            </div>
+          ) : null}
+          {slice.primary.firstDescription.length > 0 ? (
+            <div>
+              <StyledDescription normal>
+                <PrismicRichText field={slice.primary.firstDescription} />
+              </StyledDescription>
+            </div>
+          ) : null}
         </StyledBox>
-        {/* <div /> */}
 
-        {/* <div /> */}
-        {slice.primary.treatmentText ? (
-          <StyledDescription normal>
-            <PrismicRichText field={slice.primary.treatmentText} />
-          </StyledDescription>
+        {slice.primary.video ? (
+          <StyledVideo
+            dangerouslySetInnerHTML={{
+              __html: slice.primary.video.html,
+            }}
+          />
         ) : null}
-      </div>
-    </StyledRight>
-  </>
-);
+      </StyledGrid>
+
+      <StyledRight>
+        <div />
+        <div>
+          <StyledBox normal>
+            <StyledLine />
+            <StyledTitle>Jakie Leczenie</StyledTitle>
+          </StyledBox>
+          {/* <div /> */}
+
+          {/* <div /> */}
+          {slice.primary.treatmentText ? (
+            <StyledDescription normal>
+              <PrismicRichText field={slice.primary.treatmentText} />
+            </StyledDescription>
+          ) : null}
+        </div>
+      </StyledRight>
+    </>
+  );
+};
 
 export default StoryPreview;
 
@@ -86,11 +89,25 @@ const StyledTitle = styled.h2`
 
 const StyledVideo = styled.div`
   display: flex;
-  width: '80%';
-  height: '70%';
-  background-color: 'grey';
-  align-items: 'center';
-  justify-content: 'center';
+  max-width: 760px;
+  max-height: 420px;
+  background-color: grey;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  > iframe {
+    height: 420px;
+    width: 760px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    > iframe {
+      height: auto;
+      min-height: 250px;
+      height: 30%;
+      width: 100%;
+    }
+  }
 `;
 
 const StyledRight = styled.div`
@@ -118,7 +135,8 @@ const StyledLine = styled.div`
 
 const StyledDescription = styled.div`
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: ${({ mb }) => (mb ? mb : '80px')};
+
   z-index: 100;
   ${({ color }) =>
     color === 'white'

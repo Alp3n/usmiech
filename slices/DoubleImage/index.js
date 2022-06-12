@@ -83,9 +83,9 @@ const DoubleImage = ({ slice }) => (
               width={slice.primary.imageBig.dimensions.width}
               height={slice.primary.imageBig.dimensions.height}
               layout='responsive'
-              // quality={85}
+              quality={85}
             />
-            <StyledImageSmall width='45vw' left='-25%' bottom='-2rem'>
+            <StyledImageSmall width='45%' left='-25%' bottom='-2rem'>
               <Image
                 src={`${slice.primary.imageSmall.url}&dpr=2`}
                 alt={slice.primary.imageSmall.alt}
