@@ -54,6 +54,13 @@
             "placeholder": "",
             "select": null
           }
+        },
+        "video": {
+          "type": "Embed",
+          "config": {
+            "label": "Video",
+            "placeholder": ""
+          }
         }
       },
       "items": {},

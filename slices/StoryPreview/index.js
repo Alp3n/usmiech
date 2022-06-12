@@ -23,21 +23,12 @@ const StoryPreview = ({ slice }) => (
       </StyledBox>
 
       {slice.primary.video ? (
-        <div></div>
-      ) : (
-        <div
-          style={{
-            display: 'flex',
-            width: '80%',
-            height: '70%',
-            backgroundColor: 'grey',
-            alignItems: 'center',
-            justifyContent: 'center',
+        <StyledVideo
+          dangerouslySetInnerHTML={{
+            __html: slice.primary.video.html,
           }}
-        >
-          <h1>Video</h1>
-        </div>
-      )}
+        />
+      ) : null}
     </StyledGrid>
 
     <StyledRight>
@@ -91,6 +82,15 @@ const StyledTitle = styled.h2`
   @media only screen and (min-width: 768px) {
     font-size: 3rem;
   }
+`;
+
+const StyledVideo = styled.div`
+  display: flex;
+  width: '80%';
+  height: '70%';
+  background-color: 'grey';
+  align-items: 'center';
+  justify-content: 'center';
 `;
 
 const StyledRight = styled.div`
