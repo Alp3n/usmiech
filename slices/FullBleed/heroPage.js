@@ -121,6 +121,7 @@ const StyledDescription = styled.div`
   p {
     font-weight: 400;
     line-height: 2rem;
+    margin-bottom: 12px;
   }
 
   @media only screen and (min-width: 768px) {
@@ -132,7 +133,7 @@ const StyledDescription = styled.div`
     }
   }
   @media only screen and (min-width: 1280px) {
-    width: 45ch;
+    width: 50ch;
     p {
       line-height: 2.2rem;
       font-size: 1.2rem;
@@ -163,7 +164,6 @@ const StyledWrapper = styled(Media)`
     width: 100%;
   }
   @media only screen and (min-width: 768px) {
-    /* max-height: 780px; */
     margin-bottom: 5rem;
     ${({ color }) =>
       color === 'white'

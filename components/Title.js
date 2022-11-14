@@ -62,6 +62,21 @@ const StyledTitle = styled.span`
     ${({ story }) => (story === 'Viola' ? 'margin-bottom: 0.5rem;' : null)}
     ${({ story }) => (story === 'Karolina' ? 'margin-bottom: 0.5rem;' : null)}
     > h1 {
+      font-size: ${({ size }) => (size ? size : '4rem')};
+      line-height: ${({ size }) => (size === '4rem' ? '2' : '1.5')};
+      line-height: 1;
+      width: fit-content;
+    }
+
+    > h2 {
+      font-size: ${({ size }) => (size ? size : '3rem')};
+      line-height: ${({ size }) => (size === '4rem' ? '1.3' : '1.5')};
+      width: fit-content;
+      font-weight: 300;
+    }
+  }
+  @media only screen and (min-width: 1450px) {
+    > h1 {
       font-size: ${({ size }) => (size ? size : '6.5rem')};
       line-height: ${({ size }) => (size === '4rem' ? '2' : '1.5')};
       line-height: 1;

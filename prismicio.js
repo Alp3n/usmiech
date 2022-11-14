@@ -28,6 +28,8 @@ export function linkResolver(doc) {
       return `/terms`;
     case 'story':
       return `/stories/${doc.uid}`;
+    case 'page':
+      return `/${doc.uid}`;
     default:
       return '/';
   }

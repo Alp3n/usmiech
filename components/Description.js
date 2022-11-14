@@ -43,6 +43,7 @@ const StyledDescription = styled.span`
     > p {
     font-size: 1.1rem;
     line-height: 30px;
+    margin-bottom: 12px;
   }
   @media only screen and (min-width: 768px) {
     width: ${({ width }) => (width ? width : '90%')};

@@ -59,10 +59,10 @@ const Footer = ({ menu }) => {
       <StyledLine at='sm' marginTop />
       <StyledBottomWrapper>
         <StyledBottomLinks>
-          <StyledLink href={menu.data.linkTerms}>
+          <StyledLink field={menu.data.linkTerms}>
             <PrismicRichText field={menu.data.linkTermsLabel} />
           </StyledLink>
-          <StyledLink href={menu.data.linkPrivacy}>
+          <StyledLink field={menu.data.linkPrivacy}>
             <PrismicRichText field={menu.data.linkPrivacyLabel} />
           </StyledLink>
         </StyledBottomLinks>
