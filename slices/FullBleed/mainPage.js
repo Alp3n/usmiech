@@ -24,6 +24,7 @@ const MainPage = ({ slice }) => (
           height={slice.primary.image.mobile.dimensions.height}
           layout='responsive'
           quality={85}
+          priority
         />
         <StyledAbsoluteWrapper inside={slice.primary.inside}>
           {slice.primary.title ? (
@@ -80,6 +81,7 @@ const MainPage = ({ slice }) => (
             height={slice.primary.image.dimensions.height}
             layout='responsive'
             quality={85}
+            priority
           />
         </Media>
       </div>
