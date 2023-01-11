@@ -4,9 +4,9 @@ import { createClient } from '../prismicio';
 import { components } from '../slices/index';
 import SEO from '../components/SEO';
 
-const Page = ({ page, menu }) => {
+const Page = ({ page, menu, cookies }) => {
   return (
-    <Layout menu={menu}>
+    <Layout menu={menu} cookies={cookies}>
       <SEO
         metaTitle={page.data.metaTitle}
         metaDescription={page.data.metaDescription}
@@ -21,9 +21,10 @@ export async function getStaticProps({ params, previewData, locale }) {
 
   const menu = await client.getByUID('menu', 'menu');
   const page = await client.getByUID('page', params.uid);
+  const cookies = await client.getByUID('cookies_consent', 'cookies');
 
   return {
-    props: { menu, page },
+    props: { menu, page, cookies },
   };
 }
 

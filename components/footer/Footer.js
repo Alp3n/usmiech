@@ -4,7 +4,6 @@ import { MdPhone, MdMail, MdLocationOn } from 'react-icons/md';
 import { RiFacebookCircleLine, RiInstagramLine } from 'react-icons/ri';
 import Navigation from '../header/Navigation';
 import { Media } from '../MediaQueries';
-import MyLink from '../MyLink';
 
 const Footer = ({ menu }) => {
   return (

@@ -1,0 +1,74 @@
+{
+  "id": "cookies_consent",
+  "label": "Cookies Consent",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "uid",
+          "placeholder": ""
+        }
+      },
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "privacyLink": {
+        "type": "Link",
+        "config": {
+          "label": "Privacy Page Link",
+          "placeholder": "Choose link to privacy page document",
+          "allowTargetBlank": false,
+          "select": null
+        }
+      },
+      "privacyLabel": {
+        "type": "Link",
+        "config": {
+          "label": "Privacy Label",
+          "placeholder": "Name the label for the link",
+          "allowTargetBlank": false,
+          "select": null
+        }
+      },
+      "acceptButtonLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Accept Button Label",
+          "placeholder": "Label for accept cookies button"
+        }
+      },
+      "denyButtonLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Deny Button Label",
+          "placeholder": "Label for deny cookies button"
+        }
+      },
+      "closeButtonLabel": {
+        "type": "Text",
+        "config": {
+          "label": "Close Button Label",
+          "placeholder": "Label for popup closing button"
+        }
+      }
+    }
+  }
+}

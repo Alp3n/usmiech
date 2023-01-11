@@ -5,10 +5,11 @@ import * as prismicH from '@prismicio/helpers';
 import { components } from '../../slices';
 import { Layout } from '../../components/layout/Layout';
 import SEO from '../../components/SEO';
-export default function Story({ story, menu }) {
+
+export default function Story({ story, menu, cookies }) {
   const slices = story?.data?.slices ? story.data.slices : null;
   return (
-    <Layout menu={menu}>
+    <Layout menu={menu} cookies={cookies}>
       <SEO
         metaTitle={story.data.metaTitle}
         metaDescription={story.data.metaDescription}
@@ -23,10 +24,12 @@ export const getStaticProps = async ({ params, previewData }) => {
 
   const menu = await client.getByUID('menu', 'menu');
   const story = await client.getByUID('story', params.uid);
+  const cookies = await client.getByUID('cookies_consent', 'cookies');
   return {
     props: {
       story,
       menu,
+      cookies,
       fallback: false,
     },
   };
