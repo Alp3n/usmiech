@@ -1,0 +1,106 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Recall"
+            }
+          }
+        ]
+      },
+      "subTitle": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Est laborum occaecat laborum ex nisi dolore quis esse commodo veniam est ea. Adipisicing anim cillum non est commodo nostrud occaecat cillum deserunt minim tempor dolore. Id sunt aliquip consectetur velit fugiat Lorem culpa amet ea velit."
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Ipsum ad do proident duis non commodo veniam dolore exercitation proident labore aliquip. Ut fugiat pariatur tempor quis laboris culpa voluptate amet esse quis non. Dolor adipisicing ipsum aute est esse adipisicing in consectetur."
+            }
+          }
+        ]
+      },
+      "image": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+          "width": 4024,
+          "height": 4024
+        },
+        "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+        "width": 4024,
+        "height": 4024,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {
+          "mobile": {
+            "origin": {
+              "id": "mobile",
+              "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9",
+              "width": 4752,
+              "height": 3168
+            },
+            "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?rect=792%2C0%2C3168%2C3168&w=430&h=430",
+            "width": 430,
+            "height": 430,
+            "edit": {
+              "zoom": 1,
+              "crop": {
+                "x": 792,
+                "y": 0
+              },
+              "background": "transparent"
+            }
+          }
+        }
+      },
+      "buttonLink": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://google.com"
+        }
+      },
+      "buttonLabel": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "In commodo laborum laboris fugiat aliqua."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

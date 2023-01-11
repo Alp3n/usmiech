@@ -1,0 +1,196 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "sectionId": {
+        "__TYPE__": "FieldContent",
+        "value": "vowel",
+        "type": "Text"
+      },
+      "productTitle": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Chest"
+            }
+          }
+        ]
+      },
+      "firstDescription": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Occaecat reprehenderit id do voluptate amet ipsum ad veniam."
+            }
+          }
+        ]
+      },
+      "firstValuesData": {
+        "__TYPE__": "FieldContent",
+        "value": "from",
+        "type": "Text"
+      },
+      "secondDescription": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Qui duis ad sit."
+            }
+          }
+        ]
+      },
+      "ratesData": {
+        "__TYPE__": "FieldContent",
+        "value": "good",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "licowki",
+    "primary": {
+      "productName": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Bound"
+            }
+          }
+        ]
+      },
+      "installmentsText": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Veniam exercitation exercitation voluptate adipisicing ut est pariatur non Lorem aliquip exercitation ea duis amet. Laborum mollit anim eiusmod enim."
+            }
+          }
+        ]
+      },
+      "installmentsArray": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Aute nulla irure ex non nulla id anim velit. Aute laboris ullamco minim amet cupidatat nisi ipsum culpa consectetur incididunt nulla. Consequat dolore aliquip labore nostrud."
+            }
+          }
+        ]
+      },
+      "licowkiText": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Veniam qui non reprehenderit elit irure. Magna cillum sunt incididunt nisi adipisicing sit dolore nostrud."
+            }
+          }
+        ]
+      },
+      "licowkiArray": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Ullamco laboris aute eu tempor eu officia anim veniam mollit fugiat consequat labore officia. Lorem enim reprehenderit nulla officia excepteur laborum tempor eiusmod do Lorem duis ut laboris sunt id. Veniam ipsum Lorem eu laborum anim enim ad."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "ortodoncja",
+    "primary": {
+      "productName": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Stick"
+            }
+          }
+        ]
+      },
+      "installmentsText": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Officia est esse eiusmod Lorem sunt consectetur enim."
+            }
+          }
+        ]
+      },
+      "installmentsArray": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Cupidatat aliquip nulla qui fugiat sit in fugiat dolor sit. Proident aliqua labore duis et id ipsum velit consectetur exercitation enim."
+            }
+          }
+        ]
+      },
+      "treatmentText": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Sint cupidatat culpa sint anim non aute. Non aute occaecat anim deserunt eu dolore fugiat ullamco duis."
+            }
+          }
+        ]
+      },
+      "treatmentTimeArray": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Consequat Lorem duis eiusmod est incididunt nulla enim amet minim velit officia. Voluptate occaecat exercitation voluptate."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

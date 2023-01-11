@@ -8,7 +8,11 @@ const nextConfig = {
   images: {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    domains: ['images.prismic.io', 'smiech.cdn.prismic.io'],
+    domains: [
+      'images.prismic.io',
+      'smiech.cdn.prismic.io',
+      'images.unsplash.com',
+    ],
   },
   webpack(config) {
     config.module.rules.push({

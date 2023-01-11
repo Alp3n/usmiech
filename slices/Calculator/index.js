@@ -3,11 +3,34 @@ import styled from '@emotion/styled';
 import Price from './price';
 import { PrismicRichText } from '@prismicio/react';
 
+const mockDataFirst = [
+  { first: 6, price: 10800 },
+  { first: 10, price: 18000 },
+  { first: 12, price: 21600 },
+  { first: 20, price: 36000 },
+  { first: 24, price: 43200 },
+];
+
+const mockDataSecond = [
+  { rates: 0, interest: 0 },
+  { rates: 12, interest: 0.06 },
+  { rates: 24, interest: 0.12 },
+  { rates: 36, interest: 0.18 },
+  { rates: 48, interest: 0.24 },
+  { rates: 60, interest: 0.3 },
+];
+
 const Calculator = ({ slice }) => {
   const [firstValues, setFirstValues] = useState(
-    JSON.parse(slice.primary.firstValuesData)
+    isJsonString(slice.primary.firstValuesData)
+      ? JSON.parse(slice.primary.firstValuesData)
+      : mockDataFirst
   );
-  const [rates, setRates] = useState(JSON.parse(slice.primary.ratesData));
+  const [rates, setRates] = useState(
+    isJsonString(slice.primary.ratesData)
+      ? JSON.parse(slice.primary.ratesData)
+      : mockDataSecond
+  );
   const [selectedValue, setSelectedValue] = useState([firstValues[0], 'index']);
   const [selectedRate, setSelectedRate] = useState([rates[0], 'index']);
   const [price, setPrice] = useState('Wybierz wartości');
@@ -19,6 +42,16 @@ const Calculator = ({ slice }) => {
   const handleSelectRates = (value, index) => {
     setSelectedRate([value, index]);
   };
+
+  function isJsonString(str) {
+    try {
+      JSON.parse(str);
+    } catch (e) {
+      return false;
+    }
+    return true;
+  }
+
   useEffect(() => {
     let numberOfRates = selectedRate[0].rates === 0 ? 1 : selectedRate[0].rates;
     let interest = selectedRate[0].interest;

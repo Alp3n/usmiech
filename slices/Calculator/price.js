@@ -3,12 +3,9 @@ import styled from '@emotion/styled';
 const Price = ({ price }) => (
   <>
     <StyledWrapper>
-      {/* <StyledFlex> */}
       <StyledText>Przybliżona rata</StyledText>
       <StyledPrice>{price} zł</StyledPrice>
-      {/* </StyledFlex> */}
     </StyledWrapper>
-    {/* <StyledLine /> */}
   </>
 );
 
@@ -23,7 +20,6 @@ const StyledWrapper = styled.div`
   &:before {
     content: '';
     position: absolute;
-    /* left: 50px; */
     bottom: 0;
     width: 100%;
     border-bottom: 1px solid black;

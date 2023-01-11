@@ -20,7 +20,7 @@ export async function getStaticProps({ params, previewData, locale }) {
   const client = createClient({ previewData });
 
   const menu = await client.getByUID('menu', 'menu');
-  const page = await client.getByUID('page', 'spa');
+  const page = await client.getByUID('page', params.uid);
 
   return {
     props: { menu, page },

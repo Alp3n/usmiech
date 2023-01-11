@@ -1,0 +1,50 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {},
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "Question",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading2",
+                  "content": {
+                    "text": "Important"
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "Answer",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Ullamco ea excepteur Lorem eiusmod."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "uid",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "till",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

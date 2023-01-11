@@ -1,6 +1,6 @@
 {
   "id": "footer",
-  "label": "footer",
+  "label": "Footer",
   "repeatable": false,
   "status": true,
   "json": {
@@ -42,7 +42,6 @@
       "social": {
         "config": {
           "label": "Social",
-          "placeholder": "",
           "fields": {
             "logo": {
               "config": {
@@ -56,7 +55,8 @@
               "config": {
                 "label": "Link",
                 "placeholder": "",
-                "allowTargetBlank": false
+                "allowTargetBlank": false,
+                "select": null
               },
               "type": "Link"
             },
@@ -84,7 +84,8 @@
         "config": {
           "label": "Terms Link",
           "placeholder": "Insert link to term page...",
-          "allowTargetBlank": false
+          "allowTargetBlank": false,
+          "select": null
         },
         "type": "Link"
       }
