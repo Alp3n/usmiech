@@ -26,6 +26,7 @@ export default function App({ Component, pageProps }) {
     >
       <Head>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <link rel='shortcut icon' href='/favicon.ico' />
       </Head>
       {/* Google Tag Manager */}
       <Script id='gtag' strategy='afterInteractive'>{`

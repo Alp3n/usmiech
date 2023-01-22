@@ -103,7 +103,7 @@ const Calculator = ({ slice }) => {
           ))}
         </StyledOptionsWrapper>
       </StyledInputWrapper>
-      <Price price={Math.round(price)} />
+      <Price price={Math.round(price)} selectedRate={selectedRate} />
     </StyledWrapper>
   );
 };

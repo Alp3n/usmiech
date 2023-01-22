@@ -1,13 +1,18 @@
 import styled from '@emotion/styled';
 
-const Price = ({ price }) => (
-  <>
-    <StyledWrapper>
-      <StyledText>Przybliżona rata</StyledText>
-      <StyledPrice>{price} zł</StyledPrice>
-    </StyledWrapper>
-  </>
-);
+const Price = ({ price, selectedRate }) => {
+  console.log('RATA: ', selectedRate);
+  return (
+    <>
+      <StyledWrapper>
+        <StyledText>
+          {selectedRate[0].rates === 0 ? 'Suma Leczenia' : 'Przybliżona rata'}
+        </StyledText>
+        <StyledPrice>{price} zł</StyledPrice>
+      </StyledWrapper>
+    </>
+  );
+};
 
 export default Price;
 

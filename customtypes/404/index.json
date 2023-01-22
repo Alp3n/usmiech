@@ -1,0 +1,59 @@
+{
+  "id": "404",
+  "label": "404",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "uid",
+          "placeholder": ""
+        }
+      },
+      "errorText": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Error Text",
+          "placeholder": "Enter error message",
+          "allowTargetBlank": true,
+          "single": "heading1"
+        }
+      },
+      "redirectLink": {
+        "type": "Link",
+        "config": {
+          "label": "Redirect Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "redirectButtonLabel": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Redirect Button Label",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      }
+    },
+    "SEO": {
+      "metaTitle": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": ""
+        }
+      },
+      "metaDescription": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}
