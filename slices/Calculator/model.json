@@ -58,6 +58,24 @@
             "label": "Rates Data",
             "placeholder": ""
           }
+        },
+        "sumPriceLabel": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Sum Price Label",
+            "placeholder": "Label for \"Suma leczenia\"",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "estimateInstallmentLabel": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Estimate Installment Label",
+            "placeholder": "Label for \"Przybliżona rata\"",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
         }
       },
       "items": {},

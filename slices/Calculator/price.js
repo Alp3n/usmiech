@@ -1,12 +1,27 @@
 import styled from '@emotion/styled';
+import { PrismicRichText } from '@prismicio/react';
 
-const Price = ({ price, selectedRate }) => {
+const Price = ({
+  price,
+  selectedRate,
+  sumPriceLabel,
+  estimateInstallmentLabel,
+}) => {
   console.log('RATA: ', selectedRate);
   return (
     <>
       <StyledWrapper>
         <StyledText>
-          {selectedRate[0].rates === 0 ? 'Suma Leczenia' : 'Przybliżona rata'}
+          <PrismicRichText
+            components={{
+              paragraph: ({ children }) => <StyledText>{children}</StyledText>,
+            }}
+            field={
+              selectedRate[0].rates === 0
+                ? sumPriceLabel
+                : estimateInstallmentLabel
+            }
+          />
         </StyledText>
         <StyledPrice>{price} zł</StyledPrice>
       </StyledWrapper>
@@ -58,10 +73,12 @@ const StyledFlex = styled.div`
   }
 `;
 
-const StyledText = styled.span`
+const StyledText = styled.p`
   font-weight: 400;
   font-size: 1.3rem;
   text-align: center;
+  margin: 0;
+  padding: 0;
 `;
 const StyledPrice = styled.div`
   text-align: center;

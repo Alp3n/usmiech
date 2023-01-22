@@ -50,6 +50,28 @@
         "__TYPE__": "FieldContent",
         "value": "good",
         "type": "Text"
+      },
+      "sumPriceLabel": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Consectetur sunt nulla non magna nisi. Anim voluptate enim enim duis occaecat esse Lorem laborum deserunt reprehenderit pariatur ex elit. Exercitation nostrud eu nisi adipisicing occaecat sit officia."
+            }
+          }
+        ]
+      },
+      "estimateInstallmentLabel": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Aliquip enim dolore excepteur id consequat non nulla id reprehenderit velit consequat nostrud nulla."
+            }
+          }
+        ]
       }
     },
     "items": [
@@ -69,7 +91,7 @@
           {
             "type": "heading2",
             "content": {
-              "text": "Bound"
+              "text": "Uncle"
             }
           }
         ]
@@ -80,7 +102,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Veniam exercitation exercitation voluptate adipisicing ut est pariatur non Lorem aliquip exercitation ea duis amet. Laborum mollit anim eiusmod enim."
+              "text": "Deserunt velit sint duis laboris commodo non sit labore irure occaecat ex ut magna."
             }
           }
         ]
@@ -91,7 +113,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Aute nulla irure ex non nulla id anim velit. Aute laboris ullamco minim amet cupidatat nisi ipsum culpa consectetur incididunt nulla. Consequat dolore aliquip labore nostrud."
+              "text": "Velit do Lorem sit enim ad culpa occaecat mollit veniam ullamco. Nulla anim in enim magna cillum cupidatat minim nulla."
             }
           }
         ]
@@ -102,7 +124,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Veniam qui non reprehenderit elit irure. Magna cillum sunt incididunt nisi adipisicing sit dolore nostrud."
+              "text": "Sint nisi id consectetur ea nulla laboris cupidatat nostrud elit incididunt eu minim. Officia amet laborum ad tempor ad esse magna."
             }
           }
         ]
@@ -113,7 +135,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Ullamco laboris aute eu tempor eu officia anim veniam mollit fugiat consequat labore officia. Lorem enim reprehenderit nulla officia excepteur laborum tempor eiusmod do Lorem duis ut laboris sunt id. Veniam ipsum Lorem eu laborum anim enim ad."
+              "text": "Duis fugiat anim eiusmod laboris aliqua tempor est anim officia pariatur. Nisi nostrud do pariatur enim irure veniam laboris."
             }
           }
         ]
@@ -136,7 +158,7 @@
           {
             "type": "heading2",
             "content": {
-              "text": "Stick"
+              "text": "Familiar"
             }
           }
         ]
@@ -147,7 +169,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Officia est esse eiusmod Lorem sunt consectetur enim."
+              "text": "Adipisicing nulla officia veniam consequat ut occaecat incididunt culpa consectetur ut consequat est magna eu. Eiusmod excepteur laborum veniam elit irure tempor est do laboris sit mollit exercitation laborum adipisicing ad. Eiusmod quis quis ex elit."
             }
           }
         ]
@@ -158,7 +180,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Cupidatat aliquip nulla qui fugiat sit in fugiat dolor sit. Proident aliqua labore duis et id ipsum velit consectetur exercitation enim."
+              "text": "Adipisicing mollit mollit irure minim incididunt fugiat commodo voluptate ullamco. Dolor anim cillum ut in velit consequat laborum cupidatat magna ullamco dolor velit dolore amet. Laborum deserunt sint minim nulla elit non elit incididunt."
             }
           }
         ]
@@ -169,7 +191,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Sint cupidatat culpa sint anim non aute. Non aute occaecat anim deserunt eu dolore fugiat ullamco duis."
+              "text": "Occaecat irure ex in."
             }
           }
         ]
@@ -180,7 +202,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Consequat Lorem duis eiusmod est incididunt nulla enim amet minim velit officia. Voluptate occaecat exercitation voluptate."
+              "text": "Esse culpa voluptate aliquip anim sint sint exercitation."
             }
           }
         ]
