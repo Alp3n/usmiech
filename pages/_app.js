@@ -25,6 +25,7 @@ export default function App({ Component, pageProps }) {
       client={client}
     >
       <Head>
+        <meta charset='UTF-8' />
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <link rel='shortcut icon' href='/favicon.ico' />
       </Head>
