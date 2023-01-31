@@ -3,10 +3,10 @@ import { Header } from '../header/Header';
 import Footer from '../footer/Footer';
 import Consent from '../Consent';
 
-export const Layout = ({ children, menu, cookies }) => {
+export const Layout = ({ children, menu, cookies, altLangs }) => {
   return (
     <>
-      <Header menu={menu} />
+      <Header menu={menu} altLangs={altLangs} />
       <StyledMain>{children}</StyledMain>
       <Footer menu={menu}></Footer>
       <Consent cookies={cookies} />

@@ -3,6 +3,7 @@ import { PrismicRichText } from '@prismicio/react';
 import MyLink from '../MyLink';
 
 const Navigation = ({ menu, vertical, margin, bordertop }) => {
+  // console.log(menu.data.menuLinks);
   return (
     <StyledNav bordertop={bordertop}>
       <StyledUl vertical={vertical} margin={margin}>

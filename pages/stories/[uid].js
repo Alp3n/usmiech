@@ -9,7 +9,7 @@ import SEO from '../../components/SEO';
 export default function Story({ story, menu, cookies }) {
   const slices = story?.data?.slices ? story.data.slices : null;
   return (
-    <Layout menu={menu} cookies={cookies}>
+    <Layout menu={menu} cookies={cookies} altLangs={story.alternate_languages}>
       <SEO
         metaTitle={story.data.metaTitle}
         metaDescription={story.data.metaDescription}
@@ -19,12 +19,14 @@ export default function Story({ story, menu, cookies }) {
   );
 }
 
-export const getStaticProps = async ({ params, previewData }) => {
+export const getStaticProps = async ({ params, locale, previewData }) => {
   const client = createClient({ previewData });
 
-  const menu = await client.getByUID('menu', 'menu');
-  const story = await client.getByUID('story', params.uid);
-  const cookies = await client.getByUID('cookies_consent', 'cookies');
+  const menu = await client.getByUID('menu', 'menu', { locale: locale });
+  const story = await client.getByUID('story', params.uid, { locale: locale });
+  const cookies = await client.getByUID('cookies_consent', 'cookies', {
+    locale: locale,
+  });
   return {
     props: {
       story,
@@ -38,9 +40,12 @@ export const getStaticProps = async ({ params, previewData }) => {
 export const getStaticPaths = async () => {
   const client = createClient();
 
-  const stories = await client.getAllByType('story');
+  const stories = await client.getAllByType('story', { lang: '*' });
   return {
-    paths: stories?.map((doc) => prismicH.asLink(doc, linkResolver)),
+    paths: stories?.map((story) => {
+      return { params: { uid: story.uid }, locale: story.lang };
+    }),
+    // paths: stories?.map((sotry) => prismicH.asLink(doc, linkResolver)),
     fallback: false,
   };
 };

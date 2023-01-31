@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { PrismicRichText } from '@prismicio/react';
 
 const StoryPreview = ({ slice }) => {
-  console.log(slice.primary.video);
+  // console.log(slice.primary.video);
   return (
     <>
       <StyledGrid>

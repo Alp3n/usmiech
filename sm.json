@@ -2,5 +2,6 @@
   "_latest": "0.3.3",
   "apiEndpoint": "https://smiech.prismic.io/api/v2",
   "libraries": ["@/slices"],
-  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
+  "siteURL": "https://smiechu.pl"
 }

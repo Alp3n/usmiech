@@ -6,7 +6,7 @@ import SEO from '../components/SEO';
 
 const Page = ({ page, menu, cookies }) => {
   return (
-    <Layout menu={menu} cookies={cookies}>
+    <Layout menu={menu} cookies={cookies} altLangs={page.alternate_languages}>
       <SEO
         metaTitle={page.data.metaTitle}
         metaDescription={page.data.metaDescription}
@@ -19,9 +19,11 @@ const Page = ({ page, menu, cookies }) => {
 export async function getStaticProps({ params, previewData, locale }) {
   const client = createClient({ previewData });
 
-  const menu = await client.getByUID('menu', 'menu');
-  const page = await client.getByUID('page', params.uid);
-  const cookies = await client.getByUID('cookies_consent', 'cookies');
+  const menu = await client.getByUID('menu', 'menu', { lang: locale });
+  const page = await client.getByUID('page', params.uid, { lang: locale });
+  const cookies = await client.getByUID('cookies_consent', 'cookies', {
+    lang: locale,
+  });
 
   return {
     props: { menu, page, cookies },
@@ -31,13 +33,12 @@ export async function getStaticProps({ params, previewData, locale }) {
 export async function getStaticPaths() {
   const client = createClient();
 
-  const pages = await client.getAllByType('page');
+  const pages = await client.getAllByType('page', { lang: '*' });
 
   return {
     paths: pages.map((page) => {
-      return { params: { uid: page.uid } };
+      return { params: { uid: page.uid }, locale: page.lang };
     }),
-    // paths: pages.map((page) => prismicH.asLink(page, linkResolver)),
     fallback: false,
   };
 }
