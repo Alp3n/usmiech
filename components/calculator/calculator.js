@@ -28,7 +28,7 @@ const Calculator = ({
     // console.log(selectedRate[0], 'Selected RATE');
     let numberOfRates = selectedRate[0].rates === 0 ? 1 : selectedRate[0].rates;
     let interest = selectedRate[0].interest;
-    console.log(interest, 'Interest');
+    // console.log(interest, 'Interest');
     setPrice((selectedValue[0].price * (1 + interest)) / numberOfRates);
   }, [price, priceOfRate, selectedValue, selectedRate, firstValues]);
 

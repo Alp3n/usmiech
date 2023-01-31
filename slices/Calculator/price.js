@@ -7,7 +7,7 @@ const Price = ({
   sumPriceLabel,
   estimateInstallmentLabel,
 }) => {
-  console.log('RATA: ', selectedRate);
+  // console.log('RATA: ', selectedRate);
   return (
     <>
       <StyledWrapper>

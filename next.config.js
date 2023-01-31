@@ -1,47 +1,30 @@
-const API_ENDPOINT = 'https://smiech.prismic.io/api/v2';
-const SITE_URL = 'https://smiechu.pl';
+const prismic = require('@prismicio/client');
+const sm = require('./sm.json');
 
 function linkResolver(doc) {
-  if (doc.uid === 'homepage') {
-    return `/`;
-  } else if (doc.type === 'story') {
-    return `/stories/${doc.uid}`;
-  } else if (doc.type === 'page') {
-    return `/${doc.uid}`;
+  const prefix = doc.lang !== 'pl' ? `/${doc.lang}` : '/pl-pl';
+  switch (doc.type) {
+    case 'homepage':
+      return `${prefix}`;
+    case 'story':
+      return `${prefix}/stories/${doc.uid}`;
+    case 'page':
+      return `${prefix}/${doc.uid}`;
   }
+
+  // if (doc.uid === 'homepage') {
+  //   return `/`;
+  // } else if (doc.type === 'story') {
+  //   return `/stories/${doc.uid}`;
+  // } else if (doc.type === 'page') {
+  //   return `/${doc.uid}`;
+  // }
 }
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  compiler: {
-    // ssr and displayName are configured by default
-    styledComponents: true,
-  },
-  reactStrictMode: true,
-  images: {
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    domains: [
-      'images.prismic.io',
-      'smiech.cdn.prismic.io',
-      'images.unsplash.com',
-    ],
-  },
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/i,
-      issuer: /\.[jt]sx?$/,
-      use: ['@svgr/webpack'],
-    });
-
-    return config;
-  },
-};
 
 const withPrismicSitemap = require('@reecem/prismic-sitemap')({
   linkResolver: linkResolver,
-  apiEndpoint: API_ENDPOINT,
-  hostname: SITE_URL,
+  apiEndpoint: sm.apiEndpoint,
+  hostname: sm.siteURL,
   optionsMapPerDocumentType: {
     // setting the update date of the article.
     story: (document) => {
@@ -70,4 +53,47 @@ const withPrismicSitemap = require('@reecem/prismic-sitemap')({
   documentTypes: ['homepage', 'page', 'story'],
 });
 
-module.exports = withPrismicSitemap({ ...nextConfig });
+module.exports = async () => {
+  const client = prismic.createClient(sm.apiEndpoint);
+  const repository = await client.getRepository();
+  const locales = repository.languages.map((lang) => lang.id);
+
+  /** @type {import('next').NextConfig} */
+  const nextConfig = {
+    compiler: {
+      // ssr and displayName are configured by default
+      styledComponents: true,
+    },
+    reactStrictMode: true,
+    images: {
+      loader: 'imgix',
+      path: '',
+      dangerouslyAllowSVG: true,
+      contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+      domains: [
+        'images.prismic.io',
+        'smiech.cdn.prismic.io',
+        'images.unsplash.com',
+      ],
+    },
+    i18n: {
+      // These are all the locales you want to support in
+      // your application
+      locales,
+      // This is the default locale you want to be used when visiting
+      // a non-locale prefixed path e.g. `/hello`
+      defaultLocale: locales[0],
+    },
+    webpack(config) {
+      config.module.rules.push({
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: ['@svgr/webpack'],
+      });
+
+      return config;
+    },
+  };
+
+  return withPrismicSitemap({ ...nextConfig });
+};

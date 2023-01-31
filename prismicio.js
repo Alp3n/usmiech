@@ -5,15 +5,24 @@ import sm from './sm.json';
 export const endpoint = sm.apiEndpoint;
 export const repositoryName = prismic.getRepositoryName(endpoint);
 
-// Update the Link Resolver to match your project's route structure
 export function linkResolver(doc) {
-  if (doc.uid === 'homepage') {
-    return `/`;
-  } else if (doc.type === 'story') {
-    return `/stories/${doc.uid}`;
-  } else if (doc.type === 'page') {
-    return `/${doc.uid}`;
+  const prefix = doc.lang !== 'pl' ? `/${doc.lang}` : '';
+  switch (doc.type) {
+    case 'homepage':
+      return `${prefix}`;
+    case 'story':
+      return `${prefix}/stories/${doc.uid}`;
+    case 'page':
+      return `${prefix}/${doc.uid}`;
   }
+
+  // if (doc.uid === 'homepage') {
+  //   return `/`;
+  // } else if (doc.type === 'story') {
+  //   return `/stories/${doc.uid}`;
+  // } else if (doc.type === 'page') {
+  //   return `/${doc.uid}`;
+  // }
 }
 
 // This factory function allows smooth preview setup

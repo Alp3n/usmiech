@@ -55,7 +55,7 @@ const Calculator = ({ slice }) => {
   useEffect(() => {
     let numberOfRates = selectedRate[0].rates === 0 ? 1 : selectedRate[0].rates;
     let interest = selectedRate[0].interest;
-    console.log(interest, 'Interest');
+    // console.log(interest, 'Interest');
     setPrice((selectedValue[0].price * (1 + interest)) / numberOfRates);
   }, [price, selectedValue, selectedRate, firstValues]);
   return (

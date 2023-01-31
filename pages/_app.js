@@ -17,8 +17,8 @@ export default function App({ Component, pageProps }) {
   return (
     <PrismicProvider
       linkResolver={linkResolver}
-      internalLinkComponent={({ href, children, ...props }) => (
-        <Link href={href}>
+      internalLinkComponent={({ href, children, locale, ...props }) => (
+        <Link href={href} locale={locale}>
           <a {...props}>{children}</a>
         </Link>
       )}
@@ -28,6 +28,10 @@ export default function App({ Component, pageProps }) {
         <meta charset='UTF-8' />
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <link rel='shortcut icon' href='/favicon.ico' />
+        <meta
+          name='google-site-verification'
+          content='bGFYwVlcQ4X6HIoV7L6rKAq81mhX9DLYmPoX7eXHgAc'
+        />
       </Head>
       {/* Google Tag Manager */}
       <Script id='gtag' strategy='afterInteractive'>{`

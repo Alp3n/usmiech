@@ -7,42 +7,15 @@ import Navigation from './Navigation';
 import { Media } from '../MediaQueries';
 import { VscMenu, VscClose } from 'react-icons/vsc';
 import Menu from './Menu';
+import LanguageSwitcher from '../LanguageSwitcher';
 
-export const Header = ({ menu }) => {
+export const Header = ({ menu, altLangs }) => {
   const [isOpen, setIsOpen] = useState(false);
-  /* const [show, setShow] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const controlNavbar = () => {
-      if (typeof window !== 'undefined') {
-        if (window.scrollY > lastScrollY) {
-          // if scroll down hide the navbar
-          setShow(false);
-        } else {
-          // if scroll up show the navbar
-          setShow(true);
-        }
-
-        // remember current page location to use in the next move
-        setLastScrollY(window.scrollY);
-      }
-    };
-
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', controlNavbar);
-
-      // cleanup function
-      return () => {
-        window.removeEventListener('scroll', controlNavbar);
-      };
-    }
-  }, [lastScrollY]); */
 
   return (
-    <StyledWrapper /* className={`${show ? 'active' : 'hidden'}`} */>
+    <StyledWrapper>
       <StyledGrid>
-        <StyledMobileDiv between={['sm', 'xl']} /* at={`'sm' | 'md'`} */>
+        <StyledMobileDiv between={['sm', 'xl']}>
           {isOpen ? (
             <VscClose
               size={28}
@@ -71,6 +44,7 @@ export const Header = ({ menu }) => {
         </StyledPrismicLink>
         <StyledDiv greaterThanOrEqual='xl'>
           <Navigation menu={menu} />
+          {/* <LanguageSwitcher altLangs={altLangs} /> */}
           <Button
             link={menu.data.buttonLink}
             label={menu.data.buttonLabel}
@@ -86,13 +60,10 @@ export const Header = ({ menu }) => {
 const StyledGrid = styled.div`
   display: grid;
   align-items: center;
-  /* justify-content: space-between; */
   grid-template-columns: 1fr 80% 1fr;
 
   @media only screen and (min-width: 1192px) {
     grid-template-columns: 200px 1fr;
-    /* place-content: space-around;
-    place-items: space-between; */
   }
 `;
 
@@ -115,7 +86,7 @@ const StyledWrapper = styled.header`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr min(135ch, calc(100% - 48px)) 1fr;
-  /* grid-template-columns: 1fr min(115ch, calc(100% - 48px)) 1fr; */
+
   grid-column-gap: 24px;
   padding: 0.5rem 0;
   box-shadow: 1px 1px 4px grey;
