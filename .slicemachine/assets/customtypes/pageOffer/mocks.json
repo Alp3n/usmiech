@@ -1,16 +1,240 @@
 {
-  "id": "0c27a6a5-96ea-478f-882d-ef8d1619de10",
-  "uid": "non-aut-ducimus",
-  "type": "pageOffer",
-  "data": {
-    "installmentsSummary": [
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "many"
+  },
+  "installmentsSummary": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
       {
         "type": "heading4",
-        "text": "Disintermediate integrated bandwidth",
-        "spans": []
+        "content": {
+          "text": "Night"
+        }
       }
-    ],
-    "metaTitle": "streamline integrated convergence",
-    "metaDescription": "facilitate wireless schemas"
+    ]
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "full_bleed$f4bd5018-071c-4a22-9843-45312c69d8cd",
+        "name": "full_bleed",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Continent"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Nostrud do ea id officia consectetur est reprehenderit. Id cupidatat nulla reprehenderit sit duis in qui magna consequat. Cupidatat anim quis aliqua duis anim veniam amet aute ut ipsum dolor."
+                  }
+                }
+              ]
+            },
+            "image": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+                "width": 3168,
+                "height": 4752
+              },
+              "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+              "width": 3168,
+              "height": 4752,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {
+                "mobile": {
+                  "origin": {
+                    "id": "mobile",
+                    "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+                    "width": 4272,
+                    "height": 2848
+                  },
+                  "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?rect=1187%2C0%2C1899%2C2848&w=400&h=600",
+                  "width": 400,
+                  "height": 600,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 1187,
+                      "y": 0
+                    },
+                    "background": "transparent"
+                  }
+                }
+              }
+            },
+            "buttonLink": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            },
+            "inside": {
+              "__TYPE__": "BooleanContent",
+              "value": false
+            },
+            "buttonLabel": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Aute ullamco duis non ad irure ad occaecat commodo nisi id commodo tempor minim reprehenderit adipisicing. Cupidatat proident pariatur eu in est enim non duis minim irure cillum ex ex aliquip irure. Pariatur aliqua aliqua in."
+                  }
+                }
+              ]
+            },
+            "color": {
+              "__TYPE__": "FieldContent",
+              "value": "what",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "calculator$426a86b4-c5df-4113-a839-81c62ad2e8fc",
+        "name": "calculator",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "sectionId": {
+              "__TYPE__": "FieldContent",
+              "value": "fence",
+              "type": "Text"
+            },
+            "productTitle": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Loose"
+                  }
+                }
+              ]
+            },
+            "firstDescription": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Fugiat aliqua culpa nisi ad officia laborum fugiat eu esse ullamco. Irure ullamco nulla occaecat dolor deserunt aliqua in in Lorem sint anim in ullamco laboris. Reprehenderit eiusmod sunt enim proident laboris pariatur ullamco ea voluptate ipsum laboris consectetur mollit."
+                  }
+                }
+              ]
+            },
+            "firstValuesData": {
+              "__TYPE__": "FieldContent",
+              "value": "row",
+              "type": "Text"
+            },
+            "secondDescription": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Nulla quis cillum cillum aute ex culpa adipisicing. Ex qui aliquip consectetur pariatur ad cillum officia minim consequat aliqua."
+                  }
+                }
+              ]
+            },
+            "ratesData": {
+              "__TYPE__": "FieldContent",
+              "value": "needed",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "title_description$d9b7715c-6065-4d53-a10f-67070b9bbc23",
+        "name": "title_description",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading2",
+                  "content": {
+                    "text": "Funny"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Anim officia pariatur cillum voluptate sunt officia aliquip adipisicing occaecat ut ad tempor deserunt. Adipisicing deserunt irure et anim commodo adipisicing occaecat cupidatat ea pariatur dolore aliquip."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "metaTitle": {
+    "__TYPE__": "FieldContent",
+    "value": "son",
+    "type": "Text"
+  },
+  "metaDescription": {
+    "__TYPE__": "FieldContent",
+    "value": "flame",
+    "type": "Text"
   }
 }

@@ -311,17 +311,17 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "D:\\Programming\\smiech\\slices\\Calculator\\default\\preview.jpeg",
+            "path": "/Users/adam/Programming/usmiech/slices/Calculator/default/preview.jpeg",
             "width": 626,
             "height": 530
           },
           "licowki": {
-            "path": "D:\\Programming\\smiech\\slices\\Calculator\\licowki\\preview.jpeg",
+            "path": "/Users/adam/Programming/usmiech/slices/Calculator/licowki/preview.jpeg",
             "width": 626,
             "height": 530
           },
           "ortodoncja": {
-            "path": "D:\\Programming\\smiech\\slices\\Calculator\\ortodoncja\\preview.jpeg",
+            "path": "/Users/adam/Programming/usmiech/slices/Calculator/ortodoncja/preview.jpeg",
             "width": 626,
             "height": 530
           }
@@ -647,12 +647,12 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "D:\\Programming\\smiech\\slices\\DoubleImage\\default\\preview.jpeg",
+            "path": "/Users/adam/Programming/usmiech/slices/DoubleImage/default/preview.jpeg",
             "width": 890,
             "height": 588
           },
           "noCta": {
-            "path": "D:\\Programming\\smiech\\slices\\DoubleImage\\noCta\\preview.jpeg",
+            "path": "/Users/adam/Programming/usmiech/slices/DoubleImage/noCta/preview.jpeg",
             "width": 720,
             "height": 510
           }
@@ -757,7 +757,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "D:\\Programming\\smiech\\slices\\FaQ\\default\\preview.jpeg",
+            "path": "/Users/adam/Programming/usmiech/slices/FaQ/default/preview.jpeg",
             "width": 711,
             "height": 580
           }
@@ -1376,12 +1376,12 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "D:\\Programming\\smiech\\slices\\FullBleed\\default\\preview.jpeg",
+            "path": "/Users/adam/Programming/usmiech/slices/FullBleed/default/preview.jpeg",
             "width": 823,
             "height": 371
           },
           "heroPage": {
-            "path": "D:\\Programming\\smiech\\slices\\FullBleed\\heroPage\\preview.jpeg",
+            "path": "/Users/adam/Programming/usmiech/slices/FullBleed/heroPage/preview.jpeg",
             "width": 825,
             "height": 394
           }
@@ -1784,17 +1784,17 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "D:\\Programming\\smiech\\slices\\RepetableItems\\default\\preview.jpeg",
+            "path": "/Users/adam/Programming/usmiech/slices/RepetableItems/default/preview.jpeg",
             "width": 742,
             "height": 378
           },
           "steps": {
-            "path": "D:\\Programming\\smiech\\slices\\RepetableItems\\steps\\preview.jpeg",
+            "path": "/Users/adam/Programming/usmiech/slices/RepetableItems/steps/preview.jpeg",
             "width": 742,
             "height": 378
           },
           "opinions": {
-            "path": "D:\\Programming\\smiech\\slices\\RepetableItems\\opinions\\preview.jpeg",
+            "path": "/Users/adam/Programming/usmiech/slices/RepetableItems/opinions/preview.jpeg",
             "width": 1071,
             "height": 350
           }
@@ -2477,12 +2477,12 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "D:\\Programming\\smiech\\slices\\SingleImage\\default\\preview.jpeg",
+            "path": "/Users/adam/Programming/usmiech/slices/SingleImage/default/preview.jpeg",
             "width": 901,
             "height": 456
           },
           "noCta": {
-            "path": "D:\\Programming\\smiech\\slices\\SingleImage\\noCta\\preview.jpeg",
+            "path": "/Users/adam/Programming/usmiech/slices/SingleImage/noCta/preview.jpeg",
             "width": 1072,
             "height": 491
           }

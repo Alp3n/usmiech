@@ -1,0 +1,57 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "board"
+  },
+  "title": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Nisi enim tempor eu quis elit nisi."
+        }
+      }
+    ]
+  },
+  "text": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Elit anim velit est ut reprehenderit do voluptate aliquip incididunt nostrud veniam aute esse id eu. Enim adipisicing ad Lorem cillum ex voluptate laboris dolore duis velit. Reprehenderit duis fugiat aute amet dolor adipisicing cupidatat est aliquip commodo fugiat commodo sint qui minim."
+        }
+      }
+    ]
+  },
+  "privacyLink": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
+      "url": "https://prismic.io"
+    }
+  },
+  "privacyLabel": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
+      "url": "http://twitter.com"
+    }
+  },
+  "acceptButtonLabel": {
+    "__TYPE__": "FieldContent",
+    "value": "living",
+    "type": "Text"
+  },
+  "denyButtonLabel": {
+    "__TYPE__": "FieldContent",
+    "value": "drawn",
+    "type": "Text"
+  },
+  "closeButtonLabel": {
+    "__TYPE__": "FieldContent",
+    "value": "that",
+    "type": "Text"
+  }
+}

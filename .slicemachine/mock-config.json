@@ -304,6 +304,18 @@
               "patternType": "PARAGRAPH",
               "blocks": 1
             }
+          },
+          "sumPriceLabel": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "estimateInstallmentLabel": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
           }
         },
         "items": {}
@@ -413,9 +425,29 @@
           }
         }
       }
+    },
+    "Text": {
+      "default": {
+        "primary": {
+          "text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   },
   "_cts": {
+    "404": {
+      "errorText": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
     "pageHome": {},
     "pageTreatment": {},
     "pageHowItWorks": {},
@@ -477,6 +509,9 @@
           "blocks": 1
         }
       }
-    }
+    },
+    "page": {},
+    "homepage": {},
+    "cookies_consent": {}
   }
 }

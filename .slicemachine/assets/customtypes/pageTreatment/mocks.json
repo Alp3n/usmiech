@@ -1,9 +1,240 @@
 {
-  "id": "7d0e8fc5-07fc-423b-aac9-901f01c31209",
-  "uid": "consequatur-dicta-ad",
-  "type": "pageTreatment",
-  "data": {
-    "metaTitle": "brand end-to-end web-readiness",
-    "metaDescription": "drive distributed networks"
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "crowd"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "single_image$9278fd94-10a3-40fc-ad4f-64b8a56383b9",
+        "name": "single_image",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading2",
+                  "content": {
+                    "text": "Claws"
+                  }
+                }
+              ]
+            },
+            "titleMobile": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Et id tempor do."
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Et esse ad nulla non velit aute quis nisi nostrud sit tempor. Nulla eiusmod cillum cillum reprehenderit Lorem consequat commodo aliqua cupidatat amet laboris."
+                  }
+                }
+              ]
+            },
+            "buttonLink": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://google.com"
+              }
+            },
+            "buttonLabel": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Do officia cupidatat eiusmod."
+                  }
+                }
+              ]
+            },
+            "image": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+                "width": 12288,
+                "height": 16384
+              },
+              "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+              "width": 12288,
+              "height": 16384,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {
+                "mobile": {
+                  "origin": {
+                    "id": "mobile",
+                    "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72",
+                    "width": 4010,
+                    "height": 4010
+                  },
+                  "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?rect=0%2C125%2C4010%2C3759&w=640&h=600",
+                  "width": 640,
+                  "height": 600,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 0,
+                      "y": 125
+                    },
+                    "background": "transparent"
+                  }
+                }
+              }
+            },
+            "imageSide": {
+              "__TYPE__": "FieldContent",
+              "value": "away",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "full_bleed$f4ffe566-2740-44d9-9286-1243574b012f",
+        "name": "full_bleed",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Develop"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Excepteur ut eiusmod excepteur voluptate."
+                  }
+                }
+              ]
+            },
+            "image": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+                "width": 3168,
+                "height": 4752
+              },
+              "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+              "width": 3168,
+              "height": 4752,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {
+                "mobile": {
+                  "origin": {
+                    "id": "mobile",
+                    "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
+                    "width": 3810,
+                    "height": 5715
+                  },
+                  "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117?rect=0%2C0%2C3810%2C5715&w=400&h=600",
+                  "width": 400,
+                  "height": 600,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "background": "transparent"
+                  }
+                }
+              }
+            },
+            "buttonLink": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            },
+            "inside": {
+              "__TYPE__": "BooleanContent",
+              "value": true
+            },
+            "buttonLabel": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Enim sit consequat sunt anim. Aliquip amet nostrud et aute adipisicing irure veniam do. Id quis sunt deserunt ex culpa incididunt duis aliquip proident sint pariatur ut magna."
+                  }
+                }
+              ]
+            },
+            "color": {
+              "__TYPE__": "FieldContent",
+              "value": "occur",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "metaTitle": {
+    "__TYPE__": "FieldContent",
+    "value": "main",
+    "type": "Text"
+  },
+  "metaDescription": {
+    "__TYPE__": "FieldContent",
+    "value": "went",
+    "type": "Text"
   }
 }

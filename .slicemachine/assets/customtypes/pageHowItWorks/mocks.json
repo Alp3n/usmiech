@@ -1,9 +1,292 @@
 {
-  "id": "68b39587-819e-4aa6-b386-c5503c86a74f",
-  "uid": "totam-consequatur-eum",
-  "type": "pageHowItWorks",
-  "data": {
-    "metaTitle": "innovate clicks-and-mortar e-services",
-    "metaDescription": "brand frictionless initiatives"
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "feathers"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "full_bleed$b9e743ca-7cfe-4295-b034-a6a4f613384f",
+        "name": "full_bleed",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Author"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Aute consectetur laboris pariatur sunt est cillum veniam velit non reprehenderit. Esse aliqua ullamco minim ea enim incididunt amet anim sunt occaecat aliqua aliquip. Esse veniam elit culpa tempor voluptate adipisicing culpa veniam mollit sint do proident quis qui."
+                  }
+                }
+              ]
+            },
+            "image": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+                "width": 4160,
+                "height": 3120
+              },
+              "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+              "width": 4160,
+              "height": 3120,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {
+                "mobile": {
+                  "origin": {
+                    "id": "mobile",
+                    "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+                    "width": 12288,
+                    "height": 16384
+                  },
+                  "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?rect=683%2C0%2C10923%2C16384&w=400&h=600",
+                  "width": 400,
+                  "height": 600,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 683,
+                      "y": 0
+                    },
+                    "background": "transparent"
+                  }
+                }
+              }
+            },
+            "buttonLink": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            },
+            "inside": {
+              "__TYPE__": "BooleanContent",
+              "value": false
+            },
+            "buttonLabel": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Culpa incididunt aute cupidatat. Ipsum officia qui id dolor. Adipisicing reprehenderit officia magna tempor."
+                  }
+                }
+              ]
+            },
+            "color": {
+              "__TYPE__": "FieldContent",
+              "value": "bent",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "single_image$1f6aa391-44f9-4295-b91f-f28d1225c570",
+        "name": "single_image",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading2",
+                  "content": {
+                    "text": "Massage"
+                  }
+                }
+              ]
+            },
+            "titleMobile": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Reprehenderit non consectetur labore proident sint ad mollit exercitation."
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Consequat irure quis excepteur magna ea sint nostrud dolor commodo proident."
+                  }
+                }
+              ]
+            },
+            "buttonLink": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            },
+            "buttonLabel": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Irure velit aliqua irure duis aliquip. Culpa ipsum amet et nisi."
+                  }
+                }
+              ]
+            },
+            "image": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+                "width": 3456,
+                "height": 3456
+              },
+              "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+              "width": 3456,
+              "height": 3456,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {
+                "mobile": {
+                  "origin": {
+                    "id": "mobile",
+                    "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+                    "width": 4000,
+                    "height": 6000
+                  },
+                  "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?rect=0%2C1125%2C4000%2C3750&w=640&h=600",
+                  "width": 640,
+                  "height": 600,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 0,
+                      "y": 1125
+                    },
+                    "background": "transparent"
+                  }
+                }
+              }
+            },
+            "imageSide": {
+              "__TYPE__": "FieldContent",
+              "value": "lady",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "fa_q$287f2796-0c9a-4907-9705-0dd0a6c348ae",
+        "name": "fa_q",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "Question",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "heading2",
+                        "content": {
+                          "text": "Shells"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                [
+                  "Answer",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "paragraph",
+                        "content": {
+                          "text": "Velit minim ad nulla sint enim cupidatat."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                [
+                  "uid",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "liquid",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "metaTitle": {
+    "__TYPE__": "FieldContent",
+    "value": "desert",
+    "type": "Text"
+  },
+  "metaDescription": {
+    "__TYPE__": "FieldContent",
+    "value": "weight",
+    "type": "Text"
   }
 }

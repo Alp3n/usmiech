@@ -1,0 +1,45 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "scientific"
+  },
+  "errorText": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "heading1",
+        "content": {
+          "text": "Spider"
+        }
+      }
+    ]
+  },
+  "redirectLink": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
+      "url": "http://google.com"
+    }
+  },
+  "redirectButtonLabel": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Dolor Lorem ea quis. Consequat magna proident minim tempor duis id proident proident dolore anim quis mollit occaecat magna."
+        }
+      }
+    ]
+  },
+  "metaTitle": {
+    "__TYPE__": "FieldContent",
+    "value": "wood",
+    "type": "Text"
+  },
+  "metaDescription": {
+    "__TYPE__": "FieldContent",
+    "value": "came",
+    "type": "Text"
+  }
+}

@@ -1,13 +1,16 @@
 {
-  "id": "ea09cec2-2edb-4971-b1b3-ff0fd9402364",
-  "uid": "et-ut-repellendus",
-  "type": "pagePrivacy",
-  "data": {
-    "text": [
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "wind"
+  },
+  "text": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
       {
         "type": "paragraph",
-        "text": "Occaecat laborum nisi proident reprehenderit aute. Laborum anim anim non. Aliquip do in eiusmod aute qui ex.",
-        "spans": []
+        "content": {
+          "text": "Pariatur ad dolor sint Lorem Lorem enim occaecat adipisicing et eu dolore non elit occaecat id."
+        }
       }
     ]
   }

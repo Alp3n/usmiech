@@ -1,13 +1,16 @@
 {
-  "id": "446913dd-dcb6-4559-85cc-d4ee3701a91a",
-  "uid": "consequatur-occaecati-ut",
-  "type": "pageTerms",
-  "data": {
-    "text": [
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "mission"
+  },
+  "text": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
       {
         "type": "paragraph",
-        "text": "Laboris esse velit veniam cillum esse esse ut aliquip in excepteur cillum velit sit. Elit quis est magna cillum adipisicing.",
-        "spans": []
+        "content": {
+          "text": "Eu mollit enim nulla Lorem nisi duis ad elit cupidatat occaecat excepteur."
+        }
       }
     ]
   }

@@ -1,143 +1,139 @@
 {
-  "id": "5b3b5f3c-4ac5-4ebb-b008-8ae4535880ac",
-  "uid": "dolores-laudantium-eum",
-  "type": "menu",
-  "data": {
-    "title": [
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "although"
+  },
+  "title": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
       {
         "type": "heading1",
-        "text": "Seize granular interfaces",
-        "spans": []
+        "content": {
+          "text": "Laugh"
+        }
       }
-    ],
-    "logo": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": "Placeholder image",
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=900&h=500&fit=crop"
+    ]
+  },
+  "menuLinks": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://slicemachine.dev"
+              }
+            }
+          ],
+          [
+            "label",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Duis aliquip nostrud ullamco id sint esse adipisicing deserunt ex velit reprehenderit. Ut do laboris officia officia. Pariatur consequat magna et est anim dolor id et deserunt reprehenderit aliqua elit consequat."
+                  }
+                }
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+      "width": 5616,
+      "height": 3744
     },
-    "buttonLabel": [
+    "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+    "width": 5616,
+    "height": 3744,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "buttonLabel": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
       {
         "type": "paragraph",
-        "text": "Nostrud elit esse nulla mollit dolor aute quis laborum ex. Qui nisi mollit eiusmod cupidatat magna ut do.",
-        "spans": []
+        "content": {
+          "text": "Duis commodo sit occaecat irure nostrud ex nisi irure proident incididunt culpa deserunt consequat ut exercitation."
+        }
       }
-    ],
-    "buttonLink": {
-      "link_type": "Web",
-      "url": "https://prismic.io"
-    },
-    "socialInstagram": {
-      "link_type": "Web",
-      "url": "http://twitter.com"
-    },
-    "socialFacebook": {
-      "link_type": "Web",
+    ]
+  },
+  "buttonLink": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
       "url": "https://slicemachine.dev"
-    },
-    "linkTerms": {
-      "link_type": "Web",
-      "url": "http://google.com"
-    },
-    "linkPrivacy": {
-      "link_type": "Web",
+    }
+  },
+  "socialInstagram": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
+      "url": "https://slicemachine.dev"
+    }
+  },
+  "socialFacebook": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
       "url": "http://twitter.com"
-    },
-    "linkTermsLabel": [
+    }
+  },
+  "linkTerms": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
+      "url": "https://slicemachine.dev"
+    }
+  },
+  "linkPrivacy": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
+      "url": "http://google.com"
+    }
+  },
+  "linkTermsLabel": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
       {
         "type": "paragraph",
-        "text": "Tempor ut nulla occaecat sit quis pariatur sint et. Laboris ut non nulla voluptate fugiat.",
-        "spans": []
+        "content": {
+          "text": "Aliquip ex officia eu sit et anim mollit dolor ut ut duis ad ullamco irure ullamco. Minim irure sunt reprehenderit esse incididunt laborum consectetur cillum sit eiusmod ex qui. Incididunt id occaecat non nisi commodo deserunt commodo labore velit commodo eiusmod."
+        }
       }
-    ],
-    "linkPrivacyLabel": [
+    ]
+  },
+  "linkPrivacyLabel": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
       {
         "type": "paragraph",
-        "text": "Ut id eiusmod laboris duis excepteur dolore esse. Quis consequat sunt deserunt nulla labore ut. Cupidatat sint aute consequat laboris id.",
-        "spans": []
-      }
-    ],
-    "menuLinks": [
-      {
-        "link": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        },
-        "label": [
-          {
-            "type": "paragraph",
-            "text": "Occaecat deserunt incididunt ullamco ea reprehenderit ad amet.",
-            "spans": []
-          }
-        ]
-      },
-      {
-        "link": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        },
-        "label": [
-          {
-            "type": "paragraph",
-            "text": "Duis in ipsum ut occaecat.",
-            "spans": []
-          }
-        ]
-      },
-      {
-        "link": {
-          "link_type": "Web",
-          "url": "https://prismic.io"
-        },
-        "label": [
-          {
-            "type": "paragraph",
-            "text": "Cillum reprehenderit adipisicing laborum ex reprehenderit nostrud. Sint fugiat qui duis fugiat aliquip est et laboris laboris proident dolor culpa cupidatat.",
-            "spans": []
-          }
-        ]
-      },
-      {
-        "link": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        },
-        "label": [
-          {
-            "type": "paragraph",
-            "text": "Cillum mollit qui aliquip nisi ad culpa. Eiusmod anim tempor reprehenderit ex pariatur voluptate aliquip reprehenderit ea Lorem veniam adipisicing deserunt.",
-            "spans": []
-          }
-        ]
-      },
-      {
-        "link": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        },
-        "label": [
-          {
-            "type": "paragraph",
-            "text": "Non duis consectetur eiusmod dolor fugiat adipisicing tempor enim consectetur ex voluptate nulla.",
-            "spans": []
-          }
-        ]
-      },
-      {
-        "link": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        },
-        "label": [
-          {
-            "type": "paragraph",
-            "text": "Veniam commodo cupidatat exercitation ut ea laboris consectetur pariatur proident voluptate sint tempor laboris irure. Dolore tempor incididunt velit veniam duis cillum ea enim velit sint mollit. Enim consectetur eu anim amet culpa mollit adipisicing ipsum Lorem sint proident qui irure.",
-            "spans": []
-          }
-        ]
+        "content": {
+          "text": "Sunt dolore ipsum magna."
+        }
       }
     ]
   }
