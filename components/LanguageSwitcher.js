@@ -1,24 +1,26 @@
-import styled from '@emotion/styled';
 import { PrismicLink } from '@prismicio/react';
 import { linkResolver } from '../prismicio';
 
+const LangIcon = ({ lang }) => {
+  const code = lang.substring(3).toLowerCase();
+
+  return <span className={`fi fi-${code}`} />;
+};
+
 export const LanguageSwitcher = ({ altLangs = [] }) => {
+  // console.log(altLangs);
   return (
-    <StyledUl>
+    <ul>
       {altLangs.map((altLang, i) => (
-        <li key={i} value={altLang.lang.slice(0, 2)}>
+        <li key={i}>
           <PrismicLink href={linkResolver(altLang)} locale={altLang.lang}>
-            <span className='sr-only'>{altLang.lang.slice(0, 2)}</span>
+            <span className='sr-only'>{altLang.lang}</span>
+            <LangIcon lang={altLang.lang} />
           </PrismicLink>
         </li>
       ))}
-    </StyledUl>
+    </ul>
   );
 };
 
 export default LanguageSwitcher;
-
-const StyledUl = styled.ul`
-  list-style: none;
-  text-transform: uppercase;
-`;
