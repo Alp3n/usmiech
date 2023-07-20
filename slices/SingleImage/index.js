@@ -173,7 +173,7 @@ const SingleImage = ({ slice }) => (
         null}
       </StyledSmallerWrapper>
     </StyledWrapperDesktop>
-    {slice.variation === 'clinic' ? (
+    {/* {slice.variation === 'clinic' ? (
       slice.primary.calendarLink ? (
         <StyledCalendar greaterThanOrEqual='sm' className='iframe'>
           <div
@@ -181,7 +181,7 @@ const SingleImage = ({ slice }) => (
           />
         </StyledCalendar>
       ) : null
-    ) : null}
+    ) : null} */}
   </>
 );
 
@@ -192,6 +192,7 @@ const StyledHeader = styled.div`
   grid-template-areas: 'title line';
   grid-template-columns: auto 1fr;
   gap: 1rem;
+
   @media only screen and (min-width: 768px) {
     gap: 3rem;
   }
@@ -241,7 +242,8 @@ const StyledWrapperDesktop = styled(Media)`
     grid-template-areas: ${({ side }) =>
       side === 'left' ? `'image column'` : `'column image'`};
     column-gap: 7rem;
-    margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '3rem' : '110px')};
+    margin-bottom: ${({ clinic }) => (clinic === 'clinic' ? '0' : '110px')};
+    margin-top: ${({ clinic }) => (clinic === 'clinic' ? '3rem' : '110px')};
   }
 
   @media only screen and (min-width: 1292px) {
@@ -293,6 +295,7 @@ const StyledSmallerWrapper = styled.div`
 const StyledImageWrapper = styled.div`
   grid-area: ${({ area }) => (area ? area : null)};
   margin-bottom: 50px;
+  max-width: 500px;
   @media only screen and (max-width: 767px) {
     /* width: 90vw; */
     margin-bottom: 2.5rem;
@@ -302,12 +305,5 @@ const StyledImageWrapper = styled.div`
     align-self: start;
     /* max-width: 800px; */
     /* width: 100%; */
-  }
-`;
-
-const StyledCalendar = styled.div`
-  /* margin-bottom: 10px; */
-  @media only screen and (min-width: 768px) {
-    margin-bottom: 60px;
   }
 `;
