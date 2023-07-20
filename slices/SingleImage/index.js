@@ -173,7 +173,7 @@ const SingleImage = ({ slice }) => (
         null}
       </StyledSmallerWrapper>
     </StyledWrapperDesktop>
-    {/* {slice.variation === 'clinic' ? (
+    {slice.variation === 'clinic' ? (
       slice.primary.calendarLink ? (
         <StyledCalendar greaterThanOrEqual='sm' className='iframe'>
           <div
@@ -181,7 +181,7 @@ const SingleImage = ({ slice }) => (
           />
         </StyledCalendar>
       ) : null
-    ) : null} */}
+    ) : null}
   </>
 );
 
@@ -305,9 +305,9 @@ const StyledImageWrapper = styled.div`
   }
 `;
 
-// const StyledCalendar = styled.div`
-//   /* margin-bottom: 10px; */
-//   @media only screen and (min-width: 768px) {
-//     margin-bottom: 60px;
-//   }
-// `;
+const StyledCalendar = styled.div`
+  /* margin-bottom: 10px; */
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 60px;
+  }
+`;

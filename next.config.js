@@ -2,7 +2,7 @@ const prismic = require('@prismicio/client');
 const sm = require('./sm.json');
 
 function linkResolver(doc) {
-  const prefix = doc.lang !== 'pl' ? `/${doc.lang}` : '/pl';
+  const prefix = doc.lang !== 'pl' ? `/${doc.lang}` : '/pl-pl';
   switch (doc.type) {
     case 'homepage':
       return `${prefix}`;
@@ -11,6 +11,14 @@ function linkResolver(doc) {
     case 'page':
       return `${prefix}/${doc.uid}`;
   }
+
+  // if (doc.uid === 'homepage') {
+  //   return `/`;
+  // } else if (doc.type === 'story') {
+  //   return `/stories/${doc.uid}`;
+  // } else if (doc.type === 'page') {
+  //   return `/${doc.uid}`;
+  // }
 }
 
 const withPrismicSitemap = require('@reecem/prismic-sitemap')({
@@ -71,13 +79,11 @@ module.exports = async () => {
     i18n: {
       // These are all the locales you want to support in
       // your application
-      locales: locales, //: ['default', 'pl', 'en', 'uk', 'ru'],
+      locales,
       // This is the default locale you want to be used when visiting
       // a non-locale prefixed path e.g. `/hello`
-      defaultLocale: locales[0], //'default',
-      localeDetection: false,
+      defaultLocale: locales[0],
     },
-    trailingSlash: true,
     webpack(config) {
       config.module.rules.push({
         test: /\.svg$/i,
@@ -90,5 +96,4 @@ module.exports = async () => {
   };
 
   return withPrismicSitemap({ ...nextConfig });
-  // return nextConfig;
 };
