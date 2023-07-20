@@ -1,16 +1,16 @@
 {
-  "id": "page",
-  "label": "Page",
-  "repeatable": true,
+  "id": "pageAboutUs",
+  "label": "pageAboutUs",
+  "repeatable": false,
   "status": true,
   "json": {
     "Main": {
       "uid": {
-        "type": "UID",
         "config": {
           "label": "Uid",
           "placeholder": ""
-        }
+        },
+        "type": "UID"
       },
       "slices": {
         "type": "Slices",
@@ -21,27 +21,6 @@
               "type": "SharedSlice"
             },
             "full_bleed": {
-              "type": "SharedSlice"
-            },
-            "double_image": {
-              "type": "SharedSlice"
-            },
-            "repetable_items": {
-              "type": "SharedSlice"
-            },
-            "calculator": {
-              "type": "SharedSlice"
-            },
-            "fa_q": {
-              "type": "SharedSlice"
-            },
-            "title_description": {
-              "type": "SharedSlice"
-            },
-            "story": {
-              "type": "SharedSlice"
-            },
-            "text": {
               "type": "SharedSlice"
             }
           }

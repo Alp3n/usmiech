@@ -1,16 +1,25 @@
 {
-  "id": "treatment",
-  "label": "Treatment",
-  "repeatable": true,
+  "id": "pageOffer",
+  "label": "pageOffer",
+  "repeatable": false,
   "status": true,
   "json": {
     "Main": {
       "uid": {
-        "type": "UID",
         "config": {
-          "label": "uid",
+          "label": "Uid",
           "placeholder": ""
-        }
+        },
+        "type": "UID"
+      },
+      "installmentsSummary": {
+        "config": {
+          "label": "Installments Summary",
+          "placeholder": "Text for installments summary...",
+          "allowTargetBlank": true,
+          "single": "heading4"
+        },
+        "type": "StructuredText"
       },
       "slices": {
         "type": "Slices",
@@ -20,13 +29,7 @@
             "full_bleed": {
               "type": "SharedSlice"
             },
-            "single_image": {
-              "type": "SharedSlice"
-            },
-            "repetable_items": {
-              "type": "SharedSlice"
-            },
-            "dental_treatment_prices": {
+            "calculator": {
               "type": "SharedSlice"
             },
             "title_description": {
@@ -37,14 +40,14 @@
       }
     },
     "SEO": {
-      "metatitle": {
+      "metaTitle": {
         "type": "Text",
         "config": {
           "label": "Meta Title",
           "placeholder": ""
         }
       },
-      "metadescription": {
+      "metaDescription": {
         "type": "Text",
         "config": {
           "label": "Meta Description",

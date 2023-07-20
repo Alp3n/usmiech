@@ -44,7 +44,7 @@ export const Header = ({ menu, altLangs }) => {
         </StyledPrismicLink>
         <StyledDiv greaterThanOrEqual='xl'>
           <Navigation menu={menu} />
-          <LanguageSwitcher altLangs={altLangs} />
+          {/* <LanguageSwitcher altLangs={altLangs} /> */}
           <Button
             link={menu.data.buttonLink}
             label={menu.data.buttonLabel}
