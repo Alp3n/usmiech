@@ -21,16 +21,21 @@ const Footer = ({ menu }) => {
               }}
             >
               <StyledSpan>
-                ul. Pustułeczki 23
+                ul. Nowy Świat 3
                 <br />
-                02-811 Warszawa, Polska
+                15-453 Białystok
+              </StyledSpan>
+              <StyledSpan>
+                ul. Kościuszki 35
+                <br />
+                05-500 Piaseczno
               </StyledSpan>
             </div>
           </StyledItem>
-          <StyledItem>
+          {/* <StyledItem>
             <MdPhone size={'24'} />
             <StyledSpan>505 255 600</StyledSpan>
-          </StyledItem>
+          </StyledItem> */}
           <StyledItem>
             <MdMail size={'24'} />
             <StyledSpan>info@smiechu.pl</StyledSpan>

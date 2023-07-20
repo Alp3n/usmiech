@@ -43,6 +43,9 @@
             },
             "text": {
               "type": "SharedSlice"
+            },
+            "dental_treatment_prices": {
+              "type": "SharedSlice"
             }
           }
         }
