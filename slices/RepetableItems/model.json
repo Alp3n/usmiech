@@ -85,6 +85,13 @@
         }
       },
       "items": {
+        "uid": {
+          "config": {
+            "label": "Uid",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
         "title": {
           "config": {
             "label": "Title",
@@ -109,13 +116,6 @@
             "placeholder": "Insert step number..."
           },
           "type": "Number"
-        },
-        "uid": {
-          "config": {
-            "label": "Uid",
-            "placeholder": ""
-          },
-          "type": "Text"
         }
       },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
@@ -138,6 +138,13 @@
         }
       },
       "items": {
+        "uid": {
+          "config": {
+            "label": "Uid",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
         "title": {
           "config": {
             "label": "Title",
@@ -155,13 +162,54 @@
             "multi": "paragraph"
           },
           "type": "StructuredText"
-        },
-        "uid": {
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "doctors",
+      "name": "Doctors",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "RepetableItems",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
           "config": {
-            "label": "Uid",
-            "placeholder": ""
-          },
-          "type": "Text"
+            "label": "Title",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "buttonLabel": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Button label",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "buttonLink": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {
+        "doctor": {
+          "type": "Link",
+          "config": {
+            "label": "Doctor",
+            "select": "document",
+            "customtypes": [
+              "doctor"
+            ]
+          }
         }
       },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
