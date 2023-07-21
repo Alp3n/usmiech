@@ -42,10 +42,10 @@ const Footer = ({ menu }) => {
               </StyledSpan>
             </div>
           </StyledItem>
-          {/* <StyledItem>
+          <StyledItem>
             <MdPhone size={'24'} />
             <StyledSpan>505 255 600</StyledSpan>
-          </StyledItem> */}
+          </StyledItem>
           <StyledItem>
             <MdMail size={'24'} />
             <StyledLink
